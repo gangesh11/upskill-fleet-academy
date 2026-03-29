@@ -1,0 +1,194 @@
+{
+  "site": {
+    "title": "Upskill Fleet Academy",
+    "tagline": "Expert-led training in AI Security, Cyber Security, Cloud, and Financial Marketing",
+    "primaryCta": "View schedule",
+    "secondaryCta": "Explore courses"
+  },
+  "trainer": {
+    "name": "Mr. xxxxxx",
+    "title": "Principal Security & Cloud Instructor",
+    "bio": "15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.",
+    "shortBio": "Security architect, cloud strategist, and hands-on instructor for enterprise teams.",
+    "profileImage": "assets/trainer.jpg",
+    "contact": {
+      "email": "xxxxxx",
+      "phone": "xxxxxx",
+      "whatsapp": "xxxxxx"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/example",
+      "twitter": "https://twitter.com/example",
+      "github": "https://github.com/example",
+      "website": "https://example.com"
+    },
+    "credentials": [
+      ", CCSP",
+      "AWS & Azure Solutions Architect",
+      "Former ISO 27001 lead implementer"
+    ]
+  },
+  "courses": [
+    {
+      "id": "ai-security",
+      "domain": "AI Security",
+      "summary": "Secure design, deployment, and governance of AI systems in the enterprise.",
+      "topics": [
+        "Threat modeling for LLM pipelines",
+        "Data leakage & prompt injection mitigations",
+        "Model supply chain & third-party AI",
+        "Governance, audit, and responsible use"
+      ],
+      "level": "Intermediate",
+      "format": "Workshop + labs"
+    },
+    {
+      "id": "cyber-security",
+      "domain": "Cyber Security",
+      "summary": "Defense-in-depth, identity, and incident readiness for modern organizations.",
+      "topics": [
+        "Zero trust & identity-centric security",
+        "Detection, SIEM, and SOC fundamentals",
+        "Vulnerability management & patching",
+        "Incident response playbooks"
+      ],
+      "level": "Foundations to Intermediate",
+      "format": "Lecture + scenarios"
+    },
+    {
+      "id": "cloud-computing",
+      "domain": "Cloud Computing",
+      "summary": "Architecture, cost, and operations across major cloud providers.",
+      "topics": [
+        "Well-architected patterns (IaaS/PaaS/SaaS)",
+        "Networking, IAM, and encryption",
+        "Cost optimization & FinOps basics",
+        "Hybrid and multi-cloud considerations"
+      ],
+      "level": "Intermediate",
+      "format": "Hands-on labs"
+    },
+    {
+      "id": "financial-marketing",
+      "domain": "Financial Marketing Management",
+      "summary": "Regulatory-aware marketing strategy for banks, fintech, and asset managers.",
+      "topics": [
+        "Product positioning & segment strategy",
+        "Compliance frameworks (marketing disclosures)",
+        "Digital channels & campaign measurement",
+        "Brand risk and stakeholder alignment"
+      ],
+      "level": "Professional",
+      "format": "Case studies + frameworks"
+    }
+  ],
+  "sessions": [
+    {
+      "date": "2026-04-08",
+      "topic": "AI Security: Threats to LLM Systems",
+      "duration": "3 hours",
+      "mode": "Live online"
+    },
+    {
+      "date": "2026-04-15",
+      "topic": "Cyber Security: Zero Trust in Practice",
+      "duration": "4 hours",
+      "mode": "On-site / hybrid"
+    },
+    {
+      "date": "2026-04-22",
+      "topic": "Cloud: Well-Architected Review Lab",
+      "duration": "Full day",
+      "mode": "Live online"
+    },
+    {
+      "date": "2026-04-29",
+      "topic": "Financial Marketing: Compliant Campaign Design",
+      "duration": "3 hours",
+      "mode": "Live online"
+    }
+  ],
+  "curriculum": [
+    {
+      "phase": "Foundation",
+      "description": "Shared vocabulary, risk context, and tooling setup across all four domains.",
+      "milestones": ["Security & cloud fundamentals", "Regulatory landscape primer", "Lab environment access"]
+    },
+    {
+      "phase": "Core skills",
+      "description": "Domain-deep modules with exercises aligned to your catalog courses.",
+      "milestones": ["AI & cloud security controls", "Identity & detection basics", "Marketing compliance checkpoints"]
+    },
+    {
+      "phase": "Applied capstone",
+      "description": "Cross-domain scenario: ship a cloud-hosted AI feature with security and marketing sign-off.",
+      "milestones": ["Architecture review", "Control mapping", "Stakeholder briefing"]
+    }
+  ],
+  "resources": [
+    {
+      "title": "Session notes (PDF)",
+      "type": "Notes",
+      "status": "placeholder",
+      "href": "#"
+    },
+    {
+      "title": "Reading list & standards index",
+      "type": "Links",
+      "status": "placeholder",
+      "href": "#"
+    },
+    {
+      "title": "Recorded sessions (2026 Q2)",
+      "type": "Recordings",
+      "status": "placeholder",
+      "href": "#"
+    },
+    {
+      "title": "Lab starter templates",
+      "type": "Downloads",
+      "status": "placeholder",
+      "href": "#"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Clear, pragmatic framing of AI risks—we reused the threat model in our SOC review the same week.",
+      "name": "Priya S.",
+      "role": "Head of Security, FinTech"
+    },
+    {
+      "quote": "Cloud labs were the best part; our architects finally aligned on naming and tagging.",
+      "name": "Jordan L.",
+      "role": "Engineering Manager"
+    },
+    {
+      "quote": "Marketing + compliance module gave us a checklist we could hand to legal.",
+      "name": "Elena R.",
+      "role": "CMO, Regional Bank"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who should attend?",
+      "a": "Security engineers, cloud architects, product/engineering leads, and marketing leaders in regulated industries—or anyone building a cross-functional training program."
+    },
+    {
+      "q": "Are sessions recorded?",
+      "a": "Recordings are provided where policy allows; placeholders in Resources will be replaced with links after each cohort."
+    },
+    {
+      "q": "Do I need cloud accounts?",
+      "a": "Labs use sandbox-friendly patterns; you may use provided shared tenants or your own (with admin approval)."
+    },
+    {
+      "q": "Can this scale to a full LMS later?",
+      "a": "Yes. Content is data-driven from JSON; you can swap in an API, auth, and progress tracking without rewriting the page structure."
+    }
+  ],
+  "footer": {
+    "company": "Enterprise Skills Academy",
+    "address": "Remote-first · Workshops worldwide",
+    "copyrightYear": 2026
+  }
+}

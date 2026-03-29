@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional training in AI Security, Cyber Security, Cloud Computing, and Financial Marketing Management." />
+    <title>Enterprise Skills Academy — Training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['DM Sans', 'system-ui', 'sans-serif'],
+              display: ['Instrument Serif', 'Georgia', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .card-surface {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.95));
+      }
+      .dark .card-surface {
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.92));
+      }
+      .hero-mesh {
+        background-color: #0f172a;
+        background-image:
+          radial-gradient(at 40% 20%, rgba(14, 165, 233, 0.25) 0px, transparent 50%),
+          radial-gradient(at 80% 0%, rgba(99, 102, 241, 0.2) 0px, transparent 45%),
+          radial-gradient(at 0% 80%, rgba(16, 185, 129, 0.12) 0px, transparent 45%);
+      }
+    </style>
+  </head>
+  <body class="font-sans text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-slate-950 antialiased">
+    <div id="config-error" class="hidden bg-amber-100 dark:bg-amber-950/50 text-amber-900 dark:text-amber-200 text-sm px-4 py-3 text-center border-b border-amber-200 dark:border-amber-800">
+      <strong>Tip:</strong> JSON did not load (common with <code class="text-xs bg-amber-200/50 dark:bg-amber-900/40 px-1 rounded">file://</code>).
+      Run a local server from this folder, e.g. <code class="text-xs bg-amber-200/50 dark:bg-amber-900/40 px-1 rounded">python3 -m http.server 8080</code> — then open
+      <code class="text-xs bg-amber-200/50 dark:bg-amber-900/40 px-1 rounded">http://localhost:8080</code>. Fallback sample data is shown until then.
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+        <a href="#home" class="font-display text-xl text-slate-900 dark:text-white tracking-tight" id="nav-brand">Training</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
+          <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">About</a>
+          <a href="#courses" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Courses</a>
+          <a href="#schedule" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Schedule</a>
+          <a href="#curriculum" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Curriculum</a>
+          <a href="#resources" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Resources</a>
+          <a href="#register" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Register</a>
+          <a href="#faq" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            id="theme-toggle"
+            class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon-light hidden" aria-hidden="true">☀️</span>
+            <span class="theme-icon-dark" aria-hidden="true">🌙</span>
+          </button>
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-4 space-y-3 text-sm font-medium">
+        <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300">About</a>
+        <a href="#courses" class="block py-2 text-slate-700 dark:text-slate-300">Courses</a>
+        <a href="#schedule" class="block py-2 text-slate-700 dark:text-slate-300">Schedule</a>
+        <a href="#curriculum" class="block py-2 text-slate-700 dark:text-slate-300">Curriculum</a>
+        <a href="#resources" class="block py-2 text-slate-700 dark:text-slate-300">Resources</a>
+        <a href="#register" class="block py-2 text-slate-700 dark:text-slate-300">Register</a>
+        <a href="#faq" class="block py-2 text-slate-700 dark:text-slate-300">FAQ</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section id="home" class="hero-mesh text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28 lg:py-32">
+          <p class="text-sky-300/90 text-sm font-semibold tracking-widest uppercase mb-4">Enterprise learning</p>
+          <h1 id="hero-title" class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight max-w-3xl">Loading…</h1>
+          <p id="hero-tagline" class="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed"></p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#schedule"
+              id="hero-primary-cta"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm shadow-lg shadow-sky-900/30 transition-colors"
+              >Schedule</a
+            >
+            <a
+              href="#courses"
+              id="hero-secondary-cta"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
+              >Courses</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">About the trainer</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12">Profile and contact are driven by <code class="text-sm bg-slate-200/80 dark:bg-slate-800 px-1.5 py-0.5 rounded">config/data.json</code> for easy updates.</p>
+          <div class="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+            <div class="lg:col-span-1 flex flex-col items-center lg:items-start">
+              <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-slate-200 dark:bg-slate-800">
+                <img id="trainer-photo" src="" alt="" class="w-full h-full object-cover" width="224" height="224" />
+                <div id="trainer-photo-placeholder" class="hidden absolute inset-0 flex items-center justify-center bg-gradient-to-br from-sky-600 to-indigo-700 text-white text-4xl font-display font-normal" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="lg:col-span-2 space-y-6">
+              <div>
+                <h3 id="trainer-name" class="text-2xl font-semibold text-slate-900 dark:text-white"></h3>
+                <p id="trainer-role" class="text-sky-600 dark:text-sky-400 font-medium mt-1"></p>
+              </div>
+              <p id="trainer-bio" class="text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+              <div>
+                <h4 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wide mb-3">Credentials</h4>
+                <ul id="trainer-credentials" class="space-y-2 text-sm text-slate-700 dark:text-slate-300"></ul>
+              </div>
+              <div class="flex flex-wrap gap-3 pt-2">
+                <a id="social-linkedin" href="#" class="hidden text-sm font-medium px-4 py-2 rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">LinkedIn</a>
+                <a id="social-twitter" href="#" class="hidden text-sm font-medium px-4 py-2 rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">X</a>
+                <a id="social-github" href="#" class="hidden text-sm font-medium px-4 py-2 rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">GitHub</a>
+                <a id="social-website" href="#" class="hidden text-sm font-medium px-4 py-2 rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">Website</a>
+              </div>
+              <div class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 grid sm:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span class="text-slate-500 dark:text-slate-500 block text-xs uppercase tracking-wide mb-1">Email</span>
+                  <a id="contact-email" href="#" class="text-sky-600 dark:text-sky-400 font-medium break-all hover:underline"></a>
+                </div>
+                <div>
+                  <span class="text-slate-500 dark:text-slate-500 block text-xs uppercase tracking-wide mb-1">Phone</span>
+                  <a id="contact-phone" href="#" class="text-slate-900 dark:text-white font-medium hover:text-sky-600 dark:hover:text-sky-400"></a>
+                </div>
+                <div class="sm:col-span-2">
+                  <span class="text-slate-500 dark:text-slate-500 block text-xs uppercase tracking-wide mb-1">WhatsApp</span>
+                  <a id="contact-whatsapp" href="#" class="text-emerald-600 dark:text-emerald-400 font-medium hover:underline hidden"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses -->
+      <section id="courses" class="py-16 sm:py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Course catalog</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12">Four domains. Expand or reorder courses in JSON for future LMS modules.</p>
+          <div id="course-grid" class="grid sm:grid-cols-2 gap-6 lg:gap-8"></div>
+        </div>
+      </section>
+
+      <!-- Schedule -->
+      <section id="schedule" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Session schedule</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-10">Dates, topics, duration, and delivery mode — all from data file.</p>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200/80 dark:border-slate-700/80 card-surface shadow-sm">
+            <table class="w-full text-left text-sm min-w-[640px]">
+              <thead class="bg-slate-100/80 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 font-semibold">
+                <tr>
+                  <th class="py-3 px-4 rounded-tl-2xl">Date</th>
+                  <th class="py-3 px-4">Topic</th>
+                  <th class="py-3 px-4">Duration</th>
+                  <th class="py-3 px-4 rounded-tr-2xl">Mode</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curriculum -->
+      <section id="curriculum" class="py-16 sm:py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Learning path</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12">Phased curriculum you can map to credentials or badges later.</p>
+          <div id="curriculum-path" class="max-w-2xl"></div>
+        </div>
+      </section>
+
+      <!-- Resources -->
+      <section id="resources" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Resources</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12">Notes, links, and recordings — replace placeholders in JSON when assets are ready.</p>
+          <div id="resources-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+        </div>
+      </section>
+
+      <!-- Registration -->
+      <section id="register" class="py-16 sm:py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div>
+              <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Registration</h2>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Frontend-only form: submits are logged to the browser console. Wire this to your CRM, email service, or LMS when you add a backend.
+              </p>
+            </div>
+            <div class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8 shadow-sm">
+              <div id="reg-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 text-sm font-medium">
+                Thanks — your details were captured locally (see browser console). Connect an endpoint to persist registrations.
+              </div>
+              <form id="registration-form" class="space-y-5">
+                <div>
+                  <label for="reg-name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Full name</label>
+                  <input required type="text" id="reg-name" name="name" autocomplete="name" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2.5 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" />
+                </div>
+                <div>
+                  <label for="reg-email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Work email</label>
+                  <input required type="email" id="reg-email" name="email" autocomplete="email" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2.5 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" />
+                </div>
+                <div>
+                  <label for="reg-org" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Organization</label>
+                  <input type="text" id="reg-org" name="organization" autocomplete="organization" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2.5 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" />
+                </div>
+                <div>
+                  <label for="reg-course" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Primary interest</label>
+                  <select id="reg-course" name="interest" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2.5 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none">
+                    <option value="ai-security">AI Security</option>
+                    <option value="cyber-security">Cyber Security</option>
+                    <option value="cloud-computing">Cloud Computing</option>
+                    <option value="financial-marketing">Financial Marketing Management</option>
+                    <option value="multiple">Multiple domains</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="reg-notes" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Goals (optional)</label>
+                  <textarea id="reg-notes" name="goals" rows="3" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2.5 text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none resize-y"></textarea>
+                </div>
+                <button type="submit" class="w-full sm:w-auto inline-flex justify-center px-8 py-3 rounded-xl bg-slate-900 dark:bg-sky-600 text-white font-semibold text-sm hover:bg-slate-800 dark:hover:bg-sky-500 transition-colors">Submit interest</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">What participants say</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-12">Editable quotes in JSON.</p>
+          <div id="testimonials-grid" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="py-16 sm:py-24 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">FAQ</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-10">Common questions — update copy in <code class="text-sm bg-slate-200/80 dark:bg-slate-800 px-1.5 py-0.5 rounded">config/data.json</code>.</p>
+          <div id="faq-list" class="space-y-3"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div>
+          <p id="footer-company" class="font-display text-lg text-slate-900 dark:text-white"></p>
+          <p id="footer-address" class="text-sm text-slate-600 dark:text-slate-400 mt-1"></p>
+          <a id="footer-email" href="#" class="text-sm text-sky-600 dark:text-sky-400 mt-2 inline-block hover:underline"></a>
+        </div>
+        <p id="footer-copy" class="text-xs text-slate-500 dark:text-slate-500"></p>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
