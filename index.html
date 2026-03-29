@@ -216,12 +216,13 @@
             <div>
               <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Registration</h2>
               <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Frontend-only form: submits are logged to the browser console. Wire this to your CRM, email service, or LMS when you add a backend.
+                Submit your interest below. Deliveries use <a href="https://web3forms.com" class="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">Web3Forms</a> (configure your access key in <code class="text-sm bg-slate-200/80 dark:bg-slate-800 px-1.5 py-0.5 rounded">config/data.json</code>).
               </p>
             </div>
             <div class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8 shadow-sm">
+              <div id="reg-error" class="hidden mb-6 p-4 rounded-xl bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 text-sm font-medium" role="alert"></div>
               <div id="reg-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 text-sm font-medium">
-                Thanks — your details were captured locally (see browser console). Connect an endpoint to persist registrations.
+                Thanks — we received your details. You will hear back soon.
               </div>
               <form id="registration-form" class="space-y-5">
                 <div>

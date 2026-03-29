@@ -5,6 +5,10 @@
     "primaryCta": "View schedule",
     "secondaryCta": "Explore courses"
   },
+  "registration": {
+    "notifyEmail": "your-email@example.com",
+    "web3formsAccessKey": "YOUR_WEB3FORMS_ACCESS_KEY"
+  },
   "trainer": {
     "name": "Mr. xxxxxx",
     "title": "Principal Security & Cloud Instructor",

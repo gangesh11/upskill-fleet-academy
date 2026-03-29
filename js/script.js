@@ -160,6 +160,10 @@
         a: 'Yes. Content is data-driven from JSON; you can swap in an API, auth, and progress tracking without rewriting the page structure.',
       },
     ],
+    registration: {
+      notifyEmail: 'your-email@example.com',
+      web3formsAccessKey: 'YOUR_WEB3FORMS_ACCESS_KEY',
+    },
     footer: {
       company: 'Enterprise Skills Academy',
       address: 'Remote-first · Workshops worldwide',
@@ -470,17 +474,92 @@
     });
   }
 
+  const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+
   function initRegistrationForm() {
     const form = $('#registration-form');
+    const successEl = $('#reg-success');
+    const errorEl = $('#reg-error');
     if (!form) return;
-    form.addEventListener('submit', (e) => {
+
+    function hideRegMessages() {
+      successEl?.classList.add('hidden');
+      errorEl?.classList.add('hidden');
+    }
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      hideRegMessages();
+
+      const reg = data?.registration && typeof data.registration === 'object' ? data.registration : {};
+      const accessKey =
+        typeof reg.web3formsAccessKey === 'string' ? reg.web3formsAccessKey.trim() : '';
+      const keyMissing =
+        !accessKey ||
+        accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY';
+
       const fd = new FormData(form);
-      const payload = Object.fromEntries(fd.entries());
-      console.log('Registration (frontend only):', payload);
-      $('#reg-success')?.classList.remove('hidden');
-      form.reset();
-      setTimeout(() => $('#reg-success')?.classList.add('hidden'), 8000);
+      const name = String(fd.get('name') || '').trim();
+      const email = String(fd.get('email') || '').trim();
+      const organization = String(fd.get('organization') || '').trim();
+      const interest = String(fd.get('interest') || '').trim();
+      const goals = String(fd.get('goals') || '').trim();
+
+      if (keyMissing) {
+        if (errorEl) {
+          errorEl.textContent =
+            'Registration email is not set up yet. Replace registration.web3formsAccessKey in config/data.json with your key from web3forms.com (free). Update registration.notifyEmail there for your own records.';
+          errorEl.classList.remove('hidden');
+        }
+        return;
+      }
+
+      const messageBody = [
+        `Name: ${name}`,
+        `Work email: ${email}`,
+        `Organization: ${organization || '—'}`,
+        `Primary interest: ${interest}`,
+        `Goals: ${goals || '—'}`,
+        `Notify target (config): ${reg.notifyEmail || '—'}`,
+      ].join('\n');
+
+      const siteTitle = data?.site?.title || 'Training site';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch(WEB3FORMS_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: `Registration interest — ${siteTitle}`,
+            name,
+            email,
+            message: messageBody,
+            replyto: email,
+            from_name: name,
+          }),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || json.success === false) {
+          throw new Error(json.message || 'Submission failed');
+        }
+        successEl?.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => successEl?.classList.add('hidden'), 8000);
+      } catch {
+        if (errorEl) {
+          errorEl.textContent =
+            'Could not send your registration. Please try again or contact us using the email on this page.';
+          errorEl.classList.remove('hidden');
+        }
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 
