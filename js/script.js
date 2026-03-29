@@ -16,32 +16,52 @@
       title: 'Enterprise Skills Academy',
       tagline:
         'Expert-led training in AI Security, Cyber Security, Cloud, and Financial Marketing',
+      seoDescription:
+        'Enterprise Skills Academy — expert-led workshops in AI security, cyber security, cloud, and financial marketing for enterprise teams.',
+      audience:
+        'Built for security engineers, cloud architects, product leads, and marketing leaders in regulated industries.',
       primaryCta: 'View schedule',
       secondaryCta: 'Explore courses',
     },
-    trainer: {
-      name: 'Dr. Alex Morgan',
-      title: 'Principal Security & Cloud Instructor',
-      bio: '15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.',
-      shortBio: 'Security architect, cloud strategist, and hands-on instructor for enterprise teams.',
-      profileImage: 'assets/trainer.jpg',
-      contact: {
-        email: 'training@example.com',
-        phone: '+1 (555) 010-2030',
-        whatsapp: '+15550102030',
+    trainers: [
+      {
+        name: 'Dr. Alex Morgan',
+        title: 'Principal Security & Cloud Instructor',
+        bio: '15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.',
+        shortBio: 'Security architect, cloud strategist, and hands-on instructor for enterprise teams.',
+        profileImage: 'assets/trainer.jpg',
+        contact: {
+          email: 'training@example.com',
+          phone: '+1 (555) 010-2030',
+          whatsapp: '+15550102030',
+        },
+        social: {
+          linkedin: 'https://www.linkedin.com/in/example',
+          twitter: 'https://twitter.com/example',
+          github: 'https://github.com/example',
+          website: 'https://example.com',
+        },
+        credentials: [
+          'CISSP, CCSP',
+          'AWS & Azure Solutions Architect',
+          'Former ISO 27001 lead implementer',
+        ],
       },
-      social: {
-        linkedin: 'https://www.linkedin.com/in/example',
-        twitter: 'https://twitter.com/example',
-        github: 'https://github.com/example',
-        website: 'https://example.com',
+      {
+        name: 'Jordan Lee',
+        title: 'Co-instructor',
+        bio: 'Second trainer bio — replace in config/data.json under trainers[1].',
+        shortBio: '',
+        profileImage: '',
+        contact: {
+          email: '',
+          phone: '',
+          whatsapp: '',
+        },
+        social: {},
+        credentials: ['Industry certifications'],
       },
-      credentials: [
-        'CISSP, CCSP',
-        'AWS & Azure Solutions Architect',
-        'Former ISO 27001 lead implementer',
-      ],
-    },
+    ],
     courses: [
       {
         id: 'ai-security',
@@ -234,80 +254,217 @@
   function renderHero() {
     $('#hero-title').textContent = data.site?.title || '';
     $('#hero-tagline').textContent = data.site?.tagline || '';
+    const aud = $('#hero-audience');
+    const audienceText = data.site?.audience;
+    if (aud) {
+      if (typeof audienceText === 'string' && audienceText.trim()) {
+        aud.textContent = audienceText.trim();
+        aud.classList.remove('hidden');
+      } else {
+        aud.textContent = '';
+        aud.classList.add('hidden');
+      }
+    }
     const p = $('#hero-primary-cta');
     const s = $('#hero-secondary-cta');
     if (p) p.textContent = data.site?.primaryCta || 'Schedule';
     if (s) s.textContent = data.site?.secondaryCta || 'Courses';
   }
 
-  function renderTrainer() {
-    const t = data.trainer;
-    if (!t) return;
-    $('#trainer-name').textContent = t.name || '';
-    $('#trainer-role').textContent = t.title || '';
-    $('#trainer-bio').textContent = t.bio || '';
-    const img = $('#trainer-photo');
-    const ph = $('#trainer-photo-placeholder');
-    if (img) {
-      img.alt = t.name ? `Photo of ${t.name}` : 'Trainer';
-      if (t.profileImage) {
-        img.style.display = '';
-        img.src = t.profileImage;
-        if (ph) ph.classList.add('hidden');
-        img.onerror = function () {
-          this.style.display = 'none';
-          if (ph) {
-            ph.textContent = initialsFromName(t.name);
-            ph.classList.remove('hidden');
-          }
-        };
-      } else {
-        img.style.display = 'none';
-        if (ph) {
-          ph.textContent = initialsFromName(t.name);
-          ph.classList.remove('hidden');
-        }
-      }
+  function setNamedMeta(name, content) {
+    let el = document.querySelector(`meta[name="${name}"]`);
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute('name', name);
+      document.head.appendChild(el);
     }
-    const cred = $('#trainer-credentials');
-    if (cred && Array.isArray(t.credentials)) {
-      cred.innerHTML = t.credentials
-        .map((c) => `<li class="flex gap-2"><span class="text-sky-600 dark:text-sky-400">✓</span>${escapeHtml(c)}</li>`)
-        .join('');
+    el.setAttribute('content', content);
+  }
+
+  function setPropertyMeta(property, content) {
+    let el = document.querySelector(`meta[property="${property}"]`);
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute('property', property);
+      document.head.appendChild(el);
     }
-    const email = $('#contact-email');
-    const phone = $('#contact-phone');
-    const wa = $('#contact-whatsapp');
-    if (email) {
-      email.textContent = t.contact?.email || '';
-      email.href = t.contact?.email ? `mailto:${t.contact.email}` : '#';
+    el.setAttribute('content', content);
+  }
+
+  function applySeoMeta() {
+    const site = data?.site || {};
+    const titleBase = typeof site.title === 'string' && site.title.trim() ? site.title.trim() : 'Training site';
+    const title = `${titleBase} — Training`;
+    const desc =
+      (typeof site.seoDescription === 'string' && site.seoDescription.trim()) ||
+      (typeof site.tagline === 'string' && site.tagline.trim()) ||
+      'Expert-led enterprise training.';
+    document.title = title;
+    setNamedMeta('description', desc);
+
+    const pageUrl = window.location.href.split('#')[0];
+    let linkCanon = document.querySelector('link[rel="canonical"]');
+    if (!linkCanon) {
+      linkCanon = document.createElement('link');
+      linkCanon.setAttribute('rel', 'canonical');
+      document.head.appendChild(linkCanon);
     }
-    if (phone) {
-      phone.textContent = t.contact?.phone || '';
-      phone.href = t.contact?.phone ? `tel:${t.contact.phone.replace(/\s/g, '')}` : '#';
+    linkCanon.setAttribute('href', pageUrl);
+
+    const ogPath =
+      typeof site.ogImage === 'string' && site.ogImage.trim() ? site.ogImage.trim() : 'assets/favicon.svg';
+    let ogImageUrl = pageUrl;
+    try {
+      ogImageUrl = new URL(ogPath, pageUrl).href;
+    } catch {
+      /* keep pageUrl */
     }
-    if (wa) {
-      wa.textContent = t.contact?.whatsapp ? 'WhatsApp' : '';
-      const num = (t.contact?.whatsapp || '').replace(/\D/g, '');
-      wa.href = num ? `https://wa.me/${num}` : '#';
-      wa.classList.toggle('hidden', !num);
+
+    setPropertyMeta('og:type', 'website');
+    setPropertyMeta('og:title', title);
+    setPropertyMeta('og:description', desc);
+    setPropertyMeta('og:url', pageUrl);
+    setPropertyMeta('og:image', ogImageUrl);
+
+    setNamedMeta('twitter:card', 'summary_large_image');
+    setNamedMeta('twitter:title', title);
+    setNamedMeta('twitter:description', desc);
+    setNamedMeta('twitter:image', ogImageUrl);
+  }
+
+  function normalizeTrainers(d) {
+    if (!d || typeof d !== 'object') return [];
+    if (Array.isArray(d.trainers) && d.trainers.length) {
+      return d.trainers.filter((x) => x && typeof x === 'object');
     }
-    const social = t.social || {};
-    const map = [
-      ['social-linkedin', social.linkedin, 'LinkedIn'],
-      ['social-twitter', social.twitter, 'X / Twitter'],
-      ['social-github', social.github, 'GitHub'],
-      ['social-website', social.website, 'Website'],
+    if (d.trainer && typeof d.trainer === 'object') return [d.trainer];
+    return [];
+  }
+
+  function renderTrainerSocialRow(social) {
+    const s = social && typeof social === 'object' ? social : {};
+    const items = [
+      ['LinkedIn', s.linkedin],
+      ['X', s.twitter],
+      ['GitHub', s.github],
+      ['Website', s.website],
     ];
-    map.forEach(([id, url, label]) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      if (url) {
-        el.href = url;
-        el.classList.remove('hidden');
-        el.setAttribute('aria-label', label);
-      } else el.classList.add('hidden');
+    return items
+      .filter(([, url]) => typeof url === 'string' && url.trim())
+      .map(
+        ([label, url]) =>
+          `<a href="${escapeHtml(url.trim())}" class="text-sm font-medium px-4 py-2 rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" rel="noopener noreferrer" target="_blank">${escapeHtml(label)}</a>`
+      )
+      .join('');
+  }
+
+  function renderTrainerCard(t, i) {
+    const namePlain = typeof t.name === 'string' ? t.name : '';
+    const name = escapeHtml(namePlain);
+    const title = escapeHtml(t.title || '');
+    const bio = escapeHtml(t.bio || '');
+    const credHtml = (Array.isArray(t.credentials) ? t.credentials : [])
+      .filter((c) => c != null && String(c).trim())
+      .map((c) => `<li class="flex gap-2"><span class="text-sky-600 dark:text-sky-400">✓</span>${escapeHtml(String(c))}</li>`)
+      .join('');
+    const email = (t.contact?.email && String(t.contact.email).trim()) || '';
+    const phone = (t.contact?.phone && String(t.contact.phone).trim()) || '';
+    const waRaw = (t.contact?.whatsapp && String(t.contact.whatsapp).trim()) || '';
+    const waNum = waRaw.replace(/\D/g, '');
+    const emailId = i === 0 && email ? ' id="contact-email"' : '';
+    const emailCell = email
+      ? `<a${emailId} href="mailto:${escapeHtml(email)}" class="text-sky-600 dark:text-sky-400 font-medium break-all hover:underline">${escapeHtml(email)}</a>`
+      : '<span class="text-slate-400">—</span>';
+    const phoneCell = phone
+      ? `<a href="tel:${escapeHtml(phone.replace(/\s/g, ''))}" class="text-slate-900 dark:text-white font-medium hover:text-sky-600 dark:hover:text-sky-400">${escapeHtml(phone)}</a>`
+      : '<span class="text-slate-400">—</span>';
+    const waCell = waNum
+      ? `<a href="https://wa.me/${escapeHtml(waNum)}" class="text-emerald-600 dark:text-emerald-400 font-medium hover:underline">WhatsApp</a>`
+      : '<span class="text-slate-400">—</span>';
+    const imgSrc = (t.profileImage && String(t.profileImage).trim()) || '';
+    const initials = escapeHtml(initialsFromName(namePlain));
+    const socialRow = renderTrainerSocialRow(t.social);
+    const topRule = i > 0 ? 'pt-16 mt-16 border-t border-slate-200/80 dark:border-slate-800/80' : '';
+    const imgVisible = imgSrc ? '' : ' hidden';
+    const phHidden = imgSrc ? 'hidden ' : '';
+
+    return `
+      <div class="trainer-card ${topRule}" data-trainer-index="${i}">
+        <div class="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+          <div class="lg:col-span-1 flex flex-col items-center lg:items-start">
+            <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-slate-200 dark:bg-slate-800">
+              <img src="${imgSrc ? escapeHtml(imgSrc) : ''}" alt="${escapeHtml(namePlain ? `Photo of ${namePlain}` : 'Trainer')}" class="trainer-photo w-full h-full object-cover${imgVisible}" width="224" height="224" />
+              <div class="${phHidden}trainer-photo-ph absolute inset-0 flex items-center justify-center bg-gradient-to-br from-sky-600 to-indigo-700 text-white text-4xl font-display font-normal" aria-hidden="true">${initials}</div>
+            </div>
+          </div>
+          <div class="lg:col-span-2 space-y-6">
+            <div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">${name}</h3>
+              <p class="text-sky-600 dark:text-sky-400 font-medium mt-1">${title}</p>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${bio}</p>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wide mb-3">Credentials</h4>
+              <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">${credHtml || '<li class="text-slate-500">—</li>'}</ul>
+            </div>
+            ${socialRow ? `<div class="flex flex-wrap gap-3 pt-2">${socialRow}</div>` : ''}
+            <div class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 grid sm:grid-cols-2 gap-4 text-sm">
+              <div>
+                <span class="text-slate-500 dark:text-slate-500 block text-xs uppercase tracking-wide mb-1">Email</span>
+                ${emailCell}
+              </div>
+              <div>
+                <span class="text-slate-500 dark:text-slate-500 block text-xs uppercase tracking-wide mb-1">Phone</span>
+                ${phoneCell}
+              </div>
+              <div class="sm:col-span-2">
+                <span class="text-slate-500 dark:text-slate-500 block text-xs uppercase tracking-wide mb-1">WhatsApp</span>
+                ${waCell}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function bindTrainerImages(root) {
+    root.querySelectorAll('.trainer-card').forEach((card) => {
+      const img = card.querySelector('.trainer-photo');
+      const ph = card.querySelector('.trainer-photo-ph');
+      if (!img || !ph) return;
+      const src = (img.getAttribute('src') || '').trim();
+      if (!src) {
+        img.classList.add('hidden');
+        ph.classList.remove('hidden');
+        return;
+      }
+      img.addEventListener('error', function () {
+        this.classList.add('hidden');
+        ph.classList.remove('hidden');
+      });
     });
+  }
+
+  function renderTrainers() {
+    const host = $('#trainers-root');
+    if (!host) return;
+    const list = normalizeTrainers(data);
+    if (!list.length) {
+      host.innerHTML = '';
+      return;
+    }
+    host.innerHTML = list.map((t, i) => renderTrainerCard(t, i)).join('');
+    bindTrainerImages(host);
+
+    const regFollow = $('#reg-success-followup');
+    if (regFollow) {
+      const primary = list[0];
+      const em = primary?.contact?.email;
+      const emStr = typeof em === 'string' ? em.trim() : '';
+      regFollow.textContent = emStr
+        ? `If you do not see a reply within a few days, check your spam folder or email us at ${emStr}.`
+        : 'If you do not receive a reply, check your spam folder or use the contact details in the About section.';
+    }
   }
 
   function renderCourses() {
@@ -434,7 +591,8 @@
     if (!f) return;
     $('#footer-company').textContent = f.company || '';
     $('#footer-address').textContent = f.address || '';
-    const t = data.trainer;
+    const trainers = normalizeTrainers(data);
+    const t = trainers[0];
     if (t?.contact?.email) {
       const fe = $('#footer-email');
       fe.textContent = t.contact.email;
@@ -524,8 +682,13 @@
       ].join('\n');
 
       const siteTitle = data?.site?.title || 'Training site';
-      const submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
+      const submitBtn = $('#reg-submit-btn') || form.querySelector('button[type="submit"]');
+      const defaultBtnLabel = (submitBtn && submitBtn.textContent.trim()) || 'Submit interest';
+      form.setAttribute('aria-busy', 'true');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
 
       try {
         const res = await fetch(WEB3FORMS_URL, {
@@ -558,7 +721,11 @@
           errorEl.classList.remove('hidden');
         }
       } finally {
-        if (submitBtn) submitBtn.disabled = false;
+        form.removeAttribute('aria-busy');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = defaultBtnLabel;
+        }
       }
     });
   }
@@ -587,7 +754,7 @@
 
     renderNav();
     renderHero();
-    renderTrainer();
+    renderTrainers();
     renderCourses();
     renderSessions();
     renderCurriculum();
@@ -595,6 +762,7 @@
     renderTestimonials();
     renderFaq();
     renderFooter();
+    applySeoMeta();
     initSmoothNav();
     initMobileNav();
     initRegistrationForm();

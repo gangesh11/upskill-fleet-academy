@@ -1,6 +1,6 @@
 # Enterprise Skills Academy — static training site
 
-Local-first, no backend. Content is driven by **`config/data.json`** (trainer, courses, sessions, curriculum, resources, testimonials, FAQ, footer). The registration form sends submissions to your inbox via [Web3Forms](https://web3forms.com), which works on **GitHub Pages** without your own server.
+Local-first, no backend. Content is driven by **`config/data.json`** (`trainers`, courses, sessions, curriculum, resources, testimonials, FAQ, footer). The registration form sends submissions to your inbox via [Web3Forms](https://web3forms.com), which works on **GitHub Pages** without your own server.
 
 ## Folder structure
 
@@ -12,7 +12,9 @@ ed-training-site/
 ├── config/
 │   └── data.json       # Edit all copy, structured content, and registration keys
 ├── assets/
-│   └── trainer.jpg     # Optional: add your profile image (path in JSON)
+│   ├── favicon.svg     # Tab / bookmark icon (referenced from index.html)
+│   ├── trainer.jpg     # Optional: first trainer photo (`trainers[0].profileImage`)
+│   └── trainer2.jpg    # Optional: second trainer photo (`trainers[1].profileImage`)
 ├── LICENSE             # Copyright and usage terms
 └── README.md
 ```
@@ -37,8 +39,8 @@ If you open `index.html` directly, the page still works using built-in fallback 
 
 ## Customize site content
 
-1. **Trainer** — In `config/data.json`, edit `trainer` (`name`, `bio`, `contact`, `social`, `profileImage`). Set `profileImage` to a path under `assets/` (e.g. `"assets/trainer.jpg"`).
-2. **Site & footer** — `site` and `footer` objects.
+1. **Trainers** — In `config/data.json`, edit the **`trainers`** array. Each entry supports the same fields (`name`, `title`, `bio`, `contact`, `social`, `credentials`, `profileImage`). Add or remove array items for more/fewer profiles. Legacy single-object **`trainer`** is still read if **`trainers`** is omitted.
+2. **Site & footer** — `site` and `footer` objects. Optional `site` fields: **`seoDescription`** (search/social description), **`audience`** (“who it’s for” line under the hero), **`ogImage`** (path for Open Graph preview image; defaults to `assets/favicon.svg`).
 3. **Courses / schedule / etc.** — Arrays `courses`, `sessions`, `curriculum`, `resources`, `testimonials`, `faq`.
 
 ---

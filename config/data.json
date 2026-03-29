@@ -1,37 +1,63 @@
 {
   "site": {
     "title": "Upskill Fleet Academy",
-    "tagline": "Expert-led training in AI Security, Cyber Security, Cloud, and Financial Marketing",
+    "tagline": "Expert-led training in AI Security, Cyber Security, Cloud, and Financial Marketing Management",
+    "seoDescription": "Upskill Fleet Academy — Expert-led Workshops/Seminars/Guest Lectures in AI Security, Cyber Security, Cloud, and Financial Marketing Management for Students/Professionals.",
+    "audience": "Built for Students/Professionals looking to upskill in AI Security, Cyber Security, Cloud, and Financial Marketing Management.",
     "primaryCta": "View schedule",
     "secondaryCta": "Explore courses"
   },
   "registration": {
-    "notifyEmail": "your-email@example.com",
-    "web3formsAccessKey": "YOUR_WEB3FORMS_ACCESS_KEY"
+    "notifyEmail": "xxxxxx",
+    "web3formsAccessKey": "5665456456456456456456456456456456456456456456456456456456456456"
   },
-  "trainer": {
-    "name": "Mr. xxxxxx",
-    "title": "Principal Security & Cloud Instructor",
-    "bio": "15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.",
-    "shortBio": "Security architect, cloud strategist, and hands-on instructor for enterprise teams.",
-    "profileImage": "assets/trainer.jpg",
-    "contact": {
-      "email": "xxxxxx",
-      "phone": "xxxxxx",
-      "whatsapp": "xxxxxx"
+  "trainers": [
+    {
+      "name": "Mr. Gangesh Vats",
+      "title": "Principal Security & Cloud Instructor",
+      "bio": "18+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.",
+      "shortBio": "Security architect, cloud strategist, and hands-on instructor for enterprise teams.",
+      "profileImage": "assets/trainer.jpg",
+      "contact": {
+        "email": "xxxxxx",
+        "phone": "xxxxxx",
+        "whatsapp": "xxxxxx"
+      },
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/example",
+        "twitter": "https://twitter.com/example",
+        "github": "https://github.com/example",
+        "website": "https://example.com"
+      },
+      "credentials": [
+        "CISSP, CCSP",
+        "AWS & Azure Solutions Architect",
+        "Former ISO 27001 lead implementer"
+      ]
     },
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/example",
-      "twitter": "https://twitter.com/example",
-      "github": "https://github.com/example",
-      "website": "https://example.com"
-    },
-    "credentials": [
-      ", CCSP",
-      "AWS & Azure Solutions Architect",
-      "Former ISO 27001 lead implementer"
-    ]
-  },
+    {
+      "name": "Ms. Manju Vats",
+      "title": "Co-instructor / Guest expert",
+      "bio": "15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.",
+      "shortBio": "Security architect, cloud strategist, and hands-on instructor for enterprise teams.",
+      "profileImage": "assets/trainer.jpg",
+      "contact": {
+        "email": "xxxxxx",
+        "phone": "xxxxxx",
+        "whatsapp": "xxxxxx"
+      },
+      "social": {
+        "linkedin": "",
+        "twitter": "",
+        "github": "",
+        "website": ""
+      },
+      "credentials": [
+        "Add credential or certification",
+        "Second line optional"
+      ]
+    }
+  ],
   "courses": [
     {
       "id": "ai-security",
