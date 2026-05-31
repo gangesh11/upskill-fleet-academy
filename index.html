@@ -74,12 +74,10 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <a href="#home" class="font-display text-xl text-slate-900 dark:text-white tracking-tight" id="nav-brand">Training</a>
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
-          <a href="#domains" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Domains</a>
+          <a href="#paths" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Paths</a>
+          <a href="#masterclasses" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Masterclasses</a>
+          <a href="#upcoming-sessions" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Sessions</a>
           <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Instructors</a>
-          <a href="#courses" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Programs</a>
-          <a href="#schedule" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Schedule</a>
-          <a href="#curriculum" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Curriculum</a>
-          <a href="#resources" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Resources</a>
           <a href="#register" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Register</a>
           <a href="#faq" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">FAQ</a>
         </nav>
@@ -106,12 +104,10 @@
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-4 space-y-3 text-sm font-medium">
-        <a href="#domains" class="block py-2 text-slate-700 dark:text-slate-300">Domains</a>
+        <a href="#paths" class="block py-2 text-slate-700 dark:text-slate-300">Paths</a>
+        <a href="#masterclasses" class="block py-2 text-slate-700 dark:text-slate-300">Masterclasses</a>
+        <a href="#upcoming-sessions" class="block py-2 text-slate-700 dark:text-slate-300">Sessions</a>
         <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300">Instructors</a>
-        <a href="#courses" class="block py-2 text-slate-700 dark:text-slate-300">Programs</a>
-        <a href="#schedule" class="block py-2 text-slate-700 dark:text-slate-300">Schedule</a>
-        <a href="#curriculum" class="block py-2 text-slate-700 dark:text-slate-300">Curriculum</a>
-        <a href="#resources" class="block py-2 text-slate-700 dark:text-slate-300">Resources</a>
         <a href="#register" class="block py-2 text-slate-700 dark:text-slate-300">Register</a>
         <a href="#faq" class="block py-2 text-slate-700 dark:text-slate-300">FAQ</a>
       </div>
@@ -121,10 +117,11 @@
       <!-- Home -->
       <section id="home" class="hero-mesh text-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28">
-          <p id="hero-eyebrow" class="text-sky-300/90 text-sm font-semibold tracking-widest uppercase mb-4">Enterprise Security & AI Learning</p>
+          <p id="hero-eyebrow" class="text-sky-300/90 text-sm font-semibold tracking-widest uppercase mb-4">Enterprise AI, Cyber Security & Cloud Learning</p>
           <h1 id="hero-headline" class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight max-w-3xl">Loading…</h1>
           <p id="hero-subheading" class="mt-5 text-lg sm:text-xl text-slate-200 max-w-2xl leading-relaxed"></p>
-          <p id="hero-supporting" class="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed"></p>
+          <p id="hero-tags" class="hidden mt-4 text-xs sm:text-sm text-sky-300/90 font-medium tracking-wide"></p>
+          <p id="hero-supporting" class="hidden mt-4 text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed"></p>
           <div class="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#courses"
@@ -133,10 +130,10 @@
               >Explore Programs</a
             >
             <a
-              href="#schedule"
+              href="#upcoming-sessions"
               id="hero-secondary-cta"
               class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
-              >View Schedule</a
+              >Upcoming Sessions</a
             >
             <a
               href="#register"
@@ -145,6 +142,32 @@
               >Register Interest</a
             >
           </div>
+        </div>
+      </section>
+
+      <!-- Trust metrics -->
+      <section id="trust" class="py-12 sm:py-16 border-b border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 id="trust-title" class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white mb-8 text-center">Why Professionals Learn With Us</h2>
+          <div id="trust-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+        </div>
+      </section>
+
+      <!-- Audience paths -->
+      <section id="paths" class="py-14 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 id="paths-title" class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">Choose Your Learning Path</h2>
+          <p id="paths-intro" class="text-slate-600 dark:text-slate-400 max-w-2xl mb-10"></p>
+          <div id="paths-grid" class="grid sm:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- Learning formats -->
+      <section id="formats" class="py-14 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 id="formats-title" class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">Learning Formats</h2>
+          <p id="formats-intro" class="text-slate-600 dark:text-slate-400 max-w-2xl mb-10"></p>
+          <div id="formats-grid" class="grid sm:grid-cols-2 gap-6 max-w-4xl"></div>
         </div>
       </section>
 
@@ -175,12 +198,30 @@
         </div>
       </section>
 
-      <!-- Programs -->
+      <!-- Programs catalog -->
       <section id="courses" class="py-16 sm:py-24 bg-slate-100/50 dark:bg-slate-900/30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 id="courses-title" class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Course catalog</h2>
+          <h2 id="courses-title" class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Learning Path Catalog</h2>
           <p id="courses-intro" class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12"></p>
           <div id="course-grid" class="grid gap-8 max-w-4xl"></div>
+        </div>
+      </section>
+
+      <!-- Masterclasses -->
+      <section id="masterclasses" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Masterclasses</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12">Focused orientation sessions—ideal lead-ins to explore a track before a full bootcamp.</p>
+          <div id="masterclasses-grid" class="grid sm:grid-cols-2 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- Bootcamps -->
+      <section id="bootcamps" class="py-16 sm:py-24 bg-slate-100/50 dark:bg-slate-900/30 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Bootcamps</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12">Structured programs with labs, scenarios, and implementation focus—positioned as premium deep dives.</p>
+          <div id="bootcamps-grid" class="grid sm:grid-cols-2 gap-6"></div>
         </div>
       </section>
 
@@ -193,7 +234,38 @@
         </div>
       </section>
 
-      <!-- Schedule -->
+      <!-- Testimonials -->
+      <section id="testimonials" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <p id="testimonials-brand" class="font-display text-4xl sm:text-5xl lg:text-6xl text-sky-600 dark:text-sky-400 mb-4 tracking-tight">Upskill Fleet Academy</p>
+          <h2 id="testimonials-title" class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">What participants say</h2>
+          <p id="testimonials-intro" class="text-slate-600 dark:text-slate-400 mb-12 max-w-2xl"></p>
+          <div id="testimonials-grid" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- Upcoming sessions highlight -->
+      <section id="upcoming-sessions" class="py-16 sm:py-24 bg-sky-50/80 dark:bg-sky-950/20 border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 id="upcoming-title" class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Upcoming Sessions</h2>
+          <p id="upcoming-intro" class="text-slate-600 dark:text-slate-400 mb-8 max-w-2xl"></p>
+          <div class="overflow-x-auto rounded-2xl border border-sky-200/80 dark:border-sky-800/50 card-surface shadow-sm">
+            <table class="w-full text-left text-sm min-w-[520px]">
+              <thead class="bg-sky-100/80 dark:bg-sky-900/30 text-slate-600 dark:text-slate-400 font-semibold">
+                <tr>
+                  <th class="py-3 px-4 rounded-tl-2xl">Date</th>
+                  <th class="py-3 px-4">Session</th>
+                  <th class="py-3 px-4">Format</th>
+                  <th class="py-3 px-4 rounded-tr-2xl">Registration</th>
+                </tr>
+              </thead>
+              <tbody id="upcoming-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Full schedule -->
       <section id="schedule" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Session schedule</h2>
@@ -294,13 +366,15 @@
         </div>
       </section>
 
-      <!-- Testimonials -->
-      <section id="testimonials" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-          <p id="testimonials-brand" class="font-display text-4xl sm:text-5xl lg:text-6xl text-sky-600 dark:text-sky-400 mb-4 tracking-tight">Upskill Fleet Academy</p>
-          <h2 id="testimonials-title" class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">What participants say</h2>
-          <p id="testimonials-intro" class="text-slate-600 dark:text-slate-400 mb-12 max-w-2xl"></p>
-          <div id="testimonials-grid" class="grid md:grid-cols-3 gap-6"></div>
+      <!-- Final CTA -->
+      <section id="final-cta" class="py-16 sm:py-24 hero-mesh text-white border-b border-slate-800/80">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <h2 id="final-cta-title" class="font-display text-3xl sm:text-4xl mb-4">Start Your Learning Journey</h2>
+          <p id="final-cta-body" class="text-slate-300 leading-relaxed mb-8"></p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a id="final-cta-primary" href="#courses" class="inline-flex px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm transition-colors">Explore Programs</a>
+            <a id="final-cta-secondary" href="#register" class="inline-flex px-6 py-3 rounded-xl border border-white/25 hover:bg-white/10 text-white font-semibold text-sm transition-colors">Register Interest</a>
+          </div>
         </div>
       </section>
 
