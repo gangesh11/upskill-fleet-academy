@@ -48,7 +48,7 @@
   },
   "registration": {
     "notifyEmail": "vatsmanju2@gmail.com",
-    "web3formsAccessKey": "1223d4db-a647-41cc-9783-1456d98add43"
+    "web3formsAccessKey": "5665456456456456456456456456456456456456456456456456456456456456"
   },
   "trainers": [
     {
@@ -59,7 +59,7 @@
       "bioSecondary": "Having worked across large-scale enterprise environments, I bring practical insights that help learners understand how security is implemented in real organizations—not just in textbooks.",
       "shortBio": "Security architect and hands-on instructor for enterprise teams and students.",
       "profileImage": "",
-      "credentialsLabel": "Certifications",
+      "credentialsLabel": "Credentials",
       "teachTopicsLabel": "What You'll Learn",
       "teachTopics": [
         "Enterprise Cloud Security",
@@ -81,10 +81,9 @@
         "website": ""
       },
       "credentials": [
-        "Certified AI Security Professional (CAISP)",
-        "AWS Certified Solutions Architect – Professional",
-        "AWS Certified Security – Specialty",
-        "HashiCorp Terraform Associate",
+        "CAISP",
+        "AWS Architect Pro & Specialty",
+        "Terraform Associate",
         "Generative & Agentic AI Security Practitioner"
       ]
     },
