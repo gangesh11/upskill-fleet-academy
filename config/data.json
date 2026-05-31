@@ -1,50 +1,105 @@
 {
   "site": {
     "title": "Upskill Fleet Academy",
-    "tagline": "Expert-led training in AI Security, Cyber Security, Cloud, and Financial Marketing Management",
-    "seoDescription": "Upskill Fleet Academy — Expert-led Workshops/Seminars/Guest Lectures in AI Security, Cyber Security, Cloud, and Financial Marketing Management for Students/Professionals.",
-    "audience": "Built for Students/Professionals looking to upskill in AI Security, Cyber Security, Cloud, and Financial Marketing Management.",
-    "primaryCta": "View schedule",
-    "secondaryCta": "Explore courses"
+    "heroEyebrow": "Enterprise Security & AI Learning",
+    "heroHeadline": "Build Real-World Skills in AI Security, Cybersecurity & Cloud Security",
+    "heroSubheading": "Expert-led, hands-on training designed for students, security professionals, cloud engineers, and technology leaders looking to advance their careers.",
+    "heroSupporting": "Learn through practical labs, real-world case studies, threat simulations, and industry best practices used by modern enterprises.",
+    "seoDescription": "Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets & Management. Practical labs, weekend cohorts, and career-oriented learning for students and professionals.",
+    "primaryCta": "Explore Programs",
+    "secondaryCta": "View Schedule",
+    "tertiaryCta": "Register Interest",
+    "scheduleNote": "Weekends only · live online. Master classes are 1 hour each (weekends 1–3 from 21 June 2026). Bootcamp is 12 hours total — 3 hours per weekend over four weekends.",
+    "aboutTitle": "Meet your instructors",
+    "aboutIntro": "Learn from experienced practitioners across security, cloud, AI, and financial markets—focused on real-world skills and career outcomes.",
+    "coursesTitle": "Course catalog",
+    "coursesIntro": "Three learning paths—AI & Cyber Security, AWS Cloud Computing, and Financial Markets & Management (FMM)—each structured from beginner to advanced.",
+    "guestFacultyIntro": "Our programs are supported by experienced professionals from security, cloud, AI, and financial services domains, bringing diverse industry perspectives into the classroom.",
+    "testimonialsBrand": "Upskill Fleet Academy",
+    "testimonialsTitle": "What participants say",
+    "testimonialsIntro": "Learner experiences from our AI & Cyber Security, AWS Cloud, and Financial Markets programs."
+  },
+  "learningDomains": [
+    { "icon": "🔐", "name": "AI & Cyber Security", "description": "AI security, LLMs, DevSecOps & cyber defense", "href": "#ai-cyber-security" },
+    { "icon": "☁️", "name": "AWS Cloud Computing", "description": "Cloud fundamentals to advanced AWS skills", "href": "#aws-cloud-computing" },
+    { "icon": "📈", "name": "Financial Markets & Management", "description": "Markets, investing & NISM/NCFM prep", "href": "#financial-markets" }
+  ],
+  "valueProposition": {
+    "title": "Why Learn With Us?",
+    "items": [
+      "Industry-focused curriculum aligned with current enterprise security challenges",
+      "Practical workshops and guided labs—not just theory",
+      "Learn from experienced practitioners working in cloud, AI, DevSecOps, and security engineering",
+      "Small cohorts with interactive discussions and mentoring",
+      "Career-oriented learning paths for students and professionals"
+    ]
+  },
+  "outcomes": {
+    "title": "What You'll Gain",
+    "intro": "By completing our programs, learners will:",
+    "items": [
+      "Understand real-world enterprise security practices",
+      "Build hands-on technical security skills",
+      "Strengthen cloud and AI security knowledge",
+      "Improve readiness for industry certifications",
+      "Gain practical experience through labs and projects",
+      "Enhance career opportunities in security and cloud roles"
+    ]
   },
   "registration": {
-    "notifyEmail": "xxxxxx",
+    "notifyEmail": "vatsmanju2@gmail.com",
     "web3formsAccessKey": "5665456456456456456456456456456456456456456456456456456456456456"
   },
   "trainers": [
     {
+      "sectionHeading": "Meet Your Lead Instructor",
       "name": "Mr. Gangesh Vats",
-      "title": "Principal Security & Cloud Instructor",
-      "bio": "18+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.",
-      "shortBio": "Security architect, cloud strategist, and hands-on instructor for enterprise teams.",
-      "profileImage": "assets/trainer.jpg",
+      "title": "Lead Instructor — AI, Cyber Security & Cloud Security",
+      "bio": "Security Architect and AI Security Professional with 20+ years of experience in cybersecurity, cloud security, platform security, DevSecOps, and enterprise risk management.",
+      "bioSecondary": "Having worked across large-scale enterprise environments, I bring practical insights that help learners understand how security is implemented in real organizations—not just in textbooks.",
+      "shortBio": "Security architect and hands-on instructor for enterprise teams and students.",
+      "profileImage": "",
+      "credentialsLabel": "Certifications",
+      "teachTopicsLabel": "What You'll Learn",
+      "teachTopics": [
+        "Enterprise Cloud Security",
+        "AI Security & Governance",
+        "DevSecOps Practices",
+        "Security Architecture",
+        "Threat Modeling",
+        "Compliance & Risk Management"
+      ],
       "contact": {
-        "email": "xxxxxx",
-        "phone": "xxxxxx",
-        "whatsapp": "xxxxxx"
+        "email": "vatsmanju2@gmail.com",
+        "phone": "9999753152",
+        "whatsapp": "9999753152"
       },
       "social": {
-        "linkedin": "https://www.linkedin.com/in/example",
-        "twitter": "https://twitter.com/example",
-        "github": "https://github.com/example",
-        "website": "https://example.com"
+        "linkedin": "https://www.linkedin.com/in/gangesh-vats11/",
+        "twitter": "",
+        "github": "",
+        "website": ""
       },
       "credentials": [
-        "CISSP, CCSP",
-        "AWS & Azure Solutions Architect",
-        "Former ISO 27001 lead implementer"
+        "Certified AI Security Professional (CAISP)",
+        "AWS Certified Solutions Architect – Professional",
+        "AWS Certified Security – Specialty",
+        "HashiCorp Terraform Associate",
+        "Generative & Agentic AI Security Practitioner"
       ]
     },
     {
+      "sectionHeading": "Financial Markets & Investment Faculty",
       "name": "Ms. Manju Vats",
-      "title": "Co-instructor / Guest expert",
-      "bio": "15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.",
-      "shortBio": "Security architect, cloud strategist, and hands-on instructor for enterprise teams.",
-      "profileImage": "assets/trainer.jpg",
+      "title": "Guest Instructor — Financial Markets & Management",
+      "bio": "Experienced financial markets professional with 15+ years of teaching and industry experience. Specializes in simplifying investment concepts, market operations, risk management, and financial literacy for students and working professionals.",
+      "shortBio": "Financial markets educator for students and professionals.",
+      "profileImage": "",
+      "credentialsLabel": "Areas of Expertise",
       "contact": {
-        "email": "xxxxxx",
-        "phone": "xxxxxx",
-        "whatsapp": "xxxxxx"
+        "email": "vatsmanju2@gmail.com",
+        "phone": "9999753152",
+        "whatsapp": "9999753152"
       },
       "social": {
         "linkedin": "",
@@ -53,106 +108,158 @@
         "website": ""
       },
       "credentials": [
-        "Add credential or certification",
-        "Second line optional"
+        "Financial Markets",
+        "Investment Fundamentals",
+        "Trading Concepts",
+        "Financial Planning",
+        "Risk Management",
+        "Financial Analysis",
+        "Financial Ethics"
       ]
     }
   ],
   "courses": [
     {
-      "id": "ai-security",
-      "domain": "AI Security",
-      "summary": "Secure design, deployment, and governance of AI systems in the enterprise.",
-      "topics": [
-        "Threat modeling for LLM pipelines",
-        "Data leakage & prompt injection mitigations",
-        "Model supply chain & third-party AI",
-        "Governance, audit, and responsible use"
-      ],
-      "level": "Intermediate",
-      "format": "Workshop + labs"
+      "id": "ai-cyber-security",
+      "domain": "AI & Cyber Security",
+      "summary": "Build practical AI security and cyber defense skills—from LLM fundamentals and DevSecOps-style controls to supply chain risk and AI governance.",
+      "level": "Beginner to Advanced",
+      "format": "Workshop · Hands-on Labs · Threat Scenarios · Case Studies",
+      "topicGroups": [
+        {
+          "level": "Beginner",
+          "topics": [
+            "Introduction to AI Security",
+            "Understanding LLMs & generative AI",
+            "Cyber security fundamentals & zero trust basics"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "topics": [
+            "AI attacks and defenses using DevSecOps",
+            "Prompt injection defense & LLM threat modeling",
+            "Identity, access management & security monitoring"
+          ]
+        },
+        {
+          "level": "Advanced",
+          "topics": [
+            "Supply chain attacks in AI",
+            "Governance and compliance in AI",
+            "Incident response for AI-enabled systems"
+          ]
+        }
+      ]
     },
     {
-      "id": "cyber-security",
-      "domain": "Cyber Security",
-      "summary": "Defense-in-depth, identity, and incident readiness for modern organizations.",
-      "topics": [
-        "Zero trust & identity-centric security",
-        "Detection, SIEM, and SOC fundamentals",
-        "Vulnerability management & patching",
-        "Incident response playbooks"
-      ],
-      "level": "Foundations to Intermediate",
-      "format": "Lecture + scenarios"
+      "id": "aws-cloud-computing",
+      "domain": "AWS Cloud Computing",
+      "summary": "Learn cloud computing on Amazon Web Services—from core concepts and IAM to EC2, networking, and enterprise-ready AWS practices.",
+      "level": "Beginner to Advanced",
+      "format": "Hands-on Labs · AWS Console Walkthroughs · Architecture Exercises",
+      "topicGroups": [
+        {
+          "level": "Beginner",
+          "topics": [
+            "What is cloud computing?",
+            "AWS global infrastructure & core service models (IaaS, PaaS, SaaS)"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "topics": [
+            "IAM — users, roles, policies & least privilege",
+            "Amazon EC2 — compute fundamentals & instance types"
+          ]
+        },
+        {
+          "level": "Advanced",
+          "topics": [
+            "VPC, networking & compute at scale",
+            "AWS security best practices & Well-Architected Framework"
+          ]
+        }
+      ]
     },
     {
-      "id": "cloud-computing",
-      "domain": "Cloud Computing",
-      "summary": "Architecture, cost, and operations across major cloud providers.",
+      "id": "financial-markets",
+      "domain": "Financial Markets & Management (FMM)",
+      "summary": "Understand financial markets, investment principles, and industry fundamentals through practical learning and certification-focused guidance.",
       "topics": [
-        "Well-architected patterns (IaaS/PaaS/SaaS)",
-        "Networking, IAM, and encryption",
-        "Cost optimization & FinOps basics",
-        "Hybrid and multi-cloud considerations"
+        "Introduction to Financial Markets",
+        "NISM & NCFM Certification Preparation",
+        "Stock Market Fundamentals",
+        "Trading Concepts & Market Orders",
+        "Demat Accounts & Brokers",
+        "Investment Planning & Wealth Creation",
+        "Risk Management",
+        "Financial Ethics & Compliance"
       ],
-      "level": "Intermediate",
-      "format": "Hands-on labs"
-    },
-    {
-      "id": "financial-marketing",
-      "domain": "Financial Marketing Management",
-      "summary": "Regulatory-aware marketing strategy for banks, fintech, and asset managers.",
-      "topics": [
-        "Product positioning & segment strategy",
-        "Compliance frameworks (marketing disclosures)",
-        "Digital channels & campaign measurement",
-        "Brand risk and stakeholder alignment"
-      ],
-      "level": "Professional",
-      "format": "Case studies + frameworks"
+      "idealFor": "College students, beginners in finance, aspiring investors, and working professionals exploring financial markets",
+      "level": "Beginner to Advanced",
+      "format": "Interactive Sessions · Practical Examples · Certification Guidance"
     }
   ],
   "sessions": [
     {
-      "date": "2026-04-08",
-      "topic": "AI Security: Threats to LLM Systems",
+      "date": "2026-06-21",
+      "topic": "Master Class — Weekend 1: AI Security & Cyber Security (orientation, threats, and zero-trust basics)",
+      "duration": "1 hour",
+      "mode": "Online only"
+    },
+    {
+      "date": "2026-06-28",
+      "topic": "Master Class — Weekend 2: AWS Cloud Computing (cloud fundamentals, IAM & EC2 overview)",
+      "duration": "1 hour",
+      "mode": "Online only"
+    },
+    {
+      "date": "2026-07-05",
+      "topic": "Master Class — Weekend 3: Financial Markets & Management (NISM & NCFM pathways)",
+      "duration": "1 hour",
+      "mode": "Online only"
+    },
+    {
+      "date": "2026-07-12",
+      "topic": "Bootcamp — Weekend 4: Full-module kickoff & shared foundations (all three learning paths)",
       "duration": "3 hours",
-      "mode": "Live online"
+      "mode": "Online only"
     },
     {
-      "date": "2026-04-15",
-      "topic": "Cyber Security: Zero Trust in Practice",
-      "duration": "4 hours",
-      "mode": "On-site / hybrid"
-    },
-    {
-      "date": "2026-04-22",
-      "topic": "Cloud: Well-Architected Review Lab",
-      "duration": "Full day",
-      "mode": "Live online"
-    },
-    {
-      "date": "2026-04-29",
-      "topic": "Financial Marketing: Compliant Campaign Design",
+      "date": "2026-07-19",
+      "topic": "Bootcamp — Weekend 5: AI Security & Cyber Security (labs, threat modeling, incident playbooks)",
       "duration": "3 hours",
-      "mode": "Live online"
+      "mode": "Online only"
+    },
+    {
+      "date": "2026-07-26",
+      "topic": "Bootcamp — Weekend 6: AWS Cloud Computing (IAM, EC2, VPC & networking labs)",
+      "duration": "3 hours",
+      "mode": "Online only"
+    },
+    {
+      "date": "2026-08-02",
+      "topic": "Bootcamp — Weekend 7: Financial Markets capstone & integrated review",
+      "duration": "3 hours",
+      "mode": "Online only"
     }
   ],
   "curriculum": [
     {
-      "phase": "Foundation",
-      "description": "Shared vocabulary, risk context, and tooling setup across all four domains.",
-      "milestones": ["Security & cloud fundamentals", "Regulatory landscape primer", "Lab environment access"]
+      "phase": "Master classes",
+      "description": "Three focused weekend sessions introduce AI/Cyber, AWS Cloud, and Financial Markets tracks before the intensive bootcamp.",
+      "milestones": ["1-hour live master class per track", "Orientation to labs and cohort tools", "Choose your primary learning path"]
     },
     {
-      "phase": "Core skills",
-      "description": "Domain-deep modules with exercises aligned to your catalog courses.",
-      "milestones": ["AI & cloud security controls", "Identity & detection basics", "Marketing compliance checkpoints"]
+      "phase": "Bootcamp",
+      "description": "Four weekends of applied learning—3 hours each—for hands-on skills across security, cloud, AI, and financial markets.",
+      "milestones": ["AI/Cyber security labs & threat modeling", "AWS cloud hands-on exercises", "FMM scenarios and certification guidance"]
     },
     {
-      "phase": "Applied capstone",
-      "description": "Cross-domain scenario: ship a cloud-hosted AI feature with security and marketing sign-off.",
-      "milestones": ["Architecture review", "Control mapping", "Stakeholder briefing"]
+      "phase": "Career outcomes",
+      "description": "Build portfolio-ready skills, certification readiness, and confidence to advance in security, cloud, or financial markets roles.",
+      "milestones": ["Practical project artifacts", "Certification prep checkpoints", "Mentoring and next-step planning"]
     }
   ],
   "resources": [
@@ -169,7 +276,7 @@
       "href": "#"
     },
     {
-      "title": "Recorded sessions (2026 Q2)",
+      "title": "Recorded sessions (2026 cohort)",
       "type": "Recordings",
       "status": "placeholder",
       "href": "#"
@@ -183,42 +290,45 @@
   ],
   "testimonials": [
     {
-      "quote": "Clear, pragmatic framing of AI risks—we reused the threat model in our SOC review the same week.",
-      "name": "Priya S.",
-      "role": "Head of Security, FinTech"
+      "quote": "The AI security labs turned abstract risks into skills I could use immediately. Threat modeling for LLMs went from intimidating to practical—I applied the framework the same week.",
+      "role": "AI & Cyber Security track"
     },
     {
-      "quote": "Cloud labs were the best part; our architects finally aligned on naming and tagging.",
-      "name": "Jordan L.",
-      "role": "Engineering Manager"
+      "quote": "I started with almost no cloud background. The AWS path made IAM, EC2, and networking build on each other naturally. The hands-on exercises felt like real work, not theory.",
+      "role": "AWS Cloud Computing track"
     },
     {
-      "quote": "Marketing + compliance module gave us a checklist we could hand to legal.",
-      "name": "Elena R.",
-      "role": "CMO, Regional Bank"
+      "quote": "Financial markets finally clicked. NISM concepts, market orders, and risk were explained clearly—exactly what I needed as someone new to investing.",
+      "role": "Financial Markets & Management track"
     }
   ],
   "faq": [
     {
-      "q": "Who should attend?",
-      "a": "Security engineers, cloud architects, product/engineering leads, and marketing leaders in regulated industries—or anyone building a cross-functional training program."
+      "q": "Who should enroll?",
+      "a": "Students and professionals pursuing careers in AI security, cybersecurity, AWS cloud computing, or financial markets. The AI & Cyber and AWS tracks suit engineers and security practitioners; the FMM track suits learners preparing for NISM/NCFM and investment fundamentals."
+    },
+    {
+      "q": "When and how are sessions delivered?",
+      "a": "The current cohort runs on weekends only, live online, starting 21 June 2026. The first three weekends are 1-hour master classes (one per focus area). Weekends four through seven are a 12-hour bootcamp—3 hours each weekend—covering the full module."
+    },
+    {
+      "q": "Are technology and finance tracks separate?",
+      "a": "Yes. AI & Cyber Security and AWS Cloud Computing are technology & security programs. Financial Markets & Management (FMM) is a separate track with its own instructor and certification-oriented content."
     },
     {
       "q": "Are sessions recorded?",
-      "a": "Recordings are provided where policy allows; placeholders in Resources will be replaced with links after each cohort."
+      "a": "Recordings are provided where policy allows; links will be added under Resources after each cohort."
     },
     {
-      "q": "Do I need cloud accounts?",
-      "a": "Labs use sandbox-friendly patterns; you may use provided shared tenants or your own (with admin approval)."
-    },
-    {
-      "q": "Can this scale to a full LMS later?",
-      "a": "Yes. Content is data-driven from JSON; you can swap in an API, auth, and progress tracking without rewriting the page structure."
+      "q": "Do I need cloud accounts for labs?",
+      "a": "Most labs use open-source tools you can run locally or in our guided lab setup—no paid cloud subscription is required to start. When a session needs cloud resources (for example AWS Cloud Computing labs), we will say so in advance; you may create an AWS free-tier account only if required for that lab. If you use your own cloud account or company environment, follow your organization's policies and obtain admin approval where needed."
     }
   ],
   "footer": {
-    "company": "Enterprise Skills Academy",
-    "address": "Remote-first · Workshops worldwide",
+    "company": "Upskill Fleet Academy",
+    "tagline": "Practical learning. Industry experience. Career growth.",
+    "closing": "Whether you're starting your journey in technology or advancing into specialized security or financial markets roles, our programs are designed to help you build skills that matter in today's AI-driven world.",
+    "address": "Remote-first · Weekend online cohorts",
     "copyrightYear": 2026
   }
 }
