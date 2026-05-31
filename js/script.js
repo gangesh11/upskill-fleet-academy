@@ -956,7 +956,6 @@
       const name = String(fd.get('name') || '').trim();
       const email = String(fd.get('email') || '').trim();
       const phone = String(fd.get('phone') || '').trim();
-      const organization = String(fd.get('organization') || '').trim();
       const interest = String(fd.get('interest') || '').trim();
       const goals = String(fd.get('goals') || '').trim();
 
@@ -972,11 +971,9 @@
       const messageBody = [
         `Name: ${name}`,
         `Email: ${email}`,
-        `Phone: ${phone}`,
-        `Organization: ${organization || '—'}`,
+        `Phone number: ${phone}`,
         `Primary interest: ${interest}`,
         `Goals: ${goals || '—'}`,
-        `Notify target (config): ${reg.notifyEmail || '—'}`,
       ].join('\n');
 
       const siteTitle = data?.site?.title || 'Training site';
@@ -1000,6 +997,10 @@
             subject: `Registration interest — ${siteTitle}`,
             name,
             email,
+            phone,
+            'Phone number': phone,
+            'Primary interest': interest,
+            Goals: goals || '—',
             message: messageBody,
             replyto: email,
             from_name: name,
