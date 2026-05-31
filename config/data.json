@@ -1,23 +1,88 @@
 {
   "site": {
     "title": "Upskill Fleet Academy",
-    "heroEyebrow": "Enterprise Security & AI Learning",
-    "heroHeadline": "Build Real-World Skills in AI Security, Cybersecurity & Cloud Security",
-    "heroSubheading": "Expert-led, hands-on training designed for students, security professionals, cloud engineers, and technology leaders looking to advance their careers.",
-    "heroSupporting": "Learn through practical labs, real-world case studies, threat simulations, and industry best practices used by modern enterprises.",
-    "seoDescription": "Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets & Management. Practical labs, weekend cohorts, and career-oriented learning for students and professionals.",
+    "heroEyebrow": "Enterprise AI, Cyber Security & Cloud Learning",
+    "heroHeadline": "Build Practical Skills That Modern Organizations Need",
+    "heroSubheading": "Hands-on programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets—designed for students and aspiring professionals & enthusiasts.",
+    "heroTags": "Workshop-Based · Industry-Focused · Real-World Scenarios",
+    "heroSupporting": "",
+    "seoDescription": "Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets. Practical labs, weekend cohorts, and career-oriented learning.",
     "primaryCta": "Explore Programs",
-    "secondaryCta": "View Schedule",
+    "secondaryCta": "Upcoming Sessions",
     "tertiaryCta": "Register Interest",
-    "scheduleNote": "Weekends only · live online. Master classes are 1-hour orientations (weekends 1–3 from 21 June 2026). Bootcamp is 8 hours total — 2 hours each weekend over four weekends (weekends 4–7).",
+    "scheduleNote": "Weekends only · live online. Master classes are 1–2 hour orientations (weekends 1–3 from 21 June 2026). Bootcamp is 8 hours total — 2 hours each weekend over four weekends (weekends 4–7).",
     "aboutTitle": "Meet your instructors",
     "aboutIntro": "Learn from experienced practitioners across security, cloud, AI, and financial markets—focused on real-world skills and career outcomes.",
-    "coursesTitle": "Course catalog",
-    "coursesIntro": "Three learning paths—AI & Cyber Security, AWS Cloud Computing, and Financial Markets & Management (FMM)—each structured from beginner to advanced.",
+    "coursesTitle": "Learning Path Catalog",
+    "coursesIntro": "Core tracks from beginner to advanced—choose AI & Cyber, AWS Cloud, or Financial Markets & Management.",
     "guestFacultyIntro": "Our programs are supported by experienced professionals from security, cloud, AI, and financial services domains, bringing diverse industry perspectives into the classroom.",
     "testimonialsBrand": "Upskill Fleet Academy",
     "testimonialsTitle": "What participants say",
     "testimonialsIntro": "Learner experiences from our AI & Cyber Security, AWS Cloud, and Financial Markets programs."
+  },
+  "trustMetrics": {
+    "title": "Why Professionals Learn With Us",
+    "items": [
+      { "value": "20+", "label": "Years Industry Experience" },
+      { "value": "5+", "label": "Learning Domains — Technology, Security, AI, Cloud & Finance" },
+      { "value": "Hands-On", "label": "Labs — Practical learning beyond theory" },
+      { "value": "Cert-Ready", "label": "Pathways aligned with industry certifications" }
+    ]
+  },
+  "audiencePaths": {
+    "title": "Choose Your Learning Path",
+    "intro": "Not sure where to start? Pick the path that matches your goals.",
+    "items": [
+      {
+        "title": "Students & Beginners",
+        "description": "Build foundations in Cyber Security, Cloud, AI, and Financial Markets with guided, beginner-friendly sessions.",
+        "href": "#courses"
+      },
+      {
+        "title": "Aspiring Professionals & Enthusiasts",
+        "description": "Upskill with practical, enterprise-focused security and cloud programs designed for real-world application.",
+        "href": "#masterclasses"
+      },
+      {
+        "title": "Career Advancers",
+        "description": "Advanced learning in AI Security, DevSecOps, governance, cloud security, and certification-oriented FMM tracks.",
+        "href": "#bootcamps"
+      }
+    ]
+  },
+  "learningFormats": {
+    "title": "Learning Formats",
+    "intro": "Start with a masterclass orientation, then deepen skills in a structured bootcamp.",
+    "formats": [
+      {
+        "name": "Masterclasses",
+        "badge": "Lead-in",
+        "description": "Short, focused sessions for orientation—program overview, learning path, and cohort intro.",
+        "duration": "1–2 hours",
+        "detail": "Live interactive sessions · Ideal as a first step before committing to a full track"
+      },
+      {
+        "name": "Bootcamps",
+        "badge": "Deep dive",
+        "description": "Structured multi-weekend programs with guided labs, scenarios, and practical exercises.",
+        "duration": "Weekend cohorts · 2 hrs/session",
+        "detail": "Interactive implementation focus · Current cohort: 8 hours over four weekends after masterclasses"
+      }
+    ]
+  },
+  "upcomingHighlight": {
+    "title": "Upcoming Sessions",
+    "intro": "June 2026 weekend cohort — live online. Register interest to reserve your seat.",
+    "registerLabel": "Register",
+    "registerHref": "#register"
+  },
+  "finalCta": {
+    "title": "Start Your Learning Journey",
+    "body": "Whether you're entering technology, advancing your security career, or exploring financial markets, our programs provide practical knowledge, industry insights, and hands-on learning experiences.",
+    "primaryCta": "Explore Programs",
+    "primaryHref": "#courses",
+    "secondaryCta": "Register Interest",
+    "secondaryHref": "#register"
   },
   "learningDomains": [
     { "icon": "🔐", "name": "AI & Cyber Security", "description": "AI security, LLMs, DevSecOps & cyber defense", "href": "#ai-cyber-security" },
@@ -38,14 +103,151 @@
     "title": "What You'll Gain",
     "intro": "By completing our programs, learners will:",
     "items": [
-      "Understand real-world enterprise security practices",
-      "Build hands-on technical security skills",
-      "Strengthen cloud and AI security knowledge",
-      "Improve readiness for industry certifications",
-      "Gain practical experience through labs and projects",
-      "Enhance career opportunities in security and cloud roles"
+      "Practical industry knowledge you can apply immediately",
+      "Hands-on implementation experience through labs and scenarios",
+      "Real-world security and cloud concepts used in enterprises",
+      "Exposure to enterprise use cases and decision-making patterns",
+      "Career-oriented learning pathways across technology and finance",
+      "Confidence with emerging technologies including AI and LLMs",
+      "Better readiness for certifications and technical interviews"
     ]
   },
+  "masterclasses": [
+    {
+      "id": "mc-ai-security",
+      "badge": "Masterclass",
+      "title": "AI Security Fundamentals for Modern Enterprises",
+      "summary": "Understand how organizations secure Generative AI and LLM-powered applications while managing governance, privacy, and emerging security risks.",
+      "topics": [
+        "Introduction to AI Security",
+        "LLM Architecture Basics",
+        "Prompt Injection Risks",
+        "Data Leakage Threats",
+        "AI Governance",
+        "Responsible AI"
+      ],
+      "duration": "1–2 hours",
+      "format": "Live Interactive Session"
+    },
+    {
+      "id": "mc-cloud-security",
+      "badge": "Masterclass",
+      "title": "Cloud Security Essentials on AWS",
+      "summary": "A practical introduction to securing cloud workloads using AWS security building blocks and the shared responsibility model.",
+      "topics": [
+        "Shared Responsibility Model",
+        "IAM Fundamentals",
+        "Network Security",
+        "Logging & Monitoring",
+        "Security Best Practices",
+        "Common Cloud Misconfigurations"
+      ],
+      "duration": "1–2 hours",
+      "format": "Live Interactive Session"
+    },
+    {
+      "id": "mc-devsecops",
+      "badge": "Masterclass",
+      "title": "DevSecOps & Infrastructure Security Fundamentals",
+      "summary": "Learn how security integrates into modern software delivery—from secure SDLC to IaC and container security.",
+      "topics": [
+        "Secure SDLC",
+        "CI/CD Security",
+        "IaC Security",
+        "Terraform Security",
+        "Secrets Management",
+        "Container Security"
+      ],
+      "duration": "1–2 hours",
+      "format": "Live Interactive Session"
+    },
+    {
+      "id": "mc-fmm",
+      "badge": "Masterclass",
+      "title": "Introduction to Financial Markets & Investing",
+      "summary": "Build clarity on how markets work, key participants, and foundational investment concepts for students and beginners.",
+      "topics": [
+        "How Stock Markets Work",
+        "Demat Accounts",
+        "Market Participants",
+        "Investment Basics",
+        "Risk Management",
+        "Long-Term Wealth Creation"
+      ],
+      "duration": "1–2 hours",
+      "format": "Live Interactive Session"
+    }
+  ],
+  "bootcamps": [
+    {
+      "id": "bc-ai-security",
+      "badge": "Bootcamp",
+      "title": "Enterprise AI Security Bootcamp",
+      "summary": "Build and assess secure AI architectures using enterprise security principles—from LLM threats to governance.",
+      "duration": "6-week program structure",
+      "format": "Live Sessions + Labs + Case Studies",
+      "modules": [
+        "Week 1 — AI & LLM Foundations",
+        "Week 2 — Prompt Injection & Data Leakage",
+        "Week 3 — Model Security & Supply Chain Risks",
+        "Week 4 — AI Governance & Compliance",
+        "Week 5 — Threat Modeling for AI Systems"
+      ],
+      "outcome": "Build and assess secure AI architectures using enterprise security principles."
+    },
+    {
+      "id": "bc-cloud-security",
+      "badge": "Bootcamp",
+      "title": "AWS Cloud Security Bootcamp",
+      "summary": "Deep-dive AWS security across IAM, networking, monitoring, and compliance for production-ready skills.",
+      "duration": "8-week program structure",
+      "format": "Live Sessions + Hands-on Labs",
+      "modules": [
+        "AWS Security Fundamentals",
+        "IAM Deep Dive",
+        "Network Security",
+        "Logging & Monitoring",
+        "WAF & Application Security",
+        "Incident Response",
+        "Governance & Compliance"
+      ],
+      "outcome": "Design and evaluate secure AWS architectures aligned with Well-Architected practices."
+    },
+    {
+      "id": "bc-devsecops",
+      "badge": "Bootcamp",
+      "title": "DevSecOps & Platform Security Bootcamp",
+      "summary": "Integrate security across the delivery pipeline with practical labs on CI/CD, IaC, and cloud-native controls.",
+      "duration": "6-week program structure",
+      "format": "Live Sessions + Labs + Final Project",
+      "modules": [
+        "Secure SDLC",
+        "Git & CI/CD Security",
+        "Terraform Security",
+        "Container Security",
+        "Secrets Management",
+        "Cloud-Native Security",
+        "Capstone Project"
+      ],
+      "outcome": "Implement DevSecOps practices suitable for modern platform and engineering teams."
+    },
+    {
+      "id": "bc-fmm",
+      "badge": "Bootcamp",
+      "title": "Financial Markets & Investment Foundations Bootcamp",
+      "summary": "Structured progression from market basics to planning, analysis, and certification guidance.",
+      "duration": "4-week program structure",
+      "format": "Interactive Sessions + Practical Examples",
+      "modules": [
+        "Week 1 — Financial Markets Fundamentals",
+        "Week 2 — Trading & Market Operations",
+        "Week 3 — Investment Planning & Risk Management",
+        "Week 4 — Financial Analysis & Practical Investing",
+        "Bonus — NISM / NCFM Guidance Session"
+      ],
+      "outcome": "Understand markets, investment fundamentals, and certification pathways with practical confidence."
+    }
+  ],
   "registration": {
     "notifyEmail": "vatsmanju2@gmail.com",
     "web3formsAccessKey": "5665456456456456456456456456456456456456456456456456456456456456"
@@ -204,42 +406,56 @@
     {
       "date": "2026-06-21",
       "topic": "Master Class — Weekend 1: AI & Cyber Security (orientation — program overview, learning path & cohort intro)",
-      "duration": "1 hour",
+      "shortLabel": "AI & Cyber Security",
+      "sessionType": "Master Class",
+      "duration": "1–2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-06-28",
       "topic": "Master Class — Weekend 2: AWS Cloud Computing (orientation — track overview, AWS fundamentals preview & lab readiness)",
-      "duration": "1 hour",
+      "shortLabel": "AWS Cloud Computing",
+      "sessionType": "Master Class",
+      "duration": "1–2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-07-05",
       "topic": "Master Class — Weekend 3: Financial Markets & Management (orientation — FMM track overview & NISM/NCFM pathways)",
-      "duration": "1 hour",
+      "shortLabel": "Financial Markets & Management",
+      "sessionType": "Master Class",
+      "duration": "1–2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-07-12",
       "topic": "Bootcamp — Weekend 4: Program kickoff & shared foundations (all three learning paths, lab setup & cohort tools)",
+      "shortLabel": "Program Kickoff & Foundations",
+      "sessionType": "Bootcamp",
       "duration": "2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-07-19",
       "topic": "Bootcamp — Weekend 5: AI Security & Cyber Security (AI fundamentals, what is an LLM, LLM security threats & prevention, tools to secure your LLM, threat modeling labs, incident playbooks)",
+      "shortLabel": "AI Security & Cyber Security",
+      "sessionType": "Bootcamp",
       "duration": "2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-07-26",
       "topic": "Bootcamp — Weekend 6: AWS Cloud Computing (IAM, EC2, VPC & networking, AWS security basics, hands-on labs)",
+      "shortLabel": "AWS Cloud Computing",
+      "sessionType": "Bootcamp",
       "duration": "2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-08-02",
       "topic": "Bootcamp — Weekend 7: Financial Markets & capstone (market fundamentals, NISM/NCFM guidance, integrated review & next steps)",
+      "shortLabel": "Financial Markets Capstone",
+      "sessionType": "Bootcamp",
       "duration": "2 hours",
       "mode": "Online only"
     }
@@ -247,7 +463,7 @@
   "curriculum": [
     {
       "phase": "Master classes",
-      "description": "Three 1-hour orientation sessions introduce the AI/Cyber, AWS Cloud, and Financial Markets tracks before the bootcamp.",
+      "description": "Three 1–2 hour orientation sessions introduce the AI/Cyber, AWS Cloud, and Financial Markets tracks before the bootcamp.",
       "milestones": ["Orientation to each learning path", "Cohort intro and lab readiness", "Choose your primary track"]
     },
     {
@@ -289,16 +505,16 @@
   ],
   "testimonials": [
     {
-      "quote": "The AI security labs turned abstract risks into skills I could use immediately. Threat modeling for LLMs went from intimidating to practical—I applied the framework the same week.",
-      "role": "AI & Cyber Security track"
+      "quote": "The sessions were practical and focused on real-world enterprise security challenges rather than only theoretical concepts.",
+      "role": "Security Engineer"
     },
     {
-      "quote": "I started with almost no cloud background. The AWS path made IAM, EC2, and networking build on each other naturally. The hands-on exercises felt like real work, not theory.",
-      "role": "AWS Cloud Computing track"
+      "quote": "The cloud security workshops helped me understand architecture decisions, IAM strategies, and security best practices used in production environments.",
+      "role": "Cloud Professional"
     },
     {
-      "quote": "Financial markets finally clicked. NISM concepts, market orders, and risk were explained clearly—exactly what I needed as someone new to investing.",
-      "role": "Financial Markets & Management track"
+      "quote": "The learning path was beginner-friendly while still exposing us to industry-level concepts and tools.",
+      "role": "Student Learner"
     }
   ],
   "faq": [
@@ -308,7 +524,7 @@
     },
     {
       "q": "When and how are sessions delivered?",
-      "a": "The current cohort runs on weekends only, live online, starting 21 June 2026. The first three weekends are 1-hour master-class orientations (one per track). Weekends four through seven are an 8-hour bootcamp—2 hours each weekend—covering the full module."
+      "a": "The current cohort runs on weekends only, live online, starting 21 June 2026. The first three weekends are 1–2 hour master-class orientations (one per track). Weekends four through seven are an 8-hour bootcamp—2 hours each weekend—covering the full module."
     },
     {
       "q": "Are technology and finance tracks separate?",
