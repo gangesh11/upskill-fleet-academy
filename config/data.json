@@ -9,7 +9,7 @@
     "primaryCta": "Explore Programs",
     "secondaryCta": "View Schedule",
     "tertiaryCta": "Register Interest",
-    "scheduleNote": "Weekends only · live online. Master classes are 1 hour each (weekends 1–3 from 21 June 2026). Bootcamp is 12 hours total — 3 hours per weekend over four weekends.",
+    "scheduleNote": "Weekends only · live online. Master classes are 1-hour orientations (weekends 1–3 from 21 June 2026). Bootcamp is 8 hours total — 2 hours each weekend over four weekends (weekends 4–7).",
     "aboutTitle": "Meet your instructors",
     "aboutIntro": "Learn from experienced practitioners across security, cloud, AI, and financial markets—focused on real-world skills and career outcomes.",
     "coursesTitle": "Course catalog",
@@ -203,57 +203,57 @@
   "sessions": [
     {
       "date": "2026-06-21",
-      "topic": "Master Class — Weekend 1: AI Security & Cyber Security (orientation, threats, and zero-trust basics)",
+      "topic": "Master Class — Weekend 1: AI & Cyber Security (orientation — program overview, learning path & cohort intro)",
       "duration": "1 hour",
       "mode": "Online only"
     },
     {
       "date": "2026-06-28",
-      "topic": "Master Class — Weekend 2: AWS Cloud Computing (cloud fundamentals, IAM & EC2 overview)",
+      "topic": "Master Class — Weekend 2: AWS Cloud Computing (orientation — track overview, AWS fundamentals preview & lab readiness)",
       "duration": "1 hour",
       "mode": "Online only"
     },
     {
       "date": "2026-07-05",
-      "topic": "Master Class — Weekend 3: Financial Markets & Management (NISM & NCFM pathways)",
+      "topic": "Master Class — Weekend 3: Financial Markets & Management (orientation — FMM track overview & NISM/NCFM pathways)",
       "duration": "1 hour",
       "mode": "Online only"
     },
     {
       "date": "2026-07-12",
-      "topic": "Bootcamp — Weekend 4: Full-module kickoff & shared foundations (all three learning paths)",
-      "duration": "3 hours",
+      "topic": "Bootcamp — Weekend 4: Program kickoff & shared foundations (all three learning paths, lab setup & cohort tools)",
+      "duration": "2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-07-19",
-      "topic": "Bootcamp — Weekend 5: AI Security & Cyber Security (labs, threat modeling, incident playbooks)",
-      "duration": "3 hours",
+      "topic": "Bootcamp — Weekend 5: AI Security & Cyber Security (AI fundamentals, what is an LLM, LLM security threats & prevention, tools to secure your LLM, threat modeling labs, incident playbooks)",
+      "duration": "2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-07-26",
-      "topic": "Bootcamp — Weekend 6: AWS Cloud Computing (IAM, EC2, VPC & networking labs)",
-      "duration": "3 hours",
+      "topic": "Bootcamp — Weekend 6: AWS Cloud Computing (IAM, EC2, VPC & networking, AWS security basics, hands-on labs)",
+      "duration": "2 hours",
       "mode": "Online only"
     },
     {
       "date": "2026-08-02",
-      "topic": "Bootcamp — Weekend 7: Financial Markets capstone & integrated review",
-      "duration": "3 hours",
+      "topic": "Bootcamp — Weekend 7: Financial Markets & capstone (market fundamentals, NISM/NCFM guidance, integrated review & next steps)",
+      "duration": "2 hours",
       "mode": "Online only"
     }
   ],
   "curriculum": [
     {
       "phase": "Master classes",
-      "description": "Three focused weekend sessions introduce AI/Cyber, AWS Cloud, and Financial Markets tracks before the intensive bootcamp.",
-      "milestones": ["1-hour live master class per track", "Orientation to labs and cohort tools", "Choose your primary learning path"]
+      "description": "Three 1-hour orientation sessions introduce the AI/Cyber, AWS Cloud, and Financial Markets tracks before the bootcamp.",
+      "milestones": ["Orientation to each learning path", "Cohort intro and lab readiness", "Choose your primary track"]
     },
     {
       "phase": "Bootcamp",
-      "description": "Four weekends of applied learning—3 hours each—for hands-on skills across security, cloud, AI, and financial markets.",
-      "milestones": ["AI/Cyber security labs & threat modeling", "AWS cloud hands-on exercises", "FMM scenarios and certification guidance"]
+      "description": "Four weekends of applied learning—2 hours each (8 hours total)—with hands-on labs across AI/Cyber, AWS Cloud, and Financial Markets.",
+      "milestones": ["LLM security, threat modeling & playbooks", "AWS IAM, EC2 & networking labs", "FMM scenarios, NISM/NCFM guidance & capstone review"]
     },
     {
       "phase": "Career outcomes",
@@ -308,7 +308,7 @@
     },
     {
       "q": "When and how are sessions delivered?",
-      "a": "The current cohort runs on weekends only, live online, starting 21 June 2026. The first three weekends are 1-hour master classes (one per focus area). Weekends four through seven are a 12-hour bootcamp—3 hours each weekend—covering the full module."
+      "a": "The current cohort runs on weekends only, live online, starting 21 June 2026. The first three weekends are 1-hour master-class orientations (one per track). Weekends four through seven are an 8-hour bootcamp—2 hours each weekend—covering the full module."
     },
     {
       "q": "Are technology and finance tracks separate?",
