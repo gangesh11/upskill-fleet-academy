@@ -955,6 +955,7 @@
       const fd = new FormData(form);
       const name = String(fd.get('name') || '').trim();
       const email = String(fd.get('email') || '').trim();
+      const phone = String(fd.get('phone') || '').trim();
       const organization = String(fd.get('organization') || '').trim();
       const interest = String(fd.get('interest') || '').trim();
       const goals = String(fd.get('goals') || '').trim();
@@ -970,7 +971,8 @@
 
       const messageBody = [
         `Name: ${name}`,
-        `Work email: ${email}`,
+        `Email: ${email}`,
+        `Phone: ${phone}`,
         `Organization: ${organization || '—'}`,
         `Primary interest: ${interest}`,
         `Goals: ${goals || '—'}`,
