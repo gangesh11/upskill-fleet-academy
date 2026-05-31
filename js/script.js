@@ -13,15 +13,54 @@
   /** Mirrors config/data.json when fetch is blocked (e.g. file://). Keep in sync when editing JSON. */
   const FALLBACK_DATA = {
     site: {
-      title: 'Enterprise Skills Academy',
-      tagline:
-        'Expert-led training in AI Security, Cyber Security, Cloud, and Financial Marketing',
+      title: 'Upskill Fleet Academy',
+      heroEyebrow: 'Enterprise Security & AI Learning',
+      heroHeadline: 'Build Real-World Skills in AI Security, Cybersecurity & Cloud Security',
+      heroSubheading:
+        'Expert-led, hands-on training designed for students, security professionals, cloud engineers, and technology leaders looking to advance their careers.',
+      heroSupporting:
+        'Learn through practical labs, real-world case studies, threat simulations, and industry best practices used by modern enterprises.',
       seoDescription:
-        'Enterprise Skills Academy — expert-led workshops in AI security, cyber security, cloud, and financial marketing for enterprise teams.',
-      audience:
-        'Built for security engineers, cloud architects, product leads, and marketing leaders in regulated industries.',
-      primaryCta: 'View schedule',
-      secondaryCta: 'Explore courses',
+        'Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets & Management.',
+      primaryCta: 'Explore Programs',
+      secondaryCta: 'View Schedule',
+      tertiaryCta: 'Register Interest',
+      scheduleNote:
+        'Weekends only · live online. Master classes are 1 hour each (weekends 1–3 from 21 June 2026). Bootcamp is 12 hours total — 3 hours per weekend over four weekends.',
+      aboutTitle: 'Meet your instructors',
+      aboutIntro: 'Learn from experienced practitioners focused on real-world skills and career outcomes.',
+      coursesTitle: 'Course catalog',
+      coursesIntro:
+        'Three learning paths—AI & Cyber Security, AWS Cloud Computing, and FMM—each structured from beginner to advanced.',
+      guestFacultyIntro:
+        'Guest faculty bring financial markets and investment perspectives into the classroom.',
+    },
+    learningDomains: [
+      { icon: '🔐', name: 'AI & Cyber Security', description: 'AI security & cyber defense', href: '#ai-cyber-security' },
+      { icon: '☁️', name: 'AWS Cloud Computing', description: 'Cloud fundamentals to AWS', href: '#aws-cloud-computing' },
+      { icon: '📈', name: 'Financial Markets & Management', description: 'Markets & certifications', href: '#financial-markets' },
+    ],
+    valueProposition: {
+      title: 'Why Learn With Us?',
+      items: [
+        'Industry-focused curriculum aligned with enterprise security challenges',
+        'Practical workshops and guided labs—not just theory',
+        'Learn from experienced cloud, AI, and security practitioners',
+        'Small cohorts with interactive discussions and mentoring',
+        'Career-oriented paths for students and professionals',
+      ],
+    },
+    outcomes: {
+      title: "What You'll Gain",
+      intro: 'By completing our programs, learners will:',
+      items: [
+        'Understand real-world enterprise security practices',
+        'Build hands-on technical security skills',
+        'Strengthen cloud and AI security knowledge',
+        'Improve certification readiness',
+        'Gain experience through labs and projects',
+        'Enhance career opportunities in security and cloud roles',
+      ],
     },
     trainers: [
       {
@@ -29,7 +68,7 @@
         title: 'Principal Security & Cloud Instructor',
         bio: '15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.',
         shortBio: 'Security architect, cloud strategist, and hands-on instructor for enterprise teams.',
-        profileImage: 'assets/trainer.jpg',
+        profileImage: '',
         contact: {
           email: 'training@example.com',
           phone: '+1 (555) 010-2030',
@@ -64,63 +103,81 @@
     ],
     courses: [
       {
-        id: 'ai-security',
-        domain: 'AI Security',
-        summary: 'Secure design, deployment, and governance of AI systems in the enterprise.',
-        topics: [
-          'Threat modeling for LLM pipelines',
-          'Data leakage & prompt injection mitigations',
-          'Model supply chain & third-party AI',
-          'Governance, audit, and responsible use',
+        id: 'ai-cyber-security',
+        domain: 'AI & Cyber Security',
+        summary: 'AI security and cyber defense from fundamentals to governance.',
+        level: 'Beginner to Advanced',
+        format: 'Workshop · Labs · Scenarios',
+        topicGroups: [
+          { level: 'Beginner', topics: ['Introduction to AI Security', 'Understanding LLMs', 'Cyber security fundamentals'] },
+          { level: 'Intermediate', topics: ['AI attacks and defenses using DevSecOps', 'Prompt injection defense', 'IAM & security monitoring'] },
+          { level: 'Advanced', topics: ['Supply chain attacks in AI', 'Governance and compliance in AI', 'Incident response for AI systems'] },
         ],
-        level: 'Intermediate',
-        format: 'Workshop + labs',
       },
       {
-        id: 'cyber-security',
-        domain: 'Cyber Security',
-        summary: 'Defense-in-depth, identity, and incident readiness for modern organizations.',
-        topics: [
-          'Zero trust & identity-centric security',
-          'Detection, SIEM, and SOC fundamentals',
-          'Vulnerability management & patching',
-          'Incident response playbooks',
+        id: 'aws-cloud-computing',
+        domain: 'AWS Cloud Computing',
+        summary: 'Cloud computing on AWS from core concepts to networking and security.',
+        level: 'Beginner to Advanced',
+        format: 'Hands-on Labs · AWS Walkthroughs',
+        topicGroups: [
+          { level: 'Beginner', topics: ['What is cloud computing?', 'AWS infrastructure overview'] },
+          { level: 'Intermediate', topics: ['IAM — users, roles & policies', 'Amazon EC2 fundamentals'] },
+          { level: 'Advanced', topics: ['VPC, networking & compute', 'AWS security best practices'] },
         ],
-        level: 'Foundations to Intermediate',
-        format: 'Lecture + scenarios',
       },
       {
-        id: 'cloud-computing',
-        domain: 'Cloud Computing',
-        summary: 'Architecture, cost, and operations across major cloud providers.',
-        topics: [
-          'Well-architected patterns (IaaS/PaaS/SaaS)',
-          'Networking, IAM, and encryption',
-          'Cost optimization & FinOps basics',
-          'Hybrid and multi-cloud considerations',
-        ],
-        level: 'Intermediate',
-        format: 'Hands-on labs',
-      },
-      {
-        id: 'financial-marketing',
-        domain: 'Financial Marketing Management',
-        summary: 'Regulatory-aware marketing strategy for banks, fintech, and asset managers.',
-        topics: [
-          'Product positioning & segment strategy',
-          'Compliance frameworks (marketing disclosures)',
-          'Digital channels & campaign measurement',
-          'Brand risk and stakeholder alignment',
-        ],
-        level: 'Professional',
-        format: 'Case studies + frameworks',
+        id: 'financial-markets',
+        domain: 'Financial Markets & Management (FMM)',
+        summary: 'Financial markets, investing, and NISM/NCFM certification guidance.',
+        topics: ['Introduction to Financial Markets', 'NISM & NCFM Certification Preparation', 'Stock Market Fundamentals', 'Risk Management'],
+        level: 'Beginner to Advanced',
+        format: 'Interactive Sessions · Certification Guidance',
       },
     ],
     sessions: [
-      { date: '2026-04-08', topic: 'AI Security: Threats to LLM Systems', duration: '3 hours', mode: 'Live online' },
-      { date: '2026-04-15', topic: 'Cyber Security: Zero Trust in Practice', duration: '4 hours', mode: 'On-site / hybrid' },
-      { date: '2026-04-22', topic: 'Cloud: Well-Architected Review Lab', duration: 'Full day', mode: 'Live online' },
-      { date: '2026-04-29', topic: 'Financial Marketing: Compliant Campaign Design', duration: '3 hours', mode: 'Live online' },
+      {
+        date: '2026-06-21',
+        topic: 'Master Class — Weekend 1: AI Security & Cyber Security',
+        duration: '1 hour',
+        mode: 'Online only',
+      },
+      {
+        date: '2026-06-28',
+        topic: 'Master Class — Weekend 2: AWS Cloud Computing',
+        duration: '1 hour',
+        mode: 'Online only',
+      },
+      {
+        date: '2026-07-05',
+        topic: 'Master Class — Weekend 3: Financial Marketing Management (NCMF & NISM certification pathways)',
+        duration: '1 hour',
+        mode: 'Online only',
+      },
+      {
+        date: '2026-07-12',
+        topic: 'Bootcamp — Weekend 4: Full-module kickoff & shared foundations (all four domains)',
+        duration: '3 hours',
+        mode: 'Online only',
+      },
+      {
+        date: '2026-07-19',
+        topic: 'Bootcamp — Weekend 5: AI Security & Cyber Security',
+        duration: '3 hours',
+        mode: 'Online only',
+      },
+      {
+        date: '2026-07-26',
+        topic: 'Bootcamp — Weekend 6: AWS Cloud Computing (IAM, EC2, VPC & networking labs)',
+        duration: '3 hours',
+        mode: 'Online only',
+      },
+      {
+        date: '2026-08-02',
+        topic: 'Bootcamp — Weekend 7: Financial Marketing & integrated capstone (compliance, campaign design, review)',
+        duration: '3 hours',
+        mode: 'Online only',
+      },
     ],
     curriculum: [
       {
@@ -147,19 +204,19 @@
     ],
     testimonials: [
       {
-        quote: 'Clear, pragmatic framing of AI risks—we reused the threat model in our SOC review the same week.',
-        name: 'Priya S.',
-        role: 'Head of Security, FinTech',
+        quote:
+          'The AI security labs turned abstract risks into skills I could use immediately. Threat modeling for LLMs went from intimidating to practical.',
+        role: 'AI & Cyber Security track',
       },
       {
-        quote: 'Cloud labs were the best part; our architects finally aligned on naming and tagging.',
-        name: 'Jordan L.',
-        role: 'Engineering Manager',
+        quote:
+          'The AWS path made IAM, EC2, and networking build on each other naturally. The hands-on exercises felt like real work, not theory.',
+        role: 'AWS Cloud Computing track',
       },
       {
-        quote: 'Marketing + compliance module gave us a checklist we could hand to legal.',
-        name: 'Elena R.',
-        role: 'CMO, Regional Bank',
+        quote:
+          'Financial markets finally clicked. NISM concepts and risk were explained clearly—exactly what I needed as someone new to investing.',
+        role: 'Financial Markets & Management track',
       },
     ],
     faq: [
@@ -172,8 +229,8 @@
         a: 'Recordings are provided where policy allows; placeholders in Resources will be replaced with links after each cohort.',
       },
       {
-        q: 'Do I need cloud accounts?',
-        a: 'Labs use sandbox-friendly patterns; you may use provided shared tenants or your own (with admin approval).',
+        q: 'Do I need cloud accounts for labs?',
+        a: 'Most labs use open-source tools you can run locally or in our guided lab setup—no paid cloud subscription is required to start. When a session needs cloud resources (for example AWS Cloud Computing labs), we will say so in advance; you may create an AWS free-tier account only if required for that lab. If you use your own cloud account or company environment, follow organizational policies and obtain admin approval where needed.',
       },
       {
         q: 'Can this scale to a full LMS later?',
@@ -185,8 +242,11 @@
       web3formsAccessKey: 'YOUR_WEB3FORMS_ACCESS_KEY',
     },
     footer: {
-      company: 'Enterprise Skills Academy',
-      address: 'Remote-first · Workshops worldwide',
+      company: 'Upskill Fleet Academy',
+      tagline: 'Practical learning. Industry experience. Career growth.',
+      closing:
+        "Whether you're starting your journey in technology or advancing into specialized security or financial markets roles, our programs help you build skills that matter in today's AI-driven world.",
+      address: 'Remote-first · Weekend online cohorts',
       copyrightYear: 2026,
     },
   };
@@ -195,13 +255,20 @@
     return root.querySelector(sel);
   }
 
+  const NAME_PREFIXES = new Set(['mr', 'mrs', 'ms', 'miss', 'dr', 'prof', 'sir']);
+
   function initialsFromName(name) {
     if (!name || typeof name !== 'string') return '?';
-    const parts = name.replace(/\./g, '').split(/\s+/).filter(Boolean);
+    const parts = name
+      .replace(/\./g, '')
+      .split(/\s+/)
+      .filter(Boolean)
+      .filter((p) => !NAME_PREFIXES.has(p.toLowerCase()));
     if (parts.length >= 2) {
       return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
     }
-    return parts[0].slice(0, 2).toUpperCase();
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return '?';
   }
 
   function escapeHtml(s) {
@@ -251,24 +318,137 @@
     $('#footer-copy').textContent = `© ${year} ${data.footer?.company || ''}. All rights reserved.`;
   }
 
-  function renderHero() {
-    $('#hero-title').textContent = data.site?.title || '';
-    $('#hero-tagline').textContent = data.site?.tagline || '';
-    const aud = $('#hero-audience');
-    const audienceText = data.site?.audience;
-    if (aud) {
-      if (typeof audienceText === 'string' && audienceText.trim()) {
-        aud.textContent = audienceText.trim();
-        aud.classList.remove('hidden');
-      } else {
-        aud.textContent = '';
-        aud.classList.add('hidden');
-      }
+  function siteTaglineLines(site) {
+    if (!site || typeof site !== 'object') return [];
+    if (Array.isArray(site.taglines)) {
+      return site.taglines.map((t) => String(t).trim()).filter(Boolean);
     }
+    if (typeof site.tagline === 'string' && site.tagline.trim()) return [site.tagline.trim()];
+    return [];
+  }
+
+  function renderHero() {
+    const site = data.site || {};
+    const eyebrow = $('#hero-eyebrow');
+    const headline = $('#hero-headline');
+    const sub = $('#hero-subheading');
+    const supporting = $('#hero-supporting');
+
+    if (headline) {
+      headline.textContent =
+        (typeof site.heroHeadline === 'string' && site.heroHeadline.trim()) ||
+        site.title ||
+        'Training';
+    }
+    if (eyebrow) {
+      eyebrow.textContent =
+        (typeof site.heroEyebrow === 'string' && site.heroEyebrow.trim()) || 'Professional learning';
+    }
+    if (sub) {
+      const subText =
+        (typeof site.heroSubheading === 'string' && site.heroSubheading.trim()) ||
+        siteTaglineLines(site)[0] ||
+        '';
+      sub.textContent = subText;
+      sub.classList.toggle('hidden', !subText);
+    }
+    if (supporting) {
+      const supText = (typeof site.heroSupporting === 'string' && site.heroSupporting.trim()) || '';
+      supporting.textContent = supText;
+      supporting.classList.toggle('hidden', !supText);
+    }
+
+    const legacyTitle = $('#hero-title');
+    if (legacyTitle) legacyTitle.textContent = site.title || '';
+
     const p = $('#hero-primary-cta');
     const s = $('#hero-secondary-cta');
-    if (p) p.textContent = data.site?.primaryCta || 'Schedule';
-    if (s) s.textContent = data.site?.secondaryCta || 'Courses';
+    const t = $('#hero-tertiary-cta');
+    if (p) p.textContent = site.primaryCta || 'Explore Programs';
+    if (s) s.textContent = site.secondaryCta || 'View Schedule';
+    if (t) t.textContent = site.tertiaryCta || 'Register Interest';
+  }
+
+  function renderLearningDomains() {
+    const host = $('#domains-grid');
+    if (!host || !Array.isArray(data.learningDomains)) return;
+    host.innerHTML = data.learningDomains
+      .map(
+        (d) => `
+      <a href="${escapeHtml(d.href || '#courses')}" class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-5 block hover:border-sky-300 dark:hover:border-sky-600 transition-colors group text-center sm:text-left">
+        <span class="text-2xl" aria-hidden="true">${escapeHtml(d.icon || '')}</span>
+        <h3 class="text-base font-semibold text-slate-900 dark:text-white mt-3 group-hover:text-sky-700 dark:group-hover:text-sky-300">${escapeHtml(d.name || '')}</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">${escapeHtml(d.description || '')}</p>
+      </a>`
+      )
+      .join('');
+  }
+
+  function renderValueProposition() {
+    const vp = data.valueProposition;
+    if (!vp || typeof vp !== 'object') return;
+    const titleEl = $('#value-prop-title');
+    if (titleEl && vp.title) titleEl.textContent = vp.title;
+    const list = $('#value-prop-list');
+    if (!list || !Array.isArray(vp.items)) return;
+    list.innerHTML = vp.items
+      .filter((item) => item != null && String(item).trim())
+      .map(
+        (item) => `
+      <li class="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
+        <span class="text-emerald-600 dark:text-emerald-400 shrink-0 font-semibold" aria-hidden="true">✓</span>
+        <span>${escapeHtml(String(item))}</span>
+      </li>`
+      )
+      .join('');
+  }
+
+  function renderOutcomes() {
+    const out = data.outcomes;
+    if (!out || typeof out !== 'object') return;
+    const titleEl = $('#outcomes-title');
+    const introEl = $('#outcomes-intro');
+    const list = $('#outcomes-list');
+    if (titleEl && out.title) titleEl.textContent = out.title;
+    if (introEl) {
+      introEl.textContent = (typeof out.intro === 'string' && out.intro.trim()) || '';
+      introEl.classList.toggle('hidden', !introEl.textContent);
+    }
+    if (!list || !Array.isArray(out.items)) return;
+    list.innerHTML = out.items
+      .filter((item) => item != null && String(item).trim())
+      .map(
+        (item) => `
+      <li class="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
+        <span class="text-sky-600 dark:text-sky-400 shrink-0" aria-hidden="true">→</span>
+        <span>${escapeHtml(String(item))}</span>
+      </li>`
+      )
+      .join('');
+  }
+
+  function renderAboutIntro() {
+    const site = data.site || {};
+    const titleEl = $('#about-title');
+    const introEl = $('#about-intro');
+    const guestEl = $('#guest-faculty-intro');
+    if (titleEl) titleEl.textContent = site.aboutTitle || 'Meet your instructors';
+    if (introEl) introEl.textContent = site.aboutIntro || '';
+    if (guestEl) {
+      const guestText =
+        (typeof site.guestFacultyIntro === 'string' && site.guestFacultyIntro.trim()) || '';
+      if (guestText && normalizeTrainers(data).length > 1) {
+        guestEl.textContent = guestText;
+        guestEl.classList.remove('hidden');
+      } else {
+        guestEl.textContent = '';
+        guestEl.classList.add('hidden');
+      }
+    }
+    const coursesTitle = $('#courses-title');
+    const coursesIntro = $('#courses-intro');
+    if (coursesTitle) coursesTitle.textContent = site.coursesTitle || 'Course catalog';
+    if (coursesIntro) coursesIntro.textContent = site.coursesIntro || '';
   }
 
   function setNamedMeta(name, content) {
@@ -294,10 +474,14 @@
   function applySeoMeta() {
     const site = data?.site || {};
     const titleBase = typeof site.title === 'string' && site.title.trim() ? site.title.trim() : 'Training site';
-    const title = `${titleBase} — Training`;
+    const title = site.heroEyebrow
+      ? `${titleBase} — ${String(site.heroEyebrow).trim()}`
+      : `${titleBase} — Training`;
+    const taglineFallback = siteTaglineLines(site).join(' ');
     const desc =
       (typeof site.seoDescription === 'string' && site.seoDescription.trim()) ||
-      (typeof site.tagline === 'string' && site.tagline.trim()) ||
+      (typeof site.heroSubheading === 'string' && site.heroSubheading.trim()) ||
+      taglineFallback ||
       'Expert-led enterprise training.';
     document.title = title;
     setNamedMeta('description', desc);
@@ -363,10 +547,31 @@
     const name = escapeHtml(namePlain);
     const title = escapeHtml(t.title || '');
     const bio = escapeHtml(t.bio || '');
+    const bioSecondary =
+      typeof t.bioSecondary === 'string' && t.bioSecondary.trim()
+        ? `<p class="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">${escapeHtml(t.bioSecondary.trim())}</p>`
+        : '';
+    const credLabel = escapeHtml(t.credentialsLabel || 'Credentials');
     const credHtml = (Array.isArray(t.credentials) ? t.credentials : [])
       .filter((c) => c != null && String(c).trim())
       .map((c) => `<li class="flex gap-2"><span class="text-sky-600 dark:text-sky-400">✓</span>${escapeHtml(String(c))}</li>`)
       .join('');
+    const teachLabel = escapeHtml(t.teachTopicsLabel || '');
+    const teachHtml = (Array.isArray(t.teachTopics) ? t.teachTopics : [])
+      .filter((x) => x != null && String(x).trim())
+      .map((x) => `<li class="flex gap-2"><span class="text-slate-400">→</span>${escapeHtml(String(x))}</li>`)
+      .join('');
+    const teachBlock =
+      teachHtml && teachLabel
+        ? `<div>
+              <h4 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wide mb-3">${teachLabel}</h4>
+              <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">${teachHtml}</ul>
+            </div>`
+        : '';
+    const sectionHeading =
+      typeof t.sectionHeading === 'string' && t.sectionHeading.trim()
+        ? `<h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-8">${escapeHtml(t.sectionHeading.trim())}</h3>`
+        : '';
     const email = (t.contact?.email && String(t.contact.email).trim()) || '';
     const phone = (t.contact?.phone && String(t.contact.phone).trim()) || '';
     const waRaw = (t.contact?.whatsapp && String(t.contact.whatsapp).trim()) || '';
@@ -390,6 +595,7 @@
 
     return `
       <div class="trainer-card ${topRule}" data-trainer-index="${i}">
+        ${sectionHeading}
         <div class="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
           <div class="lg:col-span-1 flex flex-col items-center lg:items-start">
             <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-slate-200 dark:bg-slate-800">
@@ -403,8 +609,10 @@
               <p class="text-sky-600 dark:text-sky-400 font-medium mt-1">${title}</p>
             </div>
             <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${bio}</p>
+            ${bioSecondary}
+            ${teachBlock}
             <div>
-              <h4 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wide mb-3">Credentials</h4>
+              <h4 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wide mb-3">${credLabel}</h4>
               <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">${credHtml || '<li class="text-slate-500">—</li>'}</ul>
             </div>
             ${socialRow ? `<div class="flex flex-wrap gap-3 pt-2">${socialRow}</div>` : ''}
@@ -467,28 +675,84 @@
     }
   }
 
+  function renderCourseTopics(c) {
+    if (Array.isArray(c.topicGroups) && c.topicGroups.length) {
+      return c.topicGroups
+        .map(
+          (g) => `
+        <div class="mt-4 first:mt-0">
+          <h5 class="text-xs font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-300 mb-2">${escapeHtml(g.level || '')}</h5>
+          <ul class="text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
+            ${(g.topics || [])
+              .map(
+                (topic) =>
+                  `<li class="flex gap-2"><span class="text-sky-600 dark:text-sky-400 shrink-0">•</span><span>${escapeHtml(topic)}</span></li>`
+              )
+              .join('')}
+          </ul>
+        </div>`
+        )
+        .join('');
+    }
+    return `<ul class="text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
+      ${(c.topics || [])
+        .map(
+          (topic) =>
+            `<li class="flex gap-2"><span class="text-sky-600 dark:text-sky-400 shrink-0">•</span><span>${escapeHtml(topic)}</span></li>`
+        )
+        .join('')}
+    </ul>`;
+  }
+
   function renderCourses() {
     const host = $('#course-grid');
     if (!host || !Array.isArray(data.courses)) return;
     host.innerHTML = data.courses
-      .map(
-        (c) => `
-      <article class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow">
+      .map((c) => {
+        const idealFor =
+          typeof c.idealFor === 'string' && c.idealFor.trim()
+            ? `<p class="text-xs text-slate-600 dark:text-slate-400 mt-4 pt-4 border-t border-slate-200/80 dark:border-slate-700/80"><span class="font-semibold text-slate-700 dark:text-slate-300">Ideal for:</span> ${escapeHtml(c.idealFor.trim())}</p>`
+            : '';
+        const topicsBlock = renderCourseTopics(c);
+        const topicsHeading =
+          Array.isArray(c.topicGroups) && c.topicGroups.length
+            ? '<h4 class="text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-300 mb-1">Learning path</h4>'
+            : '<h4 class="text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-300 mb-2">Key topics</h4>';
+        return `
+      <article id="${escapeHtml(c.id || '')}" class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8 flex flex-col shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="flex items-start justify-between gap-3 mb-3">
-          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">${escapeHtml(c.domain)}</h3>
-          <span class="text-xs font-medium px-2 py-1 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200">${escapeHtml(c.level)}</span>
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white">${escapeHtml(c.domain)}</h3>
+          <span class="text-xs font-medium px-2 py-1 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200 shrink-0">${escapeHtml(c.level || '')}</span>
         </div>
-        <p class="text-slate-600 dark:text-slate-400 text-sm flex-1 mb-4">${escapeHtml(c.summary)}</p>
-        <p class="text-xs text-slate-500 dark:text-slate-500 mb-2">${escapeHtml(c.format)}</p>
-        <ul class="text-sm text-slate-700 dark:text-slate-300 space-y-1.5 list-disc list-inside">
-          ${(c.topics || []).map((t) => `<li>${escapeHtml(t)}</li>`).join('')}
-        </ul>
-      </article>`
-      )
+        <p class="text-slate-600 dark:text-slate-400 text-sm flex-1 mb-4 leading-relaxed">${escapeHtml(c.summary)}</p>
+        <p class="text-xs font-medium text-slate-500 dark:text-slate-500 mb-3">${escapeHtml(c.format || '')}</p>
+        ${topicsHeading}
+        ${topicsBlock}
+        ${idealFor}
+      </article>`;
+      })
       .join('');
   }
 
+  function renderRegistrationOptions() {
+    const sel = $('#reg-course');
+    if (!sel) return;
+    const courses = Array.isArray(data.courses) ? data.courses : [];
+    const opts = courses.map(
+      (c) =>
+        `<option value="${escapeHtml(c.id || c.domain || '')}">${escapeHtml(c.domain || c.id || '')}</option>`
+    );
+    sel.innerHTML =
+      opts.join('') +
+      '<option value="multiple">Multiple learning paths</option>';
+  }
+
   function renderSessions() {
+    const intro = $('#schedule-intro');
+    const note =
+      (typeof data.site?.scheduleNote === 'string' && data.site.scheduleNote.trim()) ||
+      'Weekends only · live online. See table for dates and topics.';
+    if (intro) intro.textContent = note;
     const tbody = $('#schedule-body');
     if (!tbody || !Array.isArray(data.sessions)) return;
     tbody.innerHTML = data.sessions
@@ -539,19 +803,44 @@
   }
 
   function renderTestimonials() {
+    const site = data.site || {};
+    const brandEl = $('#testimonials-brand');
+    const titleEl = $('#testimonials-title');
+    const introEl = $('#testimonials-intro');
+    if (brandEl) {
+      brandEl.textContent =
+        (typeof site.testimonialsBrand === 'string' && site.testimonialsBrand.trim()) ||
+        site.title ||
+        'Upskill Fleet Academy';
+    }
+    if (titleEl) {
+      titleEl.textContent =
+        (typeof site.testimonialsTitle === 'string' && site.testimonialsTitle.trim()) ||
+        'What participants say';
+    }
+    if (introEl) {
+      const intro =
+        (typeof site.testimonialsIntro === 'string' && site.testimonialsIntro.trim()) || '';
+      introEl.textContent = intro;
+      introEl.classList.toggle('hidden', !intro);
+    }
+
     const host = $('#testimonials-grid');
     if (!host || !Array.isArray(data.testimonials)) return;
     host.innerHTML = data.testimonials
-      .map(
-        (t) => `
-      <blockquote class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 shadow-sm">
-        <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">“${escapeHtml(t.quote)}”</p>
-        <footer class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
-          <cite class="not-italic font-semibold text-slate-900 dark:text-white text-sm">${escapeHtml(t.name)}</cite>
-          <p class="text-xs text-slate-500 dark:text-slate-400">${escapeHtml(t.role)}</p>
-        </footer>
-      </blockquote>`
-      )
+      .map((t) => {
+        const role =
+          typeof t.role === 'string' && t.role.trim()
+            ? `<footer class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+          <p class="text-xs font-medium text-sky-600 dark:text-sky-400">${escapeHtml(t.role.trim())}</p>
+        </footer>`
+            : '';
+        return `
+      <blockquote class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 shadow-sm flex flex-col">
+        <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed flex-1">“${escapeHtml(t.quote)}”</p>
+        ${role}
+      </blockquote>`;
+      })
       .join('');
   }
 
@@ -589,6 +878,13 @@
   function renderFooter() {
     const f = data.footer;
     if (!f) return;
+    const taglineEl = $('#footer-tagline');
+    const closingEl = $('#footer-closing');
+    if (taglineEl) taglineEl.textContent = f.tagline || f.company || '';
+    if (closingEl) {
+      closingEl.textContent = (typeof f.closing === 'string' && f.closing.trim()) || '';
+      closingEl.classList.toggle('hidden', !closingEl.textContent);
+    }
     $('#footer-company').textContent = f.company || '';
     $('#footer-address').textContent = f.address || '';
     const trainers = normalizeTrainers(data);
@@ -754,8 +1050,13 @@
 
     renderNav();
     renderHero();
+    renderLearningDomains();
+    renderValueProposition();
+    renderAboutIntro();
     renderTrainers();
     renderCourses();
+    renderOutcomes();
+    renderRegistrationOptions();
     renderSessions();
     renderCurriculum();
     renderResources();
