@@ -14,19 +14,19 @@
   const FALLBACK_DATA = {
     site: {
       title: 'Upskill Fleet Academy',
-      heroEyebrow: 'Enterprise Security & AI Learning',
-      heroHeadline: 'Build Real-World Skills in AI Security, Cybersecurity & Cloud Security',
+      heroEyebrow: 'Enterprise AI, Cyber Security & Cloud Learning',
+      heroHeadline: 'Build Practical Skills That Modern Organizations Need',
       heroSubheading:
-        'Expert-led, hands-on training designed for students, security professionals, cloud engineers, and technology leaders looking to advance their careers.',
-      heroSupporting:
-        'Learn through practical labs, real-world case studies, threat simulations, and industry best practices used by modern enterprises.',
+        'Hands-on programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets—designed for students and aspiring professionals & enthusiasts.',
+      heroTags: 'Workshop-Based · Industry-Focused · Real-World Scenarios',
+      heroSupporting: '',
       seoDescription:
-        'Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets & Management.',
+        'Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets.',
       primaryCta: 'Explore Programs',
-      secondaryCta: 'View Schedule',
+      secondaryCta: 'Upcoming Sessions',
       tertiaryCta: 'Register Interest',
       scheduleNote:
-        'Weekends only · live online. Master classes are 1-hour orientations (weekends 1–3 from 21 June 2026). Bootcamp is 8 hours total — 2 hours per weekend over four weekends (weekends 4–7).',
+        'Weekends only · live online. Master classes are 1–2 hour orientations (weekends 1–3 from 21 June 2026). Bootcamp is 8 hours total — 2 hours per weekend over four weekends (weekends 4–7).',
       aboutTitle: 'Meet your instructors',
       aboutIntro: 'Learn from experienced practitioners focused on real-world skills and career outcomes.',
       coursesTitle: 'Course catalog',
@@ -34,6 +34,46 @@
         'Three learning paths—AI & Cyber Security, AWS Cloud Computing, and FMM—each structured from beginner to advanced.',
       guestFacultyIntro:
         'Guest faculty bring financial markets and investment perspectives into the classroom.',
+    },
+    trustMetrics: {
+      title: 'Why Professionals Learn With Us',
+      items: [
+        { value: '20+', label: 'Years Industry Experience' },
+        { value: '5+', label: 'Learning Domains — Technology, Security, AI, Cloud & Finance' },
+        { value: 'Hands-On', label: 'Labs — Practical learning beyond theory' },
+        { value: 'Cert-Ready', label: 'Pathways aligned with industry certifications' },
+      ],
+    },
+    audiencePaths: {
+      title: 'Choose Your Learning Path',
+      intro: 'Not sure where to start? Pick the path that matches your goals.',
+      items: [
+        { title: 'Students & Beginners', description: 'Build foundations in Cyber Security, Cloud, AI, and Financial Markets.', href: '#courses' },
+        { title: 'Aspiring Professionals & Enthusiasts', description: 'Upskill with practical, enterprise-focused security and cloud programs.', href: '#masterclasses' },
+        { title: 'Career Advancers', description: 'Advanced learning in AI Security, DevSecOps, governance, and cloud security.', href: '#bootcamps' },
+      ],
+    },
+    learningFormats: {
+      title: 'Learning Formats',
+      intro: 'Start with a masterclass orientation, then deepen skills in a structured bootcamp.',
+      formats: [
+        { name: 'Masterclasses', badge: 'Lead-in', description: 'Short orientation sessions.', duration: '1–2 hours', detail: 'Live interactive sessions' },
+        { name: 'Bootcamps', badge: 'Deep dive', description: 'Structured multi-weekend programs with labs.', duration: 'Weekend cohorts · 2 hrs/session', detail: '8 hours over four weekends after masterclasses' },
+      ],
+    },
+    upcomingHighlight: {
+      title: 'Upcoming Sessions',
+      intro: 'June 2026 weekend cohort — live online.',
+      registerLabel: 'Register',
+      registerHref: '#register',
+    },
+    finalCta: {
+      title: 'Start Your Learning Journey',
+      body: 'Whether you\'re entering technology, advancing your security career, or exploring financial markets, our programs provide practical knowledge and hands-on learning.',
+      primaryCta: 'Explore Programs',
+      primaryHref: '#courses',
+      secondaryCta: 'Register Interest',
+      secondaryHref: '#register',
     },
     learningDomains: [
       { icon: '🔐', name: 'AI & Cyber Security', description: 'AI security & cyber defense', href: '#ai-cyber-security' },
@@ -54,14 +94,22 @@
       title: "What You'll Gain",
       intro: 'By completing our programs, learners will:',
       items: [
-        'Understand real-world enterprise security practices',
-        'Build hands-on technical security skills',
-        'Strengthen cloud and AI security knowledge',
-        'Improve certification readiness',
-        'Gain experience through labs and projects',
-        'Enhance career opportunities in security and cloud roles',
+        'Practical industry knowledge you can apply immediately',
+        'Hands-on implementation experience through labs and scenarios',
+        'Real-world security and cloud concepts used in enterprises',
+        'Exposure to enterprise use cases and decision-making patterns',
+        'Career-oriented learning pathways across technology and finance',
+        'Confidence with emerging technologies including AI and LLMs',
+        'Better readiness for certifications and technical interviews',
       ],
     },
+    masterclasses: [
+      { id: 'mc-ai-security', badge: 'Masterclass', title: 'AI Security Fundamentals for Modern Enterprises', summary: 'Secure Generative AI and LLM applications.', topics: ['Introduction to AI Security', 'LLM Architecture Basics', 'Prompt Injection Risks'], duration: '1–2 hours', format: 'Live Interactive Session' },
+      { id: 'mc-cloud-security', badge: 'Masterclass', title: 'Cloud Security Essentials on AWS', summary: 'AWS security building blocks.', topics: ['Shared Responsibility Model', 'IAM Fundamentals'], duration: '1–2 hours', format: 'Live Interactive Session' },
+    ],
+    bootcamps: [
+      { id: 'bc-ai-security', badge: 'Bootcamp', title: 'Enterprise AI Security Bootcamp', summary: 'Secure AI architectures.', duration: '6-week program structure', format: 'Live Sessions + Labs', modules: ['Week 1 — AI & LLM Foundations'], outcome: 'Build secure AI architectures.' },
+    ],
     trainers: [
       {
         name: 'Dr. Alex Morgan',
@@ -138,25 +186,33 @@
     sessions: [
       {
         date: '2026-06-21',
-        topic: 'Master Class — Weekend 1: AI & Cyber Security (orientation — program overview, learning path & cohort intro)',
-        duration: '1 hour',
+        topic: 'Master Class — Weekend 1: AI & Cyber Security',
+        shortLabel: 'AI & Cyber Security',
+        sessionType: 'Master Class',
+        duration: '1–2 hours',
         mode: 'Online only',
       },
       {
         date: '2026-06-28',
-        topic: 'Master Class — Weekend 2: AWS Cloud Computing (orientation — track overview, AWS fundamentals preview & lab readiness)',
-        duration: '1 hour',
+        topic: 'Master Class — Weekend 2: AWS Cloud Computing',
+        shortLabel: 'AWS Cloud Computing',
+        sessionType: 'Master Class',
+        duration: '1–2 hours',
         mode: 'Online only',
       },
       {
         date: '2026-07-05',
-        topic: 'Master Class — Weekend 3: Financial Markets & Management (orientation — FMM track overview & NISM/NCFM pathways)',
-        duration: '1 hour',
+        topic: 'Master Class — Weekend 3: Financial Markets & Management',
+        shortLabel: 'Financial Markets & Management',
+        sessionType: 'Master Class',
+        duration: '1–2 hours',
         mode: 'Online only',
       },
       {
         date: '2026-07-12',
-        topic: 'Bootcamp — Weekend 4: Program kickoff & shared foundations (all three learning paths, lab setup & cohort tools)',
+        topic: 'Bootcamp — Weekend 4: Program kickoff & shared foundations',
+        shortLabel: 'Program Kickoff & Foundations',
+        sessionType: 'Bootcamp',
         duration: '2 hours',
         mode: 'Online only',
       },
@@ -205,18 +261,18 @@
     testimonials: [
       {
         quote:
-          'The AI security labs turned abstract risks into skills I could use immediately. Threat modeling for LLMs went from intimidating to practical.',
-        role: 'AI & Cyber Security track',
+          'The sessions were practical and focused on real-world enterprise security challenges rather than only theoretical concepts.',
+        role: 'Security Engineer',
       },
       {
         quote:
-          'The AWS path made IAM, EC2, and networking build on each other naturally. The hands-on exercises felt like real work, not theory.',
-        role: 'AWS Cloud Computing track',
+          'The cloud security workshops helped me understand architecture decisions, IAM strategies, and security best practices used in production environments.',
+        role: 'Cloud Professional',
       },
       {
         quote:
-          'Financial markets finally clicked. NISM concepts and risk were explained clearly—exactly what I needed as someone new to investing.',
-        role: 'Financial Markets & Management track',
+          'The learning path was beginner-friendly while still exposing us to industry-level concepts and tools.',
+        role: 'Student Learner',
       },
     ],
     faq: [
@@ -292,6 +348,15 @@
     }
   }
 
+  function formatDateShort(iso) {
+    try {
+      const d = new Date(iso + 'T12:00:00');
+      return d.toLocaleDateString(undefined, { month: 'long', day: 'numeric' });
+    } catch {
+      return iso;
+    }
+  }
+
   function setTheme(dark) {
     document.documentElement.classList.toggle('dark', dark);
     localStorage.setItem('theme', dark ? 'dark' : 'light');
@@ -332,6 +397,7 @@
     const eyebrow = $('#hero-eyebrow');
     const headline = $('#hero-headline');
     const sub = $('#hero-subheading');
+    const tags = $('#hero-tags');
     const supporting = $('#hero-supporting');
 
     if (headline) {
@@ -352,6 +418,11 @@
       sub.textContent = subText;
       sub.classList.toggle('hidden', !subText);
     }
+    if (tags) {
+      const tagText = (typeof site.heroTags === 'string' && site.heroTags.trim()) || '';
+      tags.textContent = tagText;
+      tags.classList.toggle('hidden', !tagText);
+    }
     if (supporting) {
       const supText = (typeof site.heroSupporting === 'string' && site.heroSupporting.trim()) || '';
       supporting.textContent = supText;
@@ -365,8 +436,195 @@
     const s = $('#hero-secondary-cta');
     const t = $('#hero-tertiary-cta');
     if (p) p.textContent = site.primaryCta || 'Explore Programs';
-    if (s) s.textContent = site.secondaryCta || 'View Schedule';
+    if (s) {
+      s.textContent = site.secondaryCta || 'View Schedule';
+      if (site.secondaryCta === 'Upcoming Sessions') s.setAttribute('href', '#upcoming-sessions');
+    }
     if (t) t.textContent = site.tertiaryCta || 'Register Interest';
+  }
+
+  function renderTrustMetrics() {
+    const tm = data.trustMetrics;
+    if (!tm || typeof tm !== 'object') return;
+    const titleEl = $('#trust-title');
+    const grid = $('#trust-grid');
+    if (titleEl && tm.title) titleEl.textContent = tm.title;
+    if (!grid || !Array.isArray(tm.items)) return;
+    grid.innerHTML = tm.items
+      .map(
+        (item) => `
+      <div class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-5 sm:p-6 text-center">
+        <p class="text-2xl sm:text-3xl font-display font-semibold text-sky-600 dark:text-sky-400">${escapeHtml(item.value || '')}</p>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">${escapeHtml(item.label || '')}</p>
+      </div>`
+      )
+      .join('');
+  }
+
+  function renderAudiencePaths() {
+    const ap = data.audiencePaths;
+    if (!ap || typeof ap !== 'object') return;
+    const titleEl = $('#paths-title');
+    const introEl = $('#paths-intro');
+    const grid = $('#paths-grid');
+    if (titleEl && ap.title) titleEl.textContent = ap.title;
+    if (introEl) {
+      introEl.textContent = (typeof ap.intro === 'string' && ap.intro.trim()) || '';
+      introEl.classList.toggle('hidden', !introEl.textContent);
+    }
+    if (!grid || !Array.isArray(ap.items)) return;
+    grid.innerHTML = ap.items
+      .map(
+        (item) => `
+      <a href="${escapeHtml(item.href || '#courses')}" class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 block hover:border-sky-300 dark:hover:border-sky-600 transition-colors group h-full">
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-sky-700 dark:group-hover:text-sky-300">${escapeHtml(item.title || '')}</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">${escapeHtml(item.description || '')}</p>
+        <span class="inline-block mt-4 text-sm font-medium text-sky-600 dark:text-sky-400">Explore →</span>
+      </a>`
+      )
+      .join('');
+  }
+
+  function renderLearningFormats() {
+    const lf = data.learningFormats;
+    if (!lf || typeof lf !== 'object') return;
+    const titleEl = $('#formats-title');
+    const introEl = $('#formats-intro');
+    const grid = $('#formats-grid');
+    if (titleEl && lf.title) titleEl.textContent = lf.title;
+    if (introEl) {
+      introEl.textContent = (typeof lf.intro === 'string' && lf.intro.trim()) || '';
+      introEl.classList.toggle('hidden', !introEl.textContent);
+    }
+    if (!grid || !Array.isArray(lf.formats)) return;
+    grid.innerHTML = lf.formats
+      .map(
+        (f) => `
+      <article class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white">${escapeHtml(f.name || '')}</h3>
+          <span class="text-xs font-medium px-2 py-1 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200 shrink-0">${escapeHtml(f.badge || '')}</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">${escapeHtml(f.description || '')}</p>
+        <p class="mt-4 text-sm font-semibold text-slate-900 dark:text-white">Duration: <span class="font-normal text-slate-600 dark:text-slate-400">${escapeHtml(f.duration || '')}</span></p>
+        <p class="mt-2 text-xs text-slate-500 dark:text-slate-500 leading-relaxed">${escapeHtml(f.detail || '')}</p>
+      </article>`
+      )
+      .join('');
+  }
+
+  function renderProgramCard(item, variant) {
+    const topicsHtml = (Array.isArray(item.topics) ? item.topics : [])
+      .map(
+        (topic) =>
+          `<li class="flex gap-2 text-sm text-slate-700 dark:text-slate-300"><span class="text-sky-600 dark:text-sky-400 shrink-0">•</span><span>${escapeHtml(topic)}</span></li>`
+      )
+      .join('');
+    const modulesHtml = (Array.isArray(item.modules) ? item.modules : [])
+      .map(
+        (mod) =>
+          `<li class="flex gap-2 text-sm text-slate-700 dark:text-slate-300"><span class="text-sky-600 dark:text-sky-400 shrink-0">→</span><span>${escapeHtml(mod)}</span></li>`
+      )
+      .join('');
+    const listBlock =
+      topicsHtml && variant === 'masterclass'
+        ? `<h4 class="text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-300 mt-4 mb-2">Topics Covered</h4><ul class="space-y-1.5">${topicsHtml}</ul>`
+        : modulesHtml && variant === 'bootcamp'
+          ? `<h4 class="text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-300 mt-4 mb-2">Modules</h4><ul class="space-y-1.5">${modulesHtml}</ul>`
+          : '';
+    const outcomeBlock =
+      variant === 'bootcamp' && typeof item.outcome === 'string' && item.outcome.trim()
+        ? `<p class="mt-4 pt-4 border-t border-slate-200/80 dark:border-slate-700/80 text-sm text-slate-600 dark:text-slate-400"><span class="font-semibold text-slate-700 dark:text-slate-300">Outcome:</span> ${escapeHtml(item.outcome.trim())}</p>`
+        : '';
+    const summaryBlock =
+      typeof item.summary === 'string' && item.summary.trim()
+        ? `<p class="text-sm text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">${escapeHtml(item.summary.trim())}</p>`
+        : '';
+    return `
+      <article id="${escapeHtml(item.id || '')}" class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8 flex flex-col scroll-mt-24">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">${escapeHtml(item.title || '')}</h3>
+          <span class="text-xs font-medium px-2 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 shrink-0">${escapeHtml(item.badge || (variant === 'masterclass' ? 'Masterclass' : 'Bootcamp'))}</span>
+        </div>
+        ${summaryBlock}
+        ${listBlock}
+        <div class="mt-auto pt-4 flex flex-wrap gap-4 text-xs text-slate-500 dark:text-slate-500">
+          <span><span class="font-semibold text-slate-600 dark:text-slate-400">Duration:</span> ${escapeHtml(item.duration || '')}</span>
+          <span><span class="font-semibold text-slate-600 dark:text-slate-400">Format:</span> ${escapeHtml(item.format || '')}</span>
+        </div>
+        ${outcomeBlock}
+      </article>`;
+  }
+
+  function renderMasterclasses() {
+    const host = $('#masterclasses-grid');
+    if (!host || !Array.isArray(data.masterclasses)) return;
+    host.innerHTML = data.masterclasses.map((mc) => renderProgramCard(mc, 'masterclass')).join('');
+  }
+
+  function renderBootcamps() {
+    const host = $('#bootcamps-grid');
+    if (!host || !Array.isArray(data.bootcamps)) return;
+    host.innerHTML = data.bootcamps.map((bc) => renderProgramCard(bc, 'bootcamp')).join('');
+  }
+
+  function renderUpcomingHighlight() {
+    const uh = data.upcomingHighlight;
+    const titleEl = $('#upcoming-title');
+    const introEl = $('#upcoming-intro');
+    const tbody = $('#upcoming-body');
+    if (titleEl && uh?.title) titleEl.textContent = uh.title;
+    if (introEl) {
+      introEl.textContent = (typeof uh?.intro === 'string' && uh.intro.trim()) || '';
+      introEl.classList.toggle('hidden', !introEl.textContent);
+    }
+    if (!tbody || !Array.isArray(data.sessions)) return;
+    const registerHref = (typeof uh?.registerHref === 'string' && uh.registerHref.trim()) || '#register';
+    const registerLabel = (typeof uh?.registerLabel === 'string' && uh.registerLabel.trim()) || 'Register';
+    const rows = data.sessions.slice(0, 4);
+    tbody.innerHTML = rows
+      .map(
+        (row) => {
+          const label =
+            (typeof row.shortLabel === 'string' && row.shortLabel.trim()) ||
+            row.topic ||
+            '';
+          const format =
+            (typeof row.sessionType === 'string' && row.sessionType.trim()) ||
+            row.mode ||
+            'Live';
+          return `
+      <tr class="border-b border-sky-100/80 dark:border-sky-900/30 last:border-0 hover:bg-sky-50/50 dark:hover:bg-sky-950/20">
+        <td class="py-3 px-4 text-slate-900 dark:text-slate-100 whitespace-nowrap font-medium">${escapeHtml(formatDateShort(row.date))}</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">${escapeHtml(label)}</td>
+        <td class="py-3 px-4 text-slate-600 dark:text-slate-400">${escapeHtml(format)}</td>
+        <td class="py-3 px-4"><a href="${escapeHtml(registerHref)}" class="text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline">${escapeHtml(registerLabel)}</a></td>
+      </tr>`;
+        }
+      )
+      .join('');
+  }
+
+  function renderFinalCta() {
+    const fc = data.finalCta;
+    if (!fc || typeof fc !== 'object') return;
+    const titleEl = $('#final-cta-title');
+    const bodyEl = $('#final-cta-body');
+    const primary = $('#final-cta-primary');
+    const secondary = $('#final-cta-secondary');
+    if (titleEl && fc.title) titleEl.textContent = fc.title;
+    if (bodyEl) {
+      bodyEl.textContent = (typeof fc.body === 'string' && fc.body.trim()) || '';
+      bodyEl.classList.toggle('hidden', !bodyEl.textContent);
+    }
+    if (primary) {
+      primary.textContent = fc.primaryCta || 'Explore Programs';
+      if (fc.primaryHref) primary.setAttribute('href', fc.primaryHref);
+    }
+    if (secondary) {
+      secondary.textContent = fc.secondaryCta || 'Register Interest';
+      if (fc.secondaryHref) secondary.setAttribute('href', fc.secondaryHref);
+    }
   }
 
   function renderLearningDomains() {
@@ -420,7 +678,7 @@
       .map(
         (item) => `
       <li class="flex gap-3 text-sm text-slate-700 dark:text-slate-300">
-        <span class="text-sky-600 dark:text-sky-400 shrink-0" aria-hidden="true">→</span>
+        <span class="text-emerald-600 dark:text-emerald-400 shrink-0 font-semibold" aria-hidden="true">✓</span>
         <span>${escapeHtml(String(item))}</span>
       </li>`
       )
@@ -1053,17 +1311,24 @@
 
     renderNav();
     renderHero();
+    renderTrustMetrics();
+    renderAudiencePaths();
+    renderLearningFormats();
     renderLearningDomains();
     renderValueProposition();
     renderAboutIntro();
     renderTrainers();
     renderCourses();
+    renderMasterclasses();
+    renderBootcamps();
     renderOutcomes();
     renderRegistrationOptions();
+    renderUpcomingHighlight();
     renderSessions();
     renderCurriculum();
     renderResources();
     renderTestimonials();
+    renderFinalCta();
     renderFaq();
     renderFooter();
     applySeoMeta();
