@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="75%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <rect width="1920" height="1080" fill="url(#glow2)"/>
+  <g fill="none" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1">
+    <circle cx="320" cy="280" r="4" fill="#38bdf8" fill-opacity="0.4"/>
+    <circle cx="520" cy="180" r="4" fill="#38bdf8" fill-opacity="0.3"/>
+    <circle cx="720" cy="320" r="4" fill="#818cf8" fill-opacity="0.35"/>
+    <circle cx="920" cy="220" r="4" fill="#38bdf8" fill-opacity="0.3"/>
+    <circle cx="1120" cy="380" r="4" fill="#818cf8" fill-opacity="0.4"/>
+    <circle cx="1320" cy="260" r="4" fill="#38bdf8" fill-opacity="0.35"/>
+    <circle cx="1520" cy="340" r="4" fill="#818cf8" fill-opacity="0.3"/>
+    <line x1="320" y1="280" x2="520" y2="180"/><line x1="520" y1="180" x2="720" y2="320"/>
+    <line x1="720" y1="320" x2="920" y2="220"/><line x1="920" y1="220" x2="1120" y2="380"/>
+    <line x1="1120" y1="380" x2="1320" y2="260"/><line x1="1320" y1="260" x2="1520" y2="340"/>
+    <line x1="320" y1="280" x2="720" y2="320"/><line x1="520" y1="180" x2="1120" y2="380"/>
+  </g>
+  <g fill="#38bdf8" fill-opacity="0.06" font-family="monospace" font-size="11">
+    <text x="1400" y="800">AI · LLM · ML</text>
+    <text x="200" y="700" opacity="0.7">neural · generative</text>
+  </g>
+</svg>
