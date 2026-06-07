@@ -15,7 +15,7 @@
     site: {
       title: 'Upskill Fleet Academy',
       heroEyebrow: 'Upskill Fleet Academy',
-      heroHeadline: 'Learn AI, Cyber Security & AWS Cloud Through Real-World Training',
+      heroHeadline: 'Learn AI, Cyber Security, AWS Cloud & Financial Markets Through Real-World Training',
       heroSubheading:
         'Practical learning, industry insights, hands-on demonstrations, and career guidance for students and professionals looking to build future-ready skills.',
       heroTags: '',
@@ -29,13 +29,15 @@
       aboutAcademyTitle: 'About Upskill Fleet Academy',
       aboutAcademyBody:
         'Upskill Fleet Academy is a learning initiative focused on helping students and working professionals understand AI, Cyber Security, and AWS Cloud through practical, real-world training.\n\nOur goal is to bridge the gap between academic learning and industry expectations by sharing knowledge gained from years of experience in technology and cybersecurity.',
-      aboutTitle: 'Meet your instructor',
-      aboutIntro: 'Learn from an experienced practitioner focused on real-world skills—not theory alone.',
+      aboutTitle: 'Meet your instructors',
+      aboutIntro: 'Learn from experienced practitioners focused on real-world skills—not theory alone.',
       masterclassesTitle: 'Free Masterclasses',
-      masterclassesIntro: 'Short, live sessions to explore AI, Cyber Security, and AWS Cloud.',
+      masterclassesIntro: 'Short, live sessions to explore AI, Cyber Security, AWS Cloud, or Financial Markets.',
+      bootcampsTitle: 'Premium Deep-Dive Bootcamps',
+      bootcampsIntro: 'Structured bootcamps with guided hands-on exercises and real-world scenarios in each technology area.',
       domainsTitle: 'Learning Areas',
-      domainsIntro: 'Practical topics we cover through masterclasses, demonstrations, and community learning.',
-      guestFacultyIntro: '',
+      domainsIntro: 'Four focused tracks—explore through free masterclasses, then deepen in a premium bootcamp.',
+      guestFacultyIntro: 'Guest faculty bring financial markets perspectives into the FMM track.',
     },
     whyJoin: {
       title: 'Why Join?',
@@ -49,9 +51,10 @@
       ],
     },
     learningAreas: [
-      { icon: '🤖', name: 'AI & Generative AI', topics: ['AI Fundamentals', 'Prompt Engineering', 'AI Tools for Productivity', 'Practical Use Cases'] },
-      { icon: '🔐', name: 'Cyber Security', topics: ['Security Fundamentals', 'Cloud Security Concepts', 'Security Best Practices', 'Industry Trends'] },
-      { icon: '☁️', name: 'AWS Cloud', topics: ['Cloud Fundamentals', 'AWS Services Overview', 'Architecture Concepts', 'Security in AWS'] },
+      { icon: '🤖', name: 'AI & Generative AI', topics: ['AI Fundamentals', 'Prompt Engineering', 'AI Tools for Productivity', 'Practical Use Cases'], image: 'assets/backgrounds/hero-ai.svg' },
+      { icon: '🔐', name: 'Cyber Security', topics: ['Security Fundamentals', 'Cloud Security Concepts', 'Security Best Practices', 'Industry Trends'], image: 'assets/backgrounds/cyber-security.svg' },
+      { icon: '☁️', name: 'AWS Cloud', topics: ['Cloud Fundamentals', 'AWS Services Overview', 'Architecture Concepts', 'Security in AWS'], image: 'assets/backgrounds/aws-cloud.svg' },
+      { icon: '📈', name: 'Financial Markets & Management (FMM)', topics: ['Market Fundamentals', 'Investment Basics', 'Risk Management', 'Practical Investing'], image: 'assets/backgrounds/financial-markets.svg' },
     ],
     community: {
       title: 'Join Our Learning Community',
@@ -82,11 +85,22 @@
     masterclasses: [
       { id: 'mc-ai', badge: 'Free Masterclass', title: 'AI & Generative AI — Getting Started', summary: 'A practical introduction to AI fundamentals and prompt engineering.', topics: ['AI Fundamentals', 'Prompt Engineering'], duration: '1–2 hours', format: 'Live Interactive Session' },
     ],
-    bootcamps: [],
+    backgrounds: {
+      hero: 'assets/backgrounds/hero-ai.svg',
+      domains: 'assets/backgrounds/aws-cloud.svg',
+      bootcamps: 'assets/backgrounds/cyber-security.svg',
+      masterclasses: 'assets/backgrounds/aws-cloud.svg',
+      finalCta: 'assets/backgrounds/hero-ai.svg',
+    },
+    bootcamps: [
+      { id: 'bc-ai', badge: 'Premium Bootcamp', title: 'AI & Generative AI Deep Dive', summary: 'Structured deep dive with hands-on exercises.', duration: 'Multi-weekend program', format: 'Live Sessions + Hands-on Labs', modules: ['AI foundations'], outcome: 'Practical AI confidence.' },
+    ],
     registrationInterests: [
       { id: 'ai-generative', label: 'AI & Generative AI' },
       { id: 'cyber-security', label: 'Cyber Security' },
       { id: 'aws-cloud', label: 'AWS Cloud' },
+      { id: 'fmm', label: 'Financial Markets & Management (FMM)' },
+      { id: 'bootcamp', label: 'Premium Bootcamp (deep dive)' },
       { id: 'general', label: 'General interest' },
     ],
     trainers: [
@@ -411,7 +425,38 @@
       .join('');
   }
 
-  function renderProgramCard(item, variant) {
+  function applySectionBackgrounds() {
+    const bg = data.backgrounds;
+    if (!bg || typeof bg !== 'object') return;
+    const overlay =
+      'linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.72) 50%, rgba(12, 74, 110, 0.82) 100%)';
+    const home = $('#home');
+    if (home && bg.hero) {
+      home.style.backgroundImage = `${overlay}, url('${bg.hero}')`;
+      home.style.backgroundSize = 'cover';
+      home.style.backgroundPosition = 'center';
+    }
+    const setBg = (id, path) => {
+      const el = $(id);
+      if (el && path) {
+        el.style.backgroundImage = `url('${path}')`;
+        el.style.backgroundSize = 'cover';
+        el.style.backgroundPosition = 'center';
+      }
+    };
+    setBg('#domains', bg.domains);
+    setBg('#bootcamps', bg.bootcamps);
+    setBg('#masterclasses', bg.masterclasses);
+    const finalCta = $('#final-cta');
+    if (finalCta && bg.finalCta) {
+      finalCta.style.backgroundImage = `${overlay}, url('${bg.finalCta}')`;
+      finalCta.style.backgroundSize = 'cover';
+      finalCta.style.backgroundPosition = 'center';
+    }
+  }
+
+  function renderProgramCard(item, variant, opts) {
+    const onDarkBg = opts && opts.onDarkBg;
     const topicsHtml = (Array.isArray(item.topics) ? item.topics : [])
       .map(
         (topic) =>
@@ -436,21 +481,42 @@
         : '';
     const summaryBlock =
       typeof item.summary === 'string' && item.summary.trim()
-        ? `<p class="text-sm text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">${escapeHtml(item.summary.trim())}</p>`
+        ? `<p class="text-sm ${onDarkBg ? 'text-slate-300' : 'text-slate-600 dark:text-slate-400'} mt-3 leading-relaxed">${escapeHtml(item.summary.trim())}</p>`
         : '';
+    const cardClass = onDarkBg
+      ? 'rounded-2xl border border-slate-600/40 bg-slate-900/70 backdrop-blur-sm p-6 sm:p-8 flex flex-col scroll-mt-24 shadow-lg'
+      : 'card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8 flex flex-col scroll-mt-24';
+    const titleClass = onDarkBg ? 'text-white' : 'text-slate-900 dark:text-white';
+    const badgeClass = onDarkBg
+      ? 'bg-amber-500/20 text-amber-200'
+      : 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200';
+    const metaClass = onDarkBg ? 'text-slate-400' : 'text-slate-500 dark:text-slate-500';
+    const metaLabel = onDarkBg ? 'text-slate-300' : 'text-slate-600 dark:text-slate-400';
+    const listHeading = onDarkBg ? 'text-slate-200' : 'text-slate-700 dark:text-slate-300';
+    const listItem = onDarkBg ? 'text-slate-300' : 'text-slate-700 dark:text-slate-300';
+    const listBlockStyled =
+      topicsHtml && variant === 'masterclass'
+        ? `<h4 class="text-xs font-semibold uppercase tracking-wide ${listHeading} mt-4 mb-2">Topics Covered</h4><ul class="space-y-1.5">${(Array.isArray(item.topics) ? item.topics : []).map((topic) => `<li class="flex gap-2 text-sm ${listItem}"><span class="text-sky-400 shrink-0">•</span><span>${escapeHtml(topic)}</span></li>`).join('')}</ul>`
+        : modulesHtml && variant === 'bootcamp'
+          ? `<h4 class="text-xs font-semibold uppercase tracking-wide ${listHeading} mt-4 mb-2">Modules</h4><ul class="space-y-1.5">${(Array.isArray(item.modules) ? item.modules : []).map((mod) => `<li class="flex gap-2 text-sm ${listItem}"><span class="text-sky-400 shrink-0">→</span><span>${escapeHtml(mod)}</span></li>`).join('')}</ul>`
+          : listBlock;
+    const outcomeStyled =
+      variant === 'bootcamp' && typeof item.outcome === 'string' && item.outcome.trim()
+        ? `<p class="mt-4 pt-4 border-t ${onDarkBg ? 'border-slate-600/50 text-slate-300' : 'border-slate-200/80 dark:border-slate-700/80 text-slate-600 dark:text-slate-400'} text-sm"><span class="font-semibold ${onDarkBg ? 'text-white' : 'text-slate-700 dark:text-slate-300'}">Outcome:</span> ${escapeHtml(item.outcome.trim())}</p>`
+        : outcomeBlock;
     return `
-      <article id="${escapeHtml(item.id || '')}" class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 sm:p-8 flex flex-col scroll-mt-24">
+      <article id="${escapeHtml(item.id || '')}" class="${cardClass}">
         <div class="flex items-start justify-between gap-3">
-          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">${escapeHtml(item.title || '')}</h3>
-          <span class="text-xs font-medium px-2 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 shrink-0">${escapeHtml(item.badge || (variant === 'masterclass' ? 'Masterclass' : 'Bootcamp'))}</span>
+          <h3 class="text-lg font-semibold ${titleClass}">${escapeHtml(item.title || '')}</h3>
+          <span class="text-xs font-medium px-2 py-1 rounded-full ${badgeClass} shrink-0">${escapeHtml(item.badge || (variant === 'masterclass' ? 'Masterclass' : 'Bootcamp'))}</span>
         </div>
         ${summaryBlock}
-        ${listBlock}
-        <div class="mt-auto pt-4 flex flex-wrap gap-4 text-xs text-slate-500 dark:text-slate-500">
-          <span><span class="font-semibold text-slate-600 dark:text-slate-400">Duration:</span> ${escapeHtml(item.duration || '')}</span>
-          <span><span class="font-semibold text-slate-600 dark:text-slate-400">Format:</span> ${escapeHtml(item.format || '')}</span>
+        ${listBlockStyled}
+        <div class="mt-auto pt-4 flex flex-wrap gap-4 text-xs ${metaClass}">
+          <span><span class="font-semibold ${metaLabel}">Duration:</span> ${escapeHtml(item.duration || '')}</span>
+          <span><span class="font-semibold ${metaLabel}">Format:</span> ${escapeHtml(item.format || '')}</span>
         </div>
-        ${outcomeBlock}
+        ${outcomeStyled}
       </article>`;
   }
 
@@ -468,7 +534,7 @@
       return;
     }
     section?.classList.remove('hidden');
-    host.innerHTML = data.bootcamps.map((bc) => renderProgramCard(bc, 'bootcamp')).join('');
+    host.innerHTML = data.bootcamps.map((bc) => renderProgramCard(bc, 'bootcamp', { onDarkBg: true })).join('');
   }
 
   function renderUpcomingHighlight() {
@@ -484,7 +550,7 @@
     if (!tbody || !Array.isArray(data.sessions)) return;
     const registerHref = (typeof uh?.registerHref === 'string' && uh.registerHref.trim()) || '#register';
     const registerLabel = (typeof uh?.registerLabel === 'string' && uh.registerLabel.trim()) || 'Register';
-    const rows = data.sessions.slice(0, 4);
+    const rows = data.sessions;
     tbody.innerHTML = rows
       .map(
         (row) => {
@@ -555,8 +621,11 @@
           : d.description
             ? `<p class="text-sm text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">${escapeHtml(d.description)}</p>`
             : '';
+        const imgSrc = (typeof d.image === 'string' && d.image.trim()) || '';
+        const bgStyle = imgSrc ? ` style="background-image: url('${escapeHtml(imgSrc)}')"` : '';
+        const cardExtra = imgSrc ? ' area-card-bg relative overflow-hidden' : ' card-surface';
         return `
-      <article class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 h-full">
+      <article class="${cardExtra} rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 h-full"${bgStyle}>
         <span class="text-2xl" aria-hidden="true">${escapeHtml(d.icon || '')}</span>
         <h3 class="text-lg font-semibold text-slate-900 dark:text-white mt-3">${escapeHtml(d.name || '')}</h3>
         ${topicsHtml}
@@ -630,6 +699,10 @@
     const mcIntro = $('#masterclasses-intro');
     if (mcTitle) mcTitle.textContent = site.masterclassesTitle || 'Free Masterclasses';
     if (mcIntro) mcIntro.textContent = site.masterclassesIntro || '';
+    const bcTitle = $('#bootcamps-title');
+    const bcIntro = $('#bootcamps-intro');
+    if (bcTitle) bcTitle.textContent = site.bootcampsTitle || 'Premium Deep-Dive Bootcamps';
+    if (bcIntro) bcIntro.textContent = site.bootcampsIntro || '';
   }
 
   function setNamedMeta(name, content) {
@@ -1248,6 +1321,7 @@
     if (!loaded) showLoadError();
 
     renderNav();
+    applySectionBackgrounds();
     renderHero();
     renderAboutAcademy();
     renderLearningDomains();
@@ -1257,6 +1331,7 @@
     renderAboutIntro();
     renderTrainers();
     renderMasterclasses();
+    renderBootcamps();
     renderRegistrationOptions();
     renderUpcomingHighlight();
     renderFinalCta();
