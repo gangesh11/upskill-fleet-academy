@@ -2,25 +2,34 @@
   "site": {
     "title": "Upskill Fleet Academy",
     "heroEyebrow": "Upskill Fleet Academy",
-    "heroHeadline": "Learn AI, Cyber Security & AWS Cloud Through Real-World Training",
-    "heroSubheading": "Practical learning, industry insights, hands-on demonstrations, and career guidance for students and professionals looking to build future-ready skills.",
+    "heroHeadline": "Learn AI, Cyber Security, AWS Cloud & Financial Markets Through Real-World Training",
+    "heroSubheading": "Practical learning, industry insights, hands-on demonstrations, and career guidance for students and professionals building future-ready skills in technology and finance.",
     "heroTags": "",
     "heroSupporting": "",
-    "seoDescription": "Upskill Fleet Academy — Real-world AI, Cyber Security & AWS Cloud learning for students and professionals. Free masterclasses, WhatsApp community, and practical training.",
+    "seoDescription": "Upskill Fleet Academy — Real-world AI, Cyber Security, AWS Cloud & Financial Markets learning for students and professionals. Free masterclasses, premium bootcamps, and WhatsApp community.",
     "primaryCta": "Join Free Masterclass",
     "primaryCtaHref": "#masterclasses",
     "secondaryCta": "Join WhatsApp Community",
     "secondaryCtaHref": "#community",
     "scheduleNote": "Weekends only · live online. Free masterclasses are 1–2 hours each, starting 21 June 2026.",
     "aboutAcademyTitle": "About Upskill Fleet Academy",
-    "aboutAcademyBody": "Upskill Fleet Academy is a learning initiative focused on helping students and working professionals understand AI, Cyber Security, and AWS Cloud through practical, real-world training.\n\nOur goal is to bridge the gap between academic learning and industry expectations by sharing knowledge gained from years of experience in technology and cybersecurity.",
-    "aboutTitle": "Meet your instructor",
-    "aboutIntro": "Learn from an experienced practitioner focused on real-world skills—not theory alone.",
+    "aboutAcademyBody": "Upskill Fleet Academy is a learning initiative focused on helping students and working professionals understand AI, Cyber Security, AWS Cloud, and Financial Markets through practical, real-world training.\n\nOur goal is to bridge the gap between academic learning and industry expectations by sharing knowledge gained from years of experience in technology, cybersecurity, and financial markets.",
+    "aboutTitle": "Meet your instructors",
+    "aboutIntro": "Learn from experienced practitioners focused on real-world skills—not theory alone.",
     "masterclassesTitle": "Free Masterclasses",
-    "masterclassesIntro": "Short, live sessions to explore AI, Cyber Security, and AWS Cloud. A simple way to start learning with no commitment.",
-    "guestFacultyIntro": "",
+    "masterclassesIntro": "Short, live orientation sessions across our tracks. A simple way to explore AI, Cyber Security, AWS Cloud, or Financial Markets before committing to deeper learning.",
+    "bootcampsTitle": "Premium Deep-Dive Bootcamps",
+    "bootcampsIntro": "Structured bootcamps for learners ready to go further. Each track is a premium deep dive into one technology area—with guided hands-on exercises, real-world scenarios, and practical implementation focus.",
+    "guestFacultyIntro": "Guest faculty bring financial markets and investment perspectives into the FMM track.",
     "domainsTitle": "Learning Areas",
-    "domainsIntro": "Practical topics we cover through masterclasses, demonstrations, and community learning."
+    "domainsIntro": "Four focused tracks—explore through free masterclasses, then deepen your skills in a premium bootcamp."
+  },
+  "backgrounds": {
+    "hero": "assets/backgrounds/hero-ai.svg",
+    "domains": "assets/backgrounds/aws-cloud.svg",
+    "bootcamps": "assets/backgrounds/cyber-security.svg",
+    "masterclasses": "assets/backgrounds/aws-cloud.svg",
+    "finalCta": "assets/backgrounds/hero-ai.svg"
   },
   "whyJoin": {
     "title": "Why Join?",
@@ -37,17 +46,26 @@
     {
       "icon": "🤖",
       "name": "AI & Generative AI",
-      "topics": ["AI Fundamentals", "Prompt Engineering", "AI Tools for Productivity", "Practical Use Cases"]
+      "topics": ["AI Fundamentals", "Prompt Engineering", "AI Tools for Productivity", "Practical Use Cases"],
+      "image": "assets/backgrounds/hero-ai.svg"
     },
     {
       "icon": "🔐",
       "name": "Cyber Security",
-      "topics": ["Security Fundamentals", "Cloud Security Concepts", "Security Best Practices", "Industry Trends"]
+      "topics": ["Security Fundamentals", "Cloud Security Concepts", "Security Best Practices", "Industry Trends"],
+      "image": "assets/backgrounds/cyber-security.svg"
     },
     {
       "icon": "☁️",
       "name": "AWS Cloud",
-      "topics": ["Cloud Fundamentals", "AWS Services Overview", "Architecture Concepts", "Security in AWS"]
+      "topics": ["Cloud Fundamentals", "AWS Services Overview", "Architecture Concepts", "Security in AWS"],
+      "image": "assets/backgrounds/aws-cloud.svg"
+    },
+    {
+      "icon": "📈",
+      "name": "Financial Markets & Management (FMM)",
+      "topics": ["Market Fundamentals", "Investment Basics", "Risk Management", "Practical Investing"],
+      "image": "assets/backgrounds/financial-markets.svg"
     }
   ],
   "community": {
@@ -83,12 +101,10 @@
       "title": "AI & Generative AI — Getting Started",
       "summary": "A practical introduction to AI fundamentals, prompt engineering, and how generative AI is used in real work today.",
       "topics": [
-        "Introduction to AI Security",
-        "LLM Architecture Basics",
-        "Prompt Injection Risks",
-        "Data Leakage Threats",
-        "AI Governance",
-        "Responsible AI"
+        "AI Fundamentals",
+        "Prompt Engineering",
+        "AI Tools for Productivity",
+        "Practical Use Cases"
       ],
       "duration": "1–2 hours",
       "format": "Live Interactive Session"
@@ -122,9 +138,84 @@
       ],
       "duration": "1–2 hours",
       "format": "Live Interactive Session"
+    },
+    {
+      "id": "mc-fmm",
+      "badge": "Free Masterclass",
+      "title": "Financial Markets & Investing — Introduction",
+      "summary": "Understand how markets work, key participants, and foundational investment concepts for students and beginners.",
+      "topics": [
+        "How Stock Markets Work",
+        "Investment Basics",
+        "Risk Management",
+        "Long-Term Wealth Creation"
+      ],
+      "duration": "1–2 hours",
+      "format": "Live Interactive Session"
     }
   ],
-  "bootcamps": [],
+  "bootcamps": [
+    {
+      "id": "bc-ai",
+      "badge": "Premium Bootcamp",
+      "title": "AI & Generative AI Deep Dive",
+      "summary": "A structured deep dive into AI and generative AI—from fundamentals to practical application—with guided hands-on exercises.",
+      "duration": "Multi-weekend program",
+      "format": "Live Sessions + Hands-on Labs",
+      "modules": [
+        "AI & LLM foundations",
+        "Prompt engineering in practice",
+        "AI tools for productivity",
+        "Real-world use cases & scenarios"
+      ],
+      "outcome": "Build practical confidence applying AI and generative AI tools in everyday and professional contexts."
+    },
+    {
+      "id": "bc-cyber",
+      "badge": "Premium Bootcamp",
+      "title": "Cyber Security Deep Dive",
+      "summary": "Detailed exploration of security fundamentals, cloud security concepts, and industry practices—with hands-on demonstrations.",
+      "duration": "Multi-weekend program",
+      "format": "Live Sessions + Hands-on Labs",
+      "modules": [
+        "Security fundamentals",
+        "Cloud security concepts",
+        "Security monitoring & best practices",
+        "Industry trends & scenarios"
+      ],
+      "outcome": "Understand how security works in modern organizations and apply concepts through practical exercises."
+    },
+    {
+      "id": "bc-aws",
+      "badge": "Premium Bootcamp",
+      "title": "AWS Cloud Deep Dive",
+      "summary": "Deep dive into AWS cloud fundamentals, core services, architecture, and security—with guided hands-on labs.",
+      "duration": "Multi-weekend program",
+      "format": "Live Sessions + Hands-on Labs",
+      "modules": [
+        "Cloud & AWS fundamentals",
+        "IAM, compute & networking",
+        "Architecture concepts",
+        "Security in AWS environments"
+      ],
+      "outcome": "Gain hands-on familiarity with AWS building blocks and security-aware cloud decisions."
+    },
+    {
+      "id": "bc-fmm",
+      "badge": "Premium Bootcamp",
+      "title": "Financial Markets & Management (FMM) Deep Dive",
+      "summary": "Structured progression through market fundamentals, investing, risk management, and practical financial analysis.",
+      "duration": "Multi-weekend program",
+      "format": "Interactive Sessions + Practical Examples",
+      "modules": [
+        "Financial markets fundamentals",
+        "Trading & market operations",
+        "Investment planning & risk",
+        "Practical investing & analysis"
+      ],
+      "outcome": "Build clarity on markets, investing fundamentals, and practical financial decision-making."
+    }
+  ],
   "registration": {
     "notifyEmail": "connectupskillfleetacademy@gmail.com",
     "web3formsAccessKey": "5665456456456456456456456456456456456456456456456456456456456456"
@@ -165,6 +256,33 @@
         "Terraform Associate",
         "Generative & Agentic AI Security Practitioner"
       ]
+    },
+    {
+      "sectionHeading": "Financial Markets & Investment Faculty",
+      "name": "Ms. Manju Vats",
+      "title": "Guest Instructor — Financial Markets & Management (FMM)",
+      "bio": "Experienced financial markets professional with 15+ years of teaching and industry experience. Specializes in simplifying investment concepts, market operations, risk management, and financial literacy for students and working professionals.",
+      "shortBio": "Financial markets educator for students and professionals.",
+      "profileImage": "",
+      "credentialsLabel": "Areas of Expertise",
+      "contact": {
+        "email": "connectupskillfleetacademy@gmail.com",
+        "phone": "9999753152",
+        "whatsapp": "9999753152"
+      },
+      "social": {
+        "linkedin": "",
+        "twitter": "",
+        "github": "",
+        "website": ""
+      },
+      "credentials": [
+        "Financial Markets",
+        "Investment Fundamentals",
+        "Risk Management",
+        "Financial Planning",
+        "Financial Analysis"
+      ]
     }
   ],
   "courses": [],
@@ -192,6 +310,14 @@
       "sessionType": "Live",
       "duration": "1–2 hours",
       "mode": "Online"
+    },
+    {
+      "date": "2026-07-12",
+      "topic": "Free Masterclass — Financial Markets & Management (FMM)",
+      "shortLabel": "Financial Markets (FMM)",
+      "sessionType": "Live",
+      "duration": "1–2 hours",
+      "mode": "Online"
     }
   ],
   "curriculum": [],
@@ -201,12 +327,14 @@
     { "id": "ai-generative", "label": "AI & Generative AI" },
     { "id": "cyber-security", "label": "Cyber Security" },
     { "id": "aws-cloud", "label": "AWS Cloud" },
+    { "id": "fmm", "label": "Financial Markets & Management (FMM)" },
+    { "id": "bootcamp", "label": "Premium Bootcamp (deep dive)" },
     { "id": "general", "label": "General interest" }
   ],
   "faq": [
     {
       "q": "Who is this for?",
-      "a": "Students and working professionals who want practical, real-world learning in AI, Cyber Security, and AWS Cloud—not just theory."
+      "a": "Students and working professionals who want practical, real-world learning in AI, Cyber Security, AWS Cloud, or Financial Markets—not just theory."
     },
     {
       "q": "How do I get started?",
@@ -222,13 +350,17 @@
     },
     {
       "q": "Is there a cost?",
-      "a": "Masterclasses are free to join. We are building a learning community first—practical content, guidance, and resources shared through live sessions, WhatsApp, and YouTube."
+      "a": "Masterclasses are free to join. Premium deep-dive bootcamps are structured programs with hands-on focus—register interest to learn about upcoming cohorts."
+    },
+    {
+      "q": "What is the difference between masterclass and bootcamp?",
+      "a": "Masterclasses are free 1–2 hour orientation sessions to explore a track. Bootcamps are premium deep dives—structured multi-weekend programs with detailed coverage and guided hands-on exercises in one technology area."
     }
   ],
   "footer": {
     "company": "Upskill Fleet Academy",
     "tagline": "Learn. Build. Grow.",
-    "closing": "Real-world AI, Cyber Security & AWS Cloud learning for students and professionals.",
+    "closing": "Real-world AI, Cyber Security, AWS Cloud & Financial Markets learning for students and professionals.",
     "address": "Remote-first · Online learning community",
     "copyrightYear": 2026
   }
