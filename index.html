@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Real-world AI, Cyber Security & AWS Cloud learning for students and professionals. Free masterclasses and WhatsApp community." />
+    <meta name="description" content="Real-world AI, Cyber Security, AWS Cloud & Financial Markets learning. Free masterclasses, premium bootcamps, and WhatsApp community." />
     <title>Training site</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,9 +33,60 @@
       .hero-mesh {
         background-color: #0f172a;
         background-image:
-          radial-gradient(at 40% 20%, rgba(14, 165, 233, 0.25) 0px, transparent 50%),
-          radial-gradient(at 80% 0%, rgba(99, 102, 241, 0.2) 0px, transparent 45%),
-          radial-gradient(at 0% 80%, rgba(16, 185, 129, 0.12) 0px, transparent 45%);
+          linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.78) 45%, rgba(12, 74, 110, 0.85) 100%),
+          var(--bg-hero, radial-gradient(at 40% 20%, rgba(14, 165, 233, 0.25) 0px, transparent 50%));
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .section-bg-image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .section-bg-image::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .section-bg-image > * {
+        position: relative;
+        z-index: 1;
+      }
+      .domains-bg::before {
+        background: linear-gradient(180deg, rgba(248, 250, 252, 0.94) 0%, rgba(241, 245, 249, 0.97) 100%);
+      }
+      .dark .domains-bg::before {
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.98) 100%);
+      }
+      .bootcamps-bg::before {
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.96) 100%);
+      }
+      .masterclasses-bg::before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%);
+      }
+      .dark .masterclasses-bg::before {
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.99) 100%);
+      }
+      .area-card-bg {
+        background-size: cover;
+        background-position: center;
+      }
+      .area-card-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.88) 100%);
+        border-radius: inherit;
+      }
+      .dark .area-card-bg::after {
+        background: linear-gradient(160deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.9) 100%);
+      }
+      .area-card-bg > * {
+        position: relative;
+        z-index: 1;
       }
       .skip-link {
         position: absolute;
@@ -77,6 +128,7 @@
           <a href="#about-academy" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">About</a>
           <a href="#domains" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Learn</a>
           <a href="#masterclasses" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Masterclass</a>
+          <a href="#bootcamps" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Bootcamp</a>
           <a href="#community" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Community</a>
           <a href="#register" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Contact</a>
         </nav>
@@ -106,6 +158,7 @@
         <a href="#about-academy" class="block py-2 text-slate-700 dark:text-slate-300">About</a>
         <a href="#domains" class="block py-2 text-slate-700 dark:text-slate-300">Learn</a>
         <a href="#masterclasses" class="block py-2 text-slate-700 dark:text-slate-300">Masterclass</a>
+        <a href="#bootcamps" class="block py-2 text-slate-700 dark:text-slate-300">Bootcamp</a>
         <a href="#community" class="block py-2 text-slate-700 dark:text-slate-300">Community</a>
         <a href="#register" class="block py-2 text-slate-700 dark:text-slate-300">Contact</a>
       </div>
@@ -146,11 +199,11 @@
       </section>
 
       <!-- Learning areas -->
-      <section id="domains" class="py-14 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/30">
+      <section id="domains" class="domains-bg section-bg-image py-14 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 id="domains-title" class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white mb-2">Learning Areas</h2>
           <p id="domains-intro" class="text-slate-600 dark:text-slate-400 max-w-2xl mb-10 text-sm sm:text-base"></p>
-          <div id="domains-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-6"></div>
+          <div id="domains-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
         </div>
       </section>
 
@@ -205,11 +258,25 @@
       </section>
 
       <!-- Masterclasses -->
-      <section id="masterclasses" class="py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+      <section id="masterclasses" class="masterclasses-bg section-bg-image py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 id="masterclasses-title" class="font-display text-3xl sm:text-4xl text-slate-900 dark:text-white mb-2">Free Masterclasses</h2>
           <p id="masterclasses-intro" class="text-slate-600 dark:text-slate-400 max-w-2xl mb-12"></p>
-          <div id="masterclasses-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+          <div id="masterclasses-grid" class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- Bootcamps -->
+      <section id="bootcamps" class="bootcamps-bg section-bg-image py-16 sm:py-24 border-b border-slate-200/80 dark:border-slate-800/80 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 id="bootcamps-title" class="font-display text-3xl sm:text-4xl mb-2">Premium Deep-Dive Bootcamps</h2>
+          <p id="bootcamps-intro" class="text-slate-300 max-w-3xl mb-12 leading-relaxed"></p>
+          <div id="bootcamps-grid" class="grid sm:grid-cols-2 gap-6"></div>
+          <p class="mt-10 text-center text-sm text-slate-400">
+            <a href="#register" class="text-sky-400 font-semibold hover:underline">Register interest</a>
+            <span class="mx-2" aria-hidden="true">·</span>
+            to hear about upcoming bootcamp cohorts
+          </p>
         </div>
       </section>
 
