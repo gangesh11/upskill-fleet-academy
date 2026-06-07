@@ -14,284 +14,107 @@
   const FALLBACK_DATA = {
     site: {
       title: 'Upskill Fleet Academy',
-      heroEyebrow: 'Enterprise AI, Cyber Security & Cloud Learning',
-      heroHeadline: 'Build Practical Skills That Modern Organizations Need',
+      heroEyebrow: 'Upskill Fleet Academy',
+      heroHeadline: 'Learn AI, Cyber Security & AWS Cloud Through Real-World Training',
       heroSubheading:
-        'Hands-on programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets—designed for students and aspiring professionals & enthusiasts.',
-      heroTags: 'Workshop-Based · Industry-Focused · Real-World Scenarios',
+        'Practical learning, industry insights, hands-on demonstrations, and career guidance for students and professionals looking to build future-ready skills.',
+      heroTags: '',
       heroSupporting: '',
       seoDescription:
-        'Upskill Fleet Academy — Expert-led programs in AI Security, Cyber Security, Cloud Security, DevSecOps, and Financial Markets.',
-      primaryCta: 'Explore Programs',
-      secondaryCta: 'Upcoming Sessions',
-      tertiaryCta: 'Register Interest',
-      scheduleNote:
-        'Weekends only · live online. Master classes are 1–2 hour orientations (weekends 1–3 from 21 June 2026). Bootcamp is 8 hours total — 2 hours per weekend over four weekends (weekends 4–7).',
-      aboutTitle: 'Meet your instructors',
-      aboutIntro: 'Learn from experienced practitioners focused on real-world skills and career outcomes.',
-      coursesTitle: 'Course catalog',
-      coursesIntro:
-        'Three learning paths—AI & Cyber Security, AWS Cloud Computing, and FMM—each structured from beginner to advanced.',
-      guestFacultyIntro:
-        'Guest faculty bring financial markets and investment perspectives into the classroom.',
+        'Upskill Fleet Academy — Real-world AI, Cyber Security & AWS Cloud learning for students and professionals.',
+      primaryCta: 'Join Free Masterclass',
+      primaryCtaHref: '#masterclasses',
+      secondaryCta: 'Join WhatsApp Community',
+      secondaryCtaHref: '#community',
+      aboutAcademyTitle: 'About Upskill Fleet Academy',
+      aboutAcademyBody:
+        'Upskill Fleet Academy is a learning initiative focused on helping students and working professionals understand AI, Cyber Security, and AWS Cloud through practical, real-world training.\n\nOur goal is to bridge the gap between academic learning and industry expectations by sharing knowledge gained from years of experience in technology and cybersecurity.',
+      aboutTitle: 'Meet your instructor',
+      aboutIntro: 'Learn from an experienced practitioner focused on real-world skills—not theory alone.',
+      masterclassesTitle: 'Free Masterclasses',
+      masterclassesIntro: 'Short, live sessions to explore AI, Cyber Security, and AWS Cloud.',
+      domainsTitle: 'Learning Areas',
+      domainsIntro: 'Practical topics we cover through masterclasses, demonstrations, and community learning.',
+      guestFacultyIntro: '',
     },
-    trustMetrics: {
-      title: 'Why Professionals Learn With Us',
+    whyJoin: {
+      title: 'Why Join?',
       items: [
-        { value: '20+', label: 'Years Industry Experience' },
-        { value: '5+', label: 'Learning Domains — Technology, Security, AI, Cloud & Finance' },
-        { value: 'Hands-On', label: 'Labs — Practical learning beyond theory' },
-        { value: 'Cert-Ready', label: 'Pathways aligned with industry certifications' },
+        'Real-world focused training',
+        'Industry-oriented learning',
+        'Beginner-friendly sessions',
+        'Practical demonstrations',
+        'Career guidance and mentorship',
+        'Learn at your own pace',
       ],
     },
-    audiencePaths: {
-      title: 'Choose Your Learning Path',
-      intro: 'Not sure where to start? Pick the path that matches your goals.',
-      items: [
-        { title: 'Students & Beginners', description: 'Build foundations in Cyber Security, Cloud, AI, and Financial Markets.', href: '#courses' },
-        { title: 'Aspiring Professionals & Enthusiasts', description: 'Upskill with practical, enterprise-focused security and cloud programs.', href: '#masterclasses' },
-        { title: 'Career Advancers', description: 'Advanced learning in AI Security, DevSecOps, governance, and cloud security.', href: '#bootcamps' },
-      ],
+    learningAreas: [
+      { icon: '🤖', name: 'AI & Generative AI', topics: ['AI Fundamentals', 'Prompt Engineering', 'AI Tools for Productivity', 'Practical Use Cases'] },
+      { icon: '🔐', name: 'Cyber Security', topics: ['Security Fundamentals', 'Cloud Security Concepts', 'Security Best Practices', 'Industry Trends'] },
+      { icon: '☁️', name: 'AWS Cloud', topics: ['Cloud Fundamentals', 'AWS Services Overview', 'Architecture Concepts', 'Security in AWS'] },
+    ],
+    community: {
+      title: 'Join Our Learning Community',
+      body: 'Get updates on free masterclasses, learning resources, AI tools, cloud technologies, cybersecurity insights, and career guidance.',
+      cta: 'Join WhatsApp Channel',
+      whatsappChannelUrl: '',
     },
-    learningFormats: {
-      title: 'Learning Formats',
-      intro: 'Start with a masterclass orientation, then deepen skills in a structured bootcamp.',
-      formats: [
-        { name: 'Masterclasses', badge: 'Lead-in', description: 'Short orientation sessions.', duration: '1–2 hours', detail: 'Live interactive sessions' },
-        { name: 'Bootcamps', badge: 'Deep dive', description: 'Structured multi-weekend programs with labs.', duration: 'Weekend cohorts · 2 hrs/session', detail: '8 hours over four weekends after masterclasses' },
-      ],
+    youtube: {
+      title: 'YouTube Channel (Launching Soon)',
+      body: 'Subscribe for practical content on AI, Cyber Security, AWS Cloud, career guidance, and technology trends.',
+      cta: 'Subscribe on YouTube',
+      channelUrl: '',
     },
     upcomingHighlight: {
-      title: 'Upcoming Sessions',
-      intro: 'June 2026 weekend cohort — live online.',
+      title: 'Upcoming Masterclasses',
+      intro: 'June 2026 weekend sessions — live online.',
       registerLabel: 'Register',
       registerHref: '#register',
     },
     finalCta: {
-      title: 'Start Your Learning Journey',
-      body: 'Whether you\'re entering technology, advancing your security career, or exploring financial markets, our programs provide practical knowledge and hands-on learning.',
-      primaryCta: 'Explore Programs',
-      primaryHref: '#courses',
-      secondaryCta: 'Register Interest',
-      secondaryHref: '#register',
-    },
-    learningDomains: [
-      { icon: '🔐', name: 'AI & Cyber Security', description: 'AI security & cyber defense', href: '#ai-cyber-security' },
-      { icon: '☁️', name: 'AWS Cloud Computing', description: 'Cloud fundamentals to AWS', href: '#aws-cloud-computing' },
-      { icon: '📈', name: 'Financial Markets & Management', description: 'Markets & certifications', href: '#financial-markets' },
-    ],
-    valueProposition: {
-      title: 'Why Learn With Us?',
-      items: [
-        'Industry-focused curriculum aligned with enterprise security challenges',
-        'Practical workshops and guided labs—not just theory',
-        'Learn from experienced cloud, AI, and security practitioners',
-        'Small cohorts with interactive discussions and mentoring',
-        'Career-oriented paths for students and professionals',
-      ],
-    },
-    outcomes: {
-      title: "What You'll Gain",
-      intro: 'By completing our programs, learners will:',
-      items: [
-        'Practical industry knowledge you can apply immediately',
-        'Hands-on implementation experience through labs and scenarios',
-        'Real-world security and cloud concepts used in enterprises',
-        'Exposure to enterprise use cases and decision-making patterns',
-        'Career-oriented learning pathways across technology and finance',
-        'Confidence with emerging technologies including AI and LLMs',
-        'Better readiness for certifications and technical interviews',
-      ],
+      title: 'Start Learning Today',
+      body: 'Join a free masterclass or our WhatsApp community to stay updated on sessions and practical learning content.',
+      primaryCta: 'Join Free Masterclass',
+      primaryHref: '#masterclasses',
+      secondaryCta: 'Join WhatsApp Community',
+      secondaryHref: '#community',
     },
     masterclasses: [
-      { id: 'mc-ai-security', badge: 'Masterclass', title: 'AI Security Fundamentals for Modern Enterprises', summary: 'Secure Generative AI and LLM applications.', topics: ['Introduction to AI Security', 'LLM Architecture Basics', 'Prompt Injection Risks'], duration: '1–2 hours', format: 'Live Interactive Session' },
-      { id: 'mc-cloud-security', badge: 'Masterclass', title: 'Cloud Security Essentials on AWS', summary: 'AWS security building blocks.', topics: ['Shared Responsibility Model', 'IAM Fundamentals'], duration: '1–2 hours', format: 'Live Interactive Session' },
+      { id: 'mc-ai', badge: 'Free Masterclass', title: 'AI & Generative AI — Getting Started', summary: 'A practical introduction to AI fundamentals and prompt engineering.', topics: ['AI Fundamentals', 'Prompt Engineering'], duration: '1–2 hours', format: 'Live Interactive Session' },
     ],
-    bootcamps: [
-      { id: 'bc-ai-security', badge: 'Bootcamp', title: 'Enterprise AI Security Bootcamp', summary: 'Secure AI architectures.', duration: '6-week program structure', format: 'Live Sessions + Labs', modules: ['Week 1 — AI & LLM Foundations'], outcome: 'Build secure AI architectures.' },
+    bootcamps: [],
+    registrationInterests: [
+      { id: 'ai-generative', label: 'AI & Generative AI' },
+      { id: 'cyber-security', label: 'Cyber Security' },
+      { id: 'aws-cloud', label: 'AWS Cloud' },
+      { id: 'general', label: 'General interest' },
     ],
     trainers: [
       {
-        name: 'Dr. Alex Morgan',
-        title: 'Principal Security & Cloud Instructor',
-        bio: '15+ years across security architecture, cloud platforms, and regulated financial services. Former lead at a global bank and cloud partner; now focused on practical, compliance-aware training for teams adopting AI and hybrid cloud.',
-        shortBio: 'Security architect, cloud strategist, and hands-on instructor for enterprise teams.',
+        name: 'Mr. Gangesh Vats',
+        title: 'Lead Instructor — AI, Cyber Security & AWS Cloud',
+        bio: 'Security Architect and AI Security Professional with 20+ years of experience in cybersecurity, cloud security, and enterprise technology.',
+        bioSecondary: 'Having worked across large-scale enterprise environments, I share practical insights that help learners understand how technology and security work in real organizations—not just in textbooks.',
         profileImage: '',
-        contact: {
-          email: 'training@example.com',
-          phone: '+1 (555) 010-2030',
-          whatsapp: '+15550102030',
-        },
-        social: {
-          linkedin: 'https://www.linkedin.com/in/example',
-          twitter: 'https://twitter.com/example',
-          github: 'https://github.com/example',
-          website: 'https://example.com',
-        },
-        credentials: [
-          'CISSP, CCSP',
-          'AWS & Azure Solutions Architect',
-          'Former ISO 27001 lead implementer',
-        ],
-      },
-      {
-        name: 'Jordan Lee',
-        title: 'Co-instructor',
-        bio: 'Second trainer bio — replace in config/data.json under trainers[1].',
-        shortBio: '',
-        profileImage: '',
-        contact: {
-          email: '',
-          phone: '',
-          whatsapp: '',
-        },
-        social: {},
-        credentials: ['Industry certifications'],
+        credentialsLabel: 'Background',
+        contact: { email: 'connectupskillfleetacademy@gmail.com', phone: '9999753152', whatsapp: '9999753152' },
+        social: { linkedin: 'https://www.linkedin.com/in/gangesh-vats11/' },
+        credentials: ['Security architecture', 'Cloud & AI security', 'Enterprise technology'],
       },
     ],
-    courses: [
-      {
-        id: 'ai-cyber-security',
-        domain: 'AI & Cyber Security',
-        summary: 'AI security and cyber defense from fundamentals to governance.',
-        level: 'Beginner to Advanced',
-        format: 'Workshop · Labs · Scenarios',
-        topicGroups: [
-          { level: 'Beginner', topics: ['Introduction to AI Security', 'Understanding LLMs', 'Cyber security fundamentals'] },
-          { level: 'Intermediate', topics: ['AI attacks and defenses using DevSecOps', 'Prompt injection defense', 'IAM & security monitoring'] },
-          { level: 'Advanced', topics: ['Supply chain attacks in AI', 'Governance and compliance in AI', 'Incident response for AI systems'] },
-        ],
-      },
-      {
-        id: 'aws-cloud-computing',
-        domain: 'AWS Cloud Computing',
-        summary: 'Cloud computing on AWS from core concepts to networking and security.',
-        level: 'Beginner to Advanced',
-        format: 'Hands-on Labs · AWS Walkthroughs',
-        topicGroups: [
-          { level: 'Beginner', topics: ['What is cloud computing?', 'AWS infrastructure overview'] },
-          { level: 'Intermediate', topics: ['IAM — users, roles & policies', 'Amazon EC2 fundamentals'] },
-          { level: 'Advanced', topics: ['VPC, networking & compute', 'AWS security best practices'] },
-        ],
-      },
-      {
-        id: 'financial-markets',
-        domain: 'Financial Markets & Management (FMM)',
-        summary: 'Financial markets, investing, and NISM/NCFM certification guidance.',
-        topics: ['Introduction to Financial Markets', 'NISM & NCFM Certification Preparation', 'Stock Market Fundamentals', 'Risk Management'],
-        level: 'Beginner to Advanced',
-        format: 'Interactive Sessions · Certification Guidance',
-      },
-    ],
+    courses: [],
     sessions: [
-      {
-        date: '2026-06-21',
-        topic: 'Master Class — Weekend 1: AI & Cyber Security',
-        shortLabel: 'AI & Cyber Security',
-        sessionType: 'Master Class',
-        duration: '1–2 hours',
-        mode: 'Online only',
-      },
-      {
-        date: '2026-06-28',
-        topic: 'Master Class — Weekend 2: AWS Cloud Computing',
-        shortLabel: 'AWS Cloud Computing',
-        sessionType: 'Master Class',
-        duration: '1–2 hours',
-        mode: 'Online only',
-      },
-      {
-        date: '2026-07-05',
-        topic: 'Master Class — Weekend 3: Financial Markets & Management',
-        shortLabel: 'Financial Markets & Management',
-        sessionType: 'Master Class',
-        duration: '1–2 hours',
-        mode: 'Online only',
-      },
-      {
-        date: '2026-07-12',
-        topic: 'Bootcamp — Weekend 4: Program kickoff & shared foundations',
-        shortLabel: 'Program Kickoff & Foundations',
-        sessionType: 'Bootcamp',
-        duration: '2 hours',
-        mode: 'Online only',
-      },
-      {
-        date: '2026-07-19',
-        topic: 'Bootcamp — Weekend 5: AI Security & Cyber Security (AI fundamentals, what is an LLM, LLM security threats & prevention, tools to secure your LLM, threat modeling labs, incident playbooks)',
-        duration: '2 hours',
-        mode: 'Online only',
-      },
-      {
-        date: '2026-07-26',
-        topic: 'Bootcamp — Weekend 6: AWS Cloud Computing (IAM, EC2, VPC & networking, AWS security basics, hands-on labs)',
-        duration: '2 hours',
-        mode: 'Online only',
-      },
-      {
-        date: '2026-08-02',
-        topic: 'Bootcamp — Weekend 7: Financial Markets & capstone (market fundamentals, NISM/NCFM guidance, integrated review & next steps)',
-        duration: '2 hours',
-        mode: 'Online only',
-      },
+      { date: '2026-06-21', topic: 'Free Masterclass — AI & Generative AI', shortLabel: 'AI & Generative AI', sessionType: 'Live', duration: '1–2 hours', mode: 'Online' },
+      { date: '2026-06-28', topic: 'Free Masterclass — Cyber Security', shortLabel: 'Cyber Security', sessionType: 'Live', duration: '1–2 hours', mode: 'Online' },
+      { date: '2026-07-05', topic: 'Free Masterclass — AWS Cloud', shortLabel: 'AWS Cloud', sessionType: 'Live', duration: '1–2 hours', mode: 'Online' },
     ],
-    curriculum: [
-      {
-        phase: 'Foundation',
-        description: 'Shared vocabulary, risk context, and tooling setup across all four domains.',
-        milestones: ['Security & cloud fundamentals', 'Regulatory landscape primer', 'Lab environment access'],
-      },
-      {
-        phase: 'Core skills',
-        description: 'Domain-deep modules with exercises aligned to your catalog courses.',
-        milestones: ['AI & cloud security controls', 'Identity & detection basics', 'Marketing compliance checkpoints'],
-      },
-      {
-        phase: 'Applied capstone',
-        description: 'Cross-domain scenario: ship a cloud-hosted AI feature with security and marketing sign-off.',
-        milestones: ['Architecture review', 'Control mapping', 'Stakeholder briefing'],
-      },
-    ],
-    resources: [
-      { title: 'Session notes (PDF)', type: 'Notes', status: 'placeholder', href: '#' },
-      { title: 'Reading list & standards index', type: 'Links', status: 'placeholder', href: '#' },
-      { title: 'Recorded sessions (2026 Q2)', type: 'Recordings', status: 'placeholder', href: '#' },
-      { title: 'Lab starter templates', type: 'Downloads', status: 'placeholder', href: '#' },
-    ],
-    testimonials: [
-      {
-        quote:
-          'The sessions were practical and focused on real-world enterprise security challenges rather than only theoretical concepts.',
-        role: 'Security Engineer',
-      },
-      {
-        quote:
-          'The cloud security workshops helped me understand architecture decisions, IAM strategies, and security best practices used in production environments.',
-        role: 'Cloud Professional',
-      },
-      {
-        quote:
-          'The learning path was beginner-friendly while still exposing us to industry-level concepts and tools.',
-        role: 'Student Learner',
-      },
-    ],
+    curriculum: [],
+    resources: [],
+    testimonials: [],
     faq: [
-      {
-        q: 'Who should attend?',
-        a: 'Security engineers, cloud architects, product/engineering leads, and marketing leaders in regulated industries—or anyone building a cross-functional training program.',
-      },
-      {
-        q: 'Are sessions recorded?',
-        a: 'Recordings are provided where policy allows; placeholders in Resources will be replaced with links after each cohort.',
-      },
-      {
-        q: 'Do I need cloud accounts for labs?',
-        a: 'Most labs use open-source tools you can run locally or in our guided lab setup—no paid cloud subscription is required to start. When a session needs cloud resources (for example AWS Cloud Computing labs), we will say so in advance; you may create an AWS free-tier account only if required for that lab. If you use your own cloud account or company environment, follow organizational policies and obtain admin approval where needed.',
-      },
-      {
-        q: 'Can this scale to a full LMS later?',
-        a: 'Yes. Content is data-driven from JSON; you can swap in an API, auth, and progress tracking without rewriting the page structure.',
-      },
+      { q: 'Who is this for?', a: 'Students and working professionals who want practical, real-world learning in AI, Cyber Security, and AWS Cloud.' },
+      { q: 'How do I get started?', a: 'Join a free masterclass, follow our WhatsApp channel, or register your interest on this page.' },
+      { q: 'Is there a cost?', a: 'Masterclasses are free to join. We are building a learning community first.' },
     ],
     registration: {
       notifyEmail: 'your-email@example.com',
@@ -299,10 +122,9 @@
     },
     footer: {
       company: 'Upskill Fleet Academy',
-      tagline: 'Practical learning. Industry experience. Career growth.',
-      closing:
-        "Whether you're starting your journey in technology or advancing into specialized security or financial markets roles, our programs help you build skills that matter in today's AI-driven world.",
-      address: 'Remote-first · Weekend online cohorts',
+      tagline: 'Learn. Build. Grow.',
+      closing: 'Real-world AI, Cyber Security & AWS Cloud learning for students and professionals.',
+      address: 'Remote-first · Online learning community',
       copyrightYear: 2026,
     },
   };
@@ -434,13 +256,89 @@
 
     const p = $('#hero-primary-cta');
     const s = $('#hero-secondary-cta');
-    const t = $('#hero-tertiary-cta');
-    if (p) p.textContent = site.primaryCta || 'Explore Programs';
-    if (s) {
-      s.textContent = site.secondaryCta || 'View Schedule';
-      if (site.secondaryCta === 'Upcoming Sessions') s.setAttribute('href', '#upcoming-sessions');
+    if (p) {
+      p.textContent = site.primaryCta || 'Join Free Masterclass';
+      if (site.primaryCtaHref) p.setAttribute('href', site.primaryCtaHref);
     }
-    if (t) t.textContent = site.tertiaryCta || 'Register Interest';
+    if (s) {
+      s.textContent = site.secondaryCta || 'Join WhatsApp Community';
+      if (site.secondaryCtaHref) s.setAttribute('href', site.secondaryCtaHref);
+    }
+  }
+
+  function renderAboutAcademy() {
+    const site = data.site || {};
+    const titleEl = $('#about-academy-title');
+    const bodyEl = $('#about-academy-body');
+    if (titleEl && site.aboutAcademyTitle) titleEl.textContent = site.aboutAcademyTitle;
+    if (!bodyEl) return;
+    const body =
+      (typeof site.aboutAcademyBody === 'string' && site.aboutAcademyBody.trim()) || '';
+    if (!body) {
+      bodyEl.innerHTML = '';
+      return;
+    }
+    bodyEl.innerHTML = body
+      .split(/\n\n+/)
+      .map((para) => `<p>${escapeHtml(para.trim())}</p>`)
+      .join('');
+  }
+
+  function whatsappFallbackUrl() {
+    const trainers = normalizeTrainers(data);
+    const wa = trainers[0]?.contact?.whatsapp;
+    const num = typeof wa === 'string' ? wa.replace(/\D/g, '') : '';
+    if (!num) return '';
+    const full = num.length === 10 ? `91${num}` : num;
+    return `https://wa.me/${full}`;
+  }
+
+  function renderCommunity() {
+    const c = data.community;
+    if (!c || typeof c !== 'object') return;
+    const titleEl = $('#community-title');
+    const bodyEl = $('#community-body');
+    const cta = $('#community-cta');
+    if (titleEl && c.title) titleEl.textContent = c.title;
+    if (bodyEl) bodyEl.textContent = (typeof c.body === 'string' && c.body.trim()) || '';
+    if (!cta) return;
+    cta.textContent = c.cta || 'Join WhatsApp Channel';
+    const url =
+      (typeof c.whatsappChannelUrl === 'string' && c.whatsappChannelUrl.trim()) ||
+      whatsappFallbackUrl() ||
+      '#register';
+    cta.setAttribute('href', url);
+    if (url.startsWith('http')) {
+      cta.setAttribute('target', '_blank');
+      cta.setAttribute('rel', 'noopener noreferrer');
+    } else {
+      cta.removeAttribute('target');
+    }
+  }
+
+  function renderYoutube() {
+    const yt = data.youtube;
+    if (!yt || typeof yt !== 'object') return;
+    const titleEl = $('#youtube-title');
+    const bodyEl = $('#youtube-body');
+    const cta = $('#youtube-cta');
+    if (titleEl && yt.title) titleEl.textContent = yt.title;
+    if (bodyEl) bodyEl.textContent = (typeof yt.body === 'string' && yt.body.trim()) || '';
+    if (!cta) return;
+    cta.textContent = yt.cta || 'Subscribe on YouTube';
+    const url = (typeof yt.channelUrl === 'string' && yt.channelUrl.trim()) || '';
+    if (url) {
+      cta.setAttribute('href', url);
+      cta.setAttribute('target', '_blank');
+      cta.setAttribute('rel', 'noopener noreferrer');
+      cta.classList.remove('opacity-60', 'cursor-not-allowed', 'pointer-events-none');
+      cta.removeAttribute('aria-disabled');
+    } else {
+      cta.setAttribute('href', '#youtube');
+      cta.classList.add('opacity-60', 'cursor-not-allowed', 'pointer-events-none');
+      cta.setAttribute('aria-disabled', 'true');
+      cta.removeAttribute('target');
+    }
   }
 
   function renderTrustMetrics() {
@@ -558,13 +456,18 @@
 
   function renderMasterclasses() {
     const host = $('#masterclasses-grid');
-    if (!host || !Array.isArray(data.masterclasses)) return;
+    if (!host || !Array.isArray(data.masterclasses) || !data.masterclasses.length) return;
     host.innerHTML = data.masterclasses.map((mc) => renderProgramCard(mc, 'masterclass')).join('');
   }
 
   function renderBootcamps() {
     const host = $('#bootcamps-grid');
-    if (!host || !Array.isArray(data.bootcamps)) return;
+    const section = $('#bootcamps');
+    if (!host || !Array.isArray(data.bootcamps) || !data.bootcamps.length) {
+      section?.classList.add('hidden');
+      return;
+    }
+    section?.classList.remove('hidden');
     host.innerHTML = data.bootcamps.map((bc) => renderProgramCard(bc, 'bootcamp')).join('');
   }
 
@@ -628,22 +531,42 @@
   }
 
   function renderLearningDomains() {
+    const site = data.site || {};
+    const titleEl = $('#domains-title');
+    const introEl = $('#domains-intro');
+    if (titleEl && site.domainsTitle) titleEl.textContent = site.domainsTitle;
+    if (introEl && site.domainsIntro) introEl.textContent = site.domainsIntro;
+
     const host = $('#domains-grid');
-    if (!host || !Array.isArray(data.learningDomains)) return;
-    host.innerHTML = data.learningDomains
-      .map(
-        (d) => `
-      <a href="${escapeHtml(d.href || '#courses')}" class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-5 block hover:border-sky-300 dark:hover:border-sky-600 transition-colors group text-center sm:text-left">
+    const areas = Array.isArray(data.learningAreas)
+      ? data.learningAreas
+      : Array.isArray(data.learningDomains)
+        ? data.learningDomains
+        : [];
+    if (!host || !areas.length) return;
+
+    host.innerHTML = areas
+      .map((d) => {
+        const topics = Array.isArray(d.topics) ? d.topics : [];
+        const topicsHtml = topics.length
+          ? `<ul class="mt-4 space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+              ${topics.map((t) => `<li class="flex gap-2"><span class="text-sky-600 dark:text-sky-400 shrink-0">•</span><span>${escapeHtml(t)}</span></li>`).join('')}
+            </ul>`
+          : d.description
+            ? `<p class="text-sm text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">${escapeHtml(d.description)}</p>`
+            : '';
+        return `
+      <article class="card-surface rounded-2xl border border-slate-200/80 dark:border-slate-700/80 p-6 h-full">
         <span class="text-2xl" aria-hidden="true">${escapeHtml(d.icon || '')}</span>
-        <h3 class="text-base font-semibold text-slate-900 dark:text-white mt-3 group-hover:text-sky-700 dark:group-hover:text-sky-300">${escapeHtml(d.name || '')}</h3>
-        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">${escapeHtml(d.description || '')}</p>
-      </a>`
-      )
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mt-3">${escapeHtml(d.name || '')}</h3>
+        ${topicsHtml}
+      </article>`;
+      })
       .join('');
   }
 
   function renderValueProposition() {
-    const vp = data.valueProposition;
+    const vp = data.whyJoin || data.valueProposition;
     if (!vp || typeof vp !== 'object') return;
     const titleEl = $('#value-prop-title');
     if (titleEl && vp.title) titleEl.textContent = vp.title;
@@ -703,10 +626,10 @@
         guestEl.classList.add('hidden');
       }
     }
-    const coursesTitle = $('#courses-title');
-    const coursesIntro = $('#courses-intro');
-    if (coursesTitle) coursesTitle.textContent = site.coursesTitle || 'Course catalog';
-    if (coursesIntro) coursesIntro.textContent = site.coursesIntro || '';
+    const mcTitle = $('#masterclasses-title');
+    const mcIntro = $('#masterclasses-intro');
+    if (mcTitle) mcTitle.textContent = site.masterclassesTitle || 'Free Masterclasses';
+    if (mcIntro) mcIntro.textContent = site.masterclassesIntro || '';
   }
 
   function setNamedMeta(name, content) {
@@ -995,6 +918,16 @@
   function renderRegistrationOptions() {
     const sel = $('#reg-course');
     if (!sel) return;
+    const interests = Array.isArray(data.registrationInterests) ? data.registrationInterests : [];
+    if (interests.length) {
+      sel.innerHTML = interests
+        .map(
+          (item) =>
+            `<option value="${escapeHtml(item.id || item.label || '')}">${escapeHtml(item.label || item.id || '')}</option>`
+        )
+        .join('');
+      return;
+    }
     const courses = Array.isArray(data.courses) ? data.courses : [];
     const opts = courses.map(
       (c) =>
@@ -1002,7 +935,7 @@
     );
     sel.innerHTML =
       opts.join('') +
-      '<option value="multiple">Multiple learning paths</option>';
+      '<option value="general">General interest</option>';
   }
 
   function renderSessions() {
@@ -1083,8 +1016,13 @@
       introEl.classList.toggle('hidden', !intro);
     }
 
+    const section = $('#testimonials');
     const host = $('#testimonials-grid');
-    if (!host || !Array.isArray(data.testimonials)) return;
+    if (!host || !Array.isArray(data.testimonials) || !data.testimonials.length) {
+      section?.classList.add('hidden');
+      return;
+    }
+    section?.classList.remove('hidden');
     host.innerHTML = data.testimonials
       .map((t) => {
         const role =
@@ -1311,23 +1249,16 @@
 
     renderNav();
     renderHero();
-    renderTrustMetrics();
-    renderAudiencePaths();
-    renderLearningFormats();
+    renderAboutAcademy();
     renderLearningDomains();
     renderValueProposition();
+    renderCommunity();
+    renderYoutube();
     renderAboutIntro();
     renderTrainers();
-    renderCourses();
     renderMasterclasses();
-    renderBootcamps();
-    renderOutcomes();
     renderRegistrationOptions();
     renderUpcomingHighlight();
-    renderSessions();
-    renderCurriculum();
-    renderResources();
-    renderTestimonials();
     renderFinalCta();
     renderFaq();
     renderFooter();
