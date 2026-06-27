@@ -2,16 +2,16 @@
   "site": {
     "title": "Upskill Fleet Academy",
     "heroEyebrow": "Upskill Fleet Academy",
-    "heroHeadline": "Learn AI, Cyber Security, AWS Cloud & Financial Markets Through Real-World Training",
-    "heroSubheading": "Practical learning, industry insights, hands-on demonstrations, and career guidance for students and professionals building future-ready skills in technology and finance.",
+    "heroHeadline": "Build Future-Ready Skills in AI, Cyber Security, Cloud & Financial Markets",
+    "heroSubheading": "Practical learning, industry insights, hands-on demonstrations, and career guidance from experienced professionals.",
     "heroTags": "",
     "heroSupporting": "",
     "seoDescription": "Upskill Fleet Academy — Real-world AI, Cyber Security, AWS Cloud & Financial Markets learning for students and professionals. Free masterclasses, premium bootcamps, and WhatsApp community.",
-    "primaryCta": "Join Free Masterclass",
+    "primaryCta": "Explore Programs",
     "primaryCtaHref": "#masterclasses",
     "secondaryCta": "Join WhatsApp Community",
     "secondaryCtaHref": "#community",
-    "scheduleNote": "Weekends only · live online. Free masterclasses are 1–2 hours each, starting 21 June 2026.",
+    "scheduleNote": "Live online sessions and practical learning experiences for students and working professionals.",
     "aboutAcademyTitle": "About Upskill Fleet Academy",
     "aboutAcademyBody": "Upskill Fleet Academy is a learning initiative focused on helping students and working professionals understand AI, Cyber Security, AWS Cloud, and Financial Markets through practical, real-world training.\n\nOur goal is to bridge the gap between academic learning and industry expectations by sharing knowledge gained from years of experience in technology, cybersecurity, and financial markets.",
     "aboutTitle": "Meet your instructors",
@@ -75,8 +75,8 @@
     "whatsappChannelUrl": "https://whatsapp.com/channel/0029VbCyLMY6xCSXxgQq4P02"
   },
   "youtube": {
-    "title": "YouTube Channel (Launching Soon)",
-    "body": "Subscribe for practical content on AI, Cyber Security, AWS Cloud, career guidance, and technology trends.",
+    "title": "Learn on YouTube",
+    "body": "Watch practical videos on AI, Cyber Security, AWS Cloud, Financial Markets, certification guidance, and career growth.",
     "cta": "Subscribe on YouTube",
     "channelUrl": "https://www.youtube.com/@upskillfleetacademy"
   },
@@ -87,8 +87,8 @@
     "registerHref": "#register"
   },
   "finalCta": {
-    "title": "Start Learning Today",
-    "body": "Join a free masterclass or our WhatsApp community to stay updated on sessions, resources, and practical learning content.",
+    "title": "Start Your Learning Journey",
+    "body": "Join our community, explore practical learning tracks, and stay updated with new sessions and educational content.",
     "primaryCta": "Join Free Masterclass",
     "primaryHref": "#masterclasses",
     "secondaryCta": "Join WhatsApp Community",
