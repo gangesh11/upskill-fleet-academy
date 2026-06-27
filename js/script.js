@@ -537,16 +537,6 @@
     host.innerHTML = data.bootcamps.map((bc) => renderProgramCard(bc, 'bootcamp', { onDarkBg: true })).join('');
   }
 
-  function renderUpcomingHighlight() {
-    const uh = data.upcomingHighlight;
-    const titleEl = $('#upcoming-title');
-    const introEl = $('#upcoming-intro');
-    const tbody = $('#upcoming-body');
-    if (titleEl && uh?.title) titleEl.textContent = uh.title;
-    if (introEl) {
-      introEl.textContent = (typeof uh?.intro === 'string' && uh.intro.trim()) || '';
-      introEl.classList.toggle('hidden', !introEl.textContent);
-    }
     if (!tbody || !Array.isArray(data.sessions)) return;
     const registerHref = (typeof uh?.registerHref === 'string' && uh.registerHref.trim()) || '#register';
     const registerLabel = (typeof uh?.registerLabel === 'string' && uh.registerLabel.trim()) || 'Register';
@@ -1333,7 +1323,6 @@
     renderMasterclasses();
     renderBootcamps();
     renderRegistrationOptions();
-    renderUpcomingHighlight();
     renderFinalCta();
     renderFaq();
     renderFooter();
