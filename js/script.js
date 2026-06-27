@@ -537,33 +537,6 @@
     host.innerHTML = data.bootcamps.map((bc) => renderProgramCard(bc, 'bootcamp', { onDarkBg: true })).join('');
   }
 
-    if (!tbody || !Array.isArray(data.sessions)) return;
-    const registerHref = (typeof uh?.registerHref === 'string' && uh.registerHref.trim()) || '#register';
-    const registerLabel = (typeof uh?.registerLabel === 'string' && uh.registerLabel.trim()) || 'Register';
-    const rows = data.sessions;
-    tbody.innerHTML = rows
-      .map(
-        (row) => {
-          const label =
-            (typeof row.shortLabel === 'string' && row.shortLabel.trim()) ||
-            row.topic ||
-            '';
-          const format =
-            (typeof row.sessionType === 'string' && row.sessionType.trim()) ||
-            row.mode ||
-            'Live';
-          return `
-      <tr class="border-b border-sky-100/80 dark:border-sky-900/30 last:border-0 hover:bg-sky-50/50 dark:hover:bg-sky-950/20">
-        <td class="py-3 px-4 text-slate-900 dark:text-slate-100 whitespace-nowrap font-medium">${escapeHtml(formatDateShort(row.date))}</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">${escapeHtml(label)}</td>
-        <td class="py-3 px-4 text-slate-600 dark:text-slate-400">${escapeHtml(format)}</td>
-        <td class="py-3 px-4"><a href="${escapeHtml(registerHref)}" class="text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline">${escapeHtml(registerLabel)}</a></td>
-      </tr>`;
-        }
-      )
-      .join('');
-  }
-
   function renderFinalCta() {
     const fc = data.finalCta;
     if (!fc || typeof fc !== 'object') return;
